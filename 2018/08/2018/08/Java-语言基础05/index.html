@@ -109,26 +109,27 @@
 
 
 
-  <meta name="description" content="运算符 在Java中，使用算术运算符+、-、*、/表示加减乘除运算。当参与/运算的两个操作数是整数时，表示整数除法；否则，表示浮点除法。整数的求余操作用%表示。 注：整数被0除将会产生一个异常，而浮点数被0除将会得到一个无穷大或NaN结果。   二元运算符  x += 4;//等价于 x = x + 4;   自增运算符与自减运算符  前缀方式：++n  后缀方式：n++ 区别：前缀方式先对变量进">
+  <meta name="description" content="异常异常概念 在程序运行的过程中，会发生各种非正常状况，比如程序运行时磁盘空间不足，网络连接中断，被装载的类不存在。针对这种情况，在Java语言中，引入了异常，以异常类的形式对这些非正常情况进行封装，通过异常处理机制对程序运行时发生的各种问题进行处理。    Throwable 有两个直接子类Error 和 Exception，其中Error代表程序中产生的错误，Exception代表程序中产生的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 语言基础03">
-<meta property="og:url" content="https://blog.yunmok.top/2018/08/index.html">
+<meta property="og:title" content="Java 语言基础05">
+<meta property="og:url" content="https://blog.yunmok.top/2018/08/2018/08/Java-语言基础05/index.html">
 <meta property="og:site_name" content="闲事队长">
-<meta property="og:description" content="运算符 在Java中，使用算术运算符+、-、*、/表示加减乘除运算。当参与/运算的两个操作数是整数时，表示整数除法；否则，表示浮点除法。整数的求余操作用%表示。 注：整数被0除将会产生一个异常，而浮点数被0除将会得到一个无穷大或NaN结果。   二元运算符  x += 4;//等价于 x = x + 4;   自增运算符与自减运算符  前缀方式：++n  后缀方式：n++ 区别：前缀方式先对变量进">
+<meta property="og:description" content="异常异常概念 在程序运行的过程中，会发生各种非正常状况，比如程序运行时磁盘空间不足，网络连接中断，被装载的类不存在。针对这种情况，在Java语言中，引入了异常，以异常类的形式对这些非正常情况进行封装，通过异常处理机制对程序运行时发生的各种问题进行处理。    Throwable 有两个直接子类Error 和 Exception，其中Error代表程序中产生的错误，Exception代表程序中产生的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://ws4.sinaimg.cn/large/80ceacb8ly1ftvokyhvx5j20jx05laa4.jpg">
-<meta property="og:updated_time" content="2018-08-11T04:30:26.495Z">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/80ceacb8ly1fu5y1awhtnj20ex07rgmd.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/80ceacb8ly1fu5y9wks7nj20m103rq3u.jpg">
+<meta property="og:updated_time" content="2018-08-11T14:19:59.610Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java 语言基础03">
-<meta name="twitter:description" content="运算符 在Java中，使用算术运算符+、-、*、/表示加减乘除运算。当参与/运算的两个操作数是整数时，表示整数除法；否则，表示浮点除法。整数的求余操作用%表示。 注：整数被0除将会产生一个异常，而浮点数被0除将会得到一个无穷大或NaN结果。   二元运算符  x += 4;//等价于 x = x + 4;   自增运算符与自减运算符  前缀方式：++n  后缀方式：n++ 区别：前缀方式先对变量进">
-<meta name="twitter:image" content="http://ws4.sinaimg.cn/large/80ceacb8ly1ftvokyhvx5j20jx05laa4.jpg">
+<meta name="twitter:title" content="Java 语言基础05">
+<meta name="twitter:description" content="异常异常概念 在程序运行的过程中，会发生各种非正常状况，比如程序运行时磁盘空间不足，网络连接中断，被装载的类不存在。针对这种情况，在Java语言中，引入了异常，以异常类的形式对这些非正常情况进行封装，通过异常处理机制对程序运行时发生的各种问题进行处理。    Throwable 有两个直接子类Error 和 Exception，其中Error代表程序中产生的错误，Exception代表程序中产生的">
+<meta name="twitter:image" content="http://wx3.sinaimg.cn/large/80ceacb8ly1fu5y1awhtnj20ex07rgmd.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.yunmok.top/2018/08/"/>
+  <link rel="canonical" href="https://blog.yunmok.top/2018/08/2018/08/Java-语言基础05/"/>
 
 
 
@@ -138,7 +139,7 @@
   };
 </script>
 
-  <title>Java 语言基础03 | 闲事队长</title>
+  <title>Java 语言基础05 | 闲事队长</title>
   
 
 
@@ -310,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.yunmok.top/2018/08/">
+    <link itemprop="mainEntityOfPage" href="https://blog.yunmok.top/2018/08/2018/08/Java-语言基础05/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="small96">
@@ -327,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java 语言基础03
+          <h1 class="post-title" itemprop="name headline">Java 语言基础05
               
             
           </h1>
@@ -352,7 +353,7 @@
                 
               
 
-              <time title="创建时间：2018-08-01 16:30:32" itemprop="dateCreated datePublished" datetime="2018-08-01T16:30:32+08:00">2018-08-01</time>
+              <time title="创建时间：2018-08-05 18:28:04" itemprop="dateCreated datePublished" datetime="2018-08-05T18:28:04+08:00">2018-08-05</time>
             
 
             
@@ -369,7 +370,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-08-11 12:30:26" itemprop="dateModified" datetime="2018-08-11T12:30:26+08:00">2018-08-11</time>
+                <time title="修改时间：2018-08-11 22:19:59" itemprop="dateModified" datetime="2018-08-11T22:19:59+08:00">2018-08-11</time>
               
             
           </span>
@@ -400,7 +401,7 @@
 
           
           
-             <span id="/2018/08/" class="leancloud_visitors" data-flag-title="Java 语言基础03">
+             <span id="/2018/08/2018/08/Java-语言基础05/" class="leancloud_visitors" data-flag-title="Java 语言基础05">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -432,138 +433,69 @@
       
 
       
-        <h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><blockquote>
-<p>在Java中，使用算术运算符+、-、*、/表示加减乘除运算。当参与/运算的两个操作数是整数时，表示整数除法；否则，表示浮点除法。整数的求余操作用%表示。</p>
-<p><strong>注：</strong>整数被0除将会产生一个异常，而浮点数被0除将会得到一个无穷大或NaN结果。</p>
+        <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><h2 id="异常概念"><a href="#异常概念" class="headerlink" title="异常概念"></a>异常概念</h2><blockquote>
+<p>在程序运行的过程中，会发生各种非正常状况，比如程序运行时磁盘空间不足，网络连接中断，被装载的类不存在。针对这种情况，在Java语言中，引入了异常，以异常类的形式对这些非正常情况进行封装，通过异常处理机制对程序运行时发生的各种问题进行处理。</p>
+</blockquote>
+<p><img src="http://wx3.sinaimg.cn/large/80ceacb8ly1fu5y1awhtnj20ex07rgmd.jpg" alt="image"></p>
+<blockquote>
+<p>Throwable 有两个直接子类Error 和 Exception，其中Error代表程序中产生的错误，Exception代表程序中产生的异常。</p>
 </blockquote>
 <ul>
-<li><p>二元运算符</p>
+<li><p>Error 类称为错误类，它表示Java 运行时产生的系统内部错误或资源耗尽的错误，是比较严重的，仅靠修改程序本身是不能恢复执行的。</p>
+</li>
+<li><p>Exception 类称为异常类，它表示程序本身可以处理的错误，在开发Java程序中进行的异常处理，都是针对Exception类及其子类。在Exception 类的众多子类中有一个特殊的<strong>RuntimeException类，该类及其子类用于表示运行时异常</strong>，除了此类，Exception 类下所有其他的子类都用于表示编译时异常。</p>
+</li>
+<li><p>Throwable 类中的常用方法</p>
+<p><img src="http://wx2.sinaimg.cn/large/80ceacb8ly1fu5y9wks7nj20m103rq3u.jpg" alt="image"></p>
+</li>
+</ul>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><ul>
+<li><p>try … catch</p>
 <blockquote>
-<p>x += 4;//等价于 x = x + 4;</p>
+<p>Java 中提供一种对异常进行处理的方式——异常捕获</p>
 </blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//程序代码块</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(ExceptionType(Exception 类及其子类) e)&#123;</span><br><span class="line">    <span class="comment">//对ExceptionType的处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中在try 代码块中编写可能发生异常的Java 语句，catch 代码块中编写针对异常进行处理的代码。当try 代码块的程序发生了异常，系统会将这个异常的信息封装成一个异常对象，并将这个对象传递给catch代码块。catch 代码块需要一个参数指明它所能够接受的异常类型，这个参数的类型必须是Exception类或其子类。</p>
+<hr>
 </li>
-<li><p>自增运算符与自减运算符</p>
-<ol>
-<li><p>前缀方式：++n</p>
-</li>
-<li><p>后缀方式：n++</p>
-<p>区别：前缀方式先对变量进行 +1 运算；后缀方式则先使用变量原来的值，在对变量进行 +1 运算。</p>
-</li>
-</ol>
-</li>
-<li><p>关系运算符与boolean运算符</p>
-<ol>
-<li><p>使用两个等号 == 检测是否相等。</p>
+<li><p>finally</p>
 <blockquote>
-<p>3 == 7 //值为false</p>
+<p>在程序中，有时候我们希望语句无论程序是否发生异常都要执行，这个时候在try … catch语句后，加一个 finally 代码块。</p>
 </blockquote>
+<p><strong>注：</strong></p>
+<p><strong>不论程序是否发生异常还是使用 return 语句结束，finally语中的语句都会执行。用途：例如释放系统资源。</strong></p>
+<p><strong>在try … catch中如果执行了System.exit(0)语句，finally中的语句就不会执行。System.exit(0)表示退出当前的Java虚拟机，Java虚拟机停止了，任何代码都不能再执行。</strong></p>
+<hr>
 </li>
-<li><p>使用 != 检测是否不相等。</p>
+<li><p>throws</p>
 <blockquote>
-<p>3! = 7 //值为true</p>
+<p>如果去调用一个别人写的方法时，是否知道别人写的方法是否会异常呢？这就很难做出判断。针对这种情况，Java中允许在方法的后面使用 throws 关键字对外声明该方法有可能发生的异常，这样调用者在调用方法时，就明确地知道该方法有异常，并且必须在程序中对异常进行处理，否则无法编译通过。</p>
 </blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 返回值类型 方法名([参数<span class="number">1</span>，参数<span class="number">2</span>...])<span class="keyword">throws</span> ExceptionType1[,ExceptionType2...]&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>从上述语法格式中可以看出，throws关键字需要写在方法声明的后面，throws后面需要声方法中发生异常的类型，通常将这种做法称为<strong>方法声明抛一个异常。</strong></p>
 </li>
-<li><p>经常使用的还有&lt;(小于)、&gt;（大于）、&lt;=（小于等于）和 &gt;=（大于等于）。</p>
-</li>
-<li><p>用&amp;&amp;表示逻辑 “与” 、用 ||表示逻辑 “或”。</p>
-<blockquote>
-<p>如果第一个操作数已经能够确定表达式的值，第二个操作数就不必计算了。</p>
-<p>expression1 &amp;&amp; expression2</p>
-<p>expression1 || expression2</p>
-</blockquote>
-</li>
-<li><p>三元操作符 ?:</p>
-<blockquote>
-<p>condition ? expression1 : expression2</p>
-<p>当条件condition 为 true 时计算第1个表达，否则计算第2个表达。例：</p>
-<p>x&lt;y ? x : y //返回 x 和 y 中较小的那个值。</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><p>位运算符</p>
-<blockquote>
-<p>&amp;(“与”)、|（“或”）、^（“异或”）、~（“非”）</p>
-</blockquote>
-</li>
+</ul>
+<h2 id="异常分类"><a href="#异常分类" class="headerlink" title="异常分类"></a>异常分类</h2><ol>
+<li><p>编译时异常</p>
+<p>在Java中，Exception 类除了RuntimeException 类及其子类都是编译时异常。编译时异常的特点是Java 编译器会对其进行检查，如果出现异常就必须对异常进行处理，否则程序无法通过编译。</p>
+<p><strong>处理编译时期的异常的两种方式：</strong></p>
+<ul>
+<li>使用 try … catch 语句对异常进行捕获。</li>
+<li>使用 throws 关键字声明抛出异常，调用者对其处理。</li>
 </ul>
 <hr>
-<h1 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h1><blockquote>
-<p>Java 中4种访问修饰符public / protected / default(friendly) / private</p>
-</blockquote>
-<ol>
-<li>对于public修饰符，它具有最大的访问权限，可以访问任何一个在CLASSPATH下的类、接口、异常等。它往往用于对外的情况，也就是对象或类对外的一种接口的形式。 </li>
-<li>对于protected修饰符，它主要的作用就是用来保护子类的。它的含义在于子类可以用它修饰的成员，其他的不可以，它相当于传递给子类的一种继承的东西。 </li>
-<li>对于default来说，有点的时候也成为friendly（友员），它是针对本包访问而设计的，任何处于本包下的类、接口、异常等，都可以相互访问，即使是父类没有用protected修饰的成员也可以。 </li>
-<li>对于private来说，它的访问权限仅限于类的内部，是一种封装的体现，例如，大多数的成员变量都是修饰符为private的，它们不希望被其他任何外部的类访问。 </li>
+</li>
+<li><p>运行时异常</p>
+<p>RuntimeException 类及其子类都是运行时异常。运行时异常特点是Java编译器不会对其检查，也就是说，当程序中出现这类异常时，即使没有使用 try … catch 语句捕获或使用 throws 关键字声明抛出，程序也能编译通过，运行时异常一般是由程序中的逻辑错误引起的，在程序运行时无法恢复。</p>
+</li>
 </ol>
-<ul>
-<li>下表为Java访问控制符的含义和使用情况 :</li>
-</ul>
-<p><img src="http://ws4.sinaimg.cn/large/80ceacb8ly1ftvokyhvx5j20jx05laa4.jpg" alt="image"></p>
-<p>  区别：</p>
-<p>  (1) public:可以被所有其他类所访问。</p>
-<p>  (2) private:只能被自己修改。</p>
-<p>  (3) protected:自身，子类及同一个包中类可以访问。</p>
-<p>  (4) default(默认):同一包中的类可以访问，声明时没有加修饰符，认为是friendly。</p>
-<p>  <strong>注意</strong>：Java的访问控制是停留在编译层的，也就是它不会在.class文件中留下任何的痕迹，只在编译的时候进行访问控制的检查。其实，通过反射的手段，是可以访问任何包下任何类中的成员，例如，访问类的私有成员也是可能的。 </p>
-<hr>
-<h1 id="基本结构语句"><a href="#基本结构语句" class="headerlink" title="基本结构语句"></a>基本结构语句</h1><ul>
-<li><p>顺序结构语句</p>
-</li>
-<li><p>选择结构语句</p>
-<ul>
-<li><p>if语句</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(condition)&#123;</span><br><span class="line">    statement1.</span><br><span class="line">        statement2</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>&#123;</span><br><span class="line">    statement3</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>多重选择：switch 语句</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(choice)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>：</span><br><span class="line">        ...</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        ...</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>case 标签可以是：</p>
-<ul>
-<li>类型为 char、byte、short 或 int（或其包装类）的常量表达式。</li>
-<li>枚举常量</li>
-<li>字符串字面量</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>循环结构语句</p>
-<ul>
-<li><p>while循环</p>
-<p>当条件为true时，while循环执行一条语句。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(condition)&#123;</span><br><span class="line">    statement</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>while 循环语句首先检测循环条件。因此，循环体中的代码有可能不被执行。</p>
-</li>
-<li><p>do while循环<br>如果希望循环体至少执行一次，则应该将检测条件放在最后。使用do/while循环语句执行这种操作。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    statement</span><br><span class="line">&#125; <span class="keyword">while</span>()</span><br></pre></td></tr></table></figure>
-<p>这种循环语句先执行语句，再检测循环条件；然后重复语句，再检测循环条件，以此类推。</p>
-</li>
-<li><p>for循环</p>
-<p>for 循环语句是支持迭代的一种通用结构，利用每次迭代之后更新的计数器或类似的变量来控制迭代次数。下面程序将数字1~10输出到屏幕上：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= <span class="number">10</span>;i++)</span><br><span class="line">    System.out.println(i);</span><br></pre></td></tr></table></figure>
-<p>for语句的第一部分通常用于对计数器初始化；第二部分给出每次新一轮循环执行前要检测的循环条件；第三部分指示如何更新计数器。</p>
-<p><strong>注：如果在for语句内部定义一个变量，这个变量就不能在循环体之外使用。另一方面，可以在各自独立的不同for循环中定义同名的变量。</strong></p>
-</li>
-<li><p>for each 循环</p>
-<p>语句格式：for(variable :collection) statement </p>
-<p>定义一个变量暂存集合中的每一个元素，并执行相应的语句/语句块。collection这一集合表达式必须是一个数组或者是一个实现了Iterable接口的类对象。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> element : a)</span><br><span class="line">    System.out.println(element);</span><br></pre></td></tr></table></figure>
-<p>这个循环应该读作“循环a中的每一个元素”。</p>
-</li>
-<li><p>循环控制 break 和 continue 语句</p>
-<ul>
-<li>break 的作用就是跳出一个循环或者结束一个循环。</li>
-<li>continue 的作用是立即结束本次循环，继续执行下一次循环。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p><a href="https://www.yunmok.top/2018/07/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8001/" target="_blank" rel="noopener">Java 语言基础01</a></p>
-<p><a href="https://www.yunmok.top/2018/07/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8002/" target="_blank" rel="noopener">Java 语言基础02</a></p>
-<p><a href="https://www.yunmok.top/2018/08/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8004/" target="_blank" rel="noopener">Java 语言基础04</a></p>
+<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><blockquote>
+<p>Java允许用户自定义异常，但自定义的异常类必须继承自 Exception 或其子类。</p>
 </blockquote>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//下面的代码是自定义一个异常类继承自 Exception</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyException</span> <span class="keyword">extends</span> <span class="title">Exception</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyException</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();           <span class="comment">//调用 Exception 无参的构造方法</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyException</span><span class="params">(String message)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();		 <span class="comment">//调用 Exception 有参的构造方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在实际开发中，如果没有特殊的要求，自定义的异常类只需继承 Exception 类，在构造方法中使用 super() 语句调用Exception 的构造方法即可。</p>
+<p>使用自定义异常使用 throw 关键字，throw 关键字用于在方法中抛出异常的实例对象。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">throw</span> Exception异常对象</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -602,7 +534,7 @@
     <strong>本文作者： </strong>small96</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://blog.yunmok.top/2018/08/" title="Java 语言基础03">https://blog.yunmok.top/2018/08/</a>
+    <a href="https://blog.yunmok.top/2018/08/2018/08/Java-语言基础05/" title="Java 语言基础05">https://blog.yunmok.top/2018/08/2018/08/Java-语言基础05/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -622,8 +554,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/" rel="next" title="Java 语言基础02">
-                <i class="fa fa-chevron-left"></i> Java 语言基础02
+              <a href="/2018/08/2018/08/Java-语言基础04/" rel="next" title="Java 语言基础04">
+                <i class="fa fa-chevron-left"></i> Java 语言基础04
               </a>
             
           </div>
@@ -632,8 +564,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/" rel="prev" title="Java 语言基础04">
-                Java 语言基础04 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/2018/08/Java-面向对象/" rel="prev" title="Java 面向对象">
+                Java 面向对象 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -767,7 +699,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-number">1.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#访问修饰符"><span class="nav-number">2.</span> <span class="nav-text">访问修饰符</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本结构语句"><span class="nav-number">3.</span> <span class="nav-text">基本结构语句</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#异常"><span class="nav-number">1.</span> <span class="nav-text">异常</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#异常概念"><span class="nav-number">1.1.</span> <span class="nav-text">异常概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理"><span class="nav-number">1.2.</span> <span class="nav-text">异常处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常分类"><span class="nav-number">1.3.</span> <span class="nav-text">异常分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义异常"><span class="nav-number">1.4.</span> <span class="nav-text">自定义异常</span></a></li></ol></li></ol></div>
             
 
           </div>
