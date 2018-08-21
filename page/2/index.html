@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2018/07/Python-语言基础04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/20/2018/07/Python-语言基础04/" class="article-date">
+  <time datetime="2018-07-20T08:53:18.000Z" itemprop="datePublished">2018-07-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/20/2018/07/Python-语言基础04/">Python 语言基础04</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python-的特性"><a href="#Python-的特性" class="headerlink" title="Python 的特性"></a>Python 的特性</h1><h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><blockquote>
+<p>Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates = [<span class="string">'Michael'</span>,<span class="string">'Bob'</span>,<span class="string">'Tracy'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>,<span class="string">'Bob'</span>,<span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>变量 classmates 就是一个 list 。用<strong>len()</strong> 函数可以获得list<strong>元素的个数</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>len(classmates)</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用索引来访问list中每一个位置的元素，记得<strong>索引是从 0 开始的</strong>。当索引超出范围，Python会报一个IndexError 错误，所以，要确保索引不要越界，记得最后一个元素的索引是<strong>len(classmates) - 1</strong>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates[<span class="number">0</span>]</span><br><span class="line"><span class="string">'Michael'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>除了计算索引位置外，还可用 -1 做索引，直接获取最后一个元素，以此类推，可以获取倒数第二个、第三个：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates[<span class="number">-1</span>]</span><br><span class="line"><span class="string">'Tracy'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list 是一个可变的有序表，可以使用函数 <strong>append()</strong> 往 list 中追加元素到<strong>末尾</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.append(<span class="string">'Adam'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>,<span class="string">'Bob'</span>,<span class="string">'Tracy'</span>,<span class="string">'Adam'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用函数 <strong>insert()</strong> 将元素插入到指定位置，比如索引为 1 的位置:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.insert(<span class="number">1</span>,<span class="string">'Jack'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Jack'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>, <span class="string">'Adam'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要删除list <strong>末尾的元素</strong>，用 <strong>pop()</strong> 方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.pop()</span><br><span class="line"><span class="string">'Adam'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Jack'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要删除指定位置的元素，用 <strong>pop(i)</strong> 方法，其中 i 是索引位置：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.pop(<span class="number">1</span>)</span><br><span class="line"><span class="string">'Jack'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要把某个元素替换成别的元素，可以直接赋值给对应的索引的位置：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates[<span class="number">1</span>] = <span class="string">'Sarah'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Sarah'</span>, <span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list 里面的元素的数据类型也可以不同，比如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="string">'Apple'</span>, <span class="number">123</span>, <span class="keyword">True</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list 元素也可以是另一个 list（list的嵌套），比如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = [<span class="string">'python'</span>, <span class="string">'java'</span>, [<span class="string">'asp'</span>, <span class="string">'php'</span>], <span class="string">'scheme'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>len(s)</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>拆开写：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = [<span class="string">'asp'</span>, <span class="string">'php'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = [<span class="string">'python'</span>, <span class="string">'java'</span>, p, <span class="string">'scheme'</span>]</span><br><span class="line"><span class="comment">#如果想拿到 ‘php’ 可以写成p[1] 或者 s[2][1]，因此 s 可以看成是一个二维数组。</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>如果list中一个元素也没有，就是一个<strong>空的list，它的长度为0</strong>。</li>
+</ul>
+<hr>
+<h2 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h2><blockquote>
+<p>另一种有序列表叫元组：tuple。tuple和list非常类似，但是tuple一旦初始化就<strong>不能修改</strong>。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates = (<span class="string">'Michael'</span>,<span class="string">'Bob'</span>,<span class="string">'Tracy'</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>!!!注：</strong>classmates这个tuple不能变了，<strong>它没有append(),insert()这样的方法</strong>，其他获取元素的方法和list是一样的，但不能赋值成另外的元素。</p>
+<ul>
+<li><p>不可变的tuple有什么意义？？？<br><br>因为tuple不可变，所以代码更加安全。如果可能，能用tuple替代list就尽量用tuple。</p>
+</li>
+<li><p>tuple的陷阱：当定义一个tuple时，在定义的时候，tuple的元素就必须确定下来。如果要定义一个空的tuple，可以写成（）；但是，要定义一个只有1个元素的tuple：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>t = (<span class="number">1</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>t</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>定义的不是tuple，是1这个数！这是因为括号()既可以表示tuple，又可以表示数学公式中的小括号，这就产生了歧义，因此，Python规定，这种情况下，按小括号进行计算，计算结果自然是1。 </p>
+<p>所以，<strong>只有1个元素的tuple</strong>定义时必须加一个<strong>逗号,</strong>，来消除歧义： </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>t = (<span class="number">1</span>,)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>t</span><br><span class="line">(<span class="number">1</span>,)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><blockquote>
+<p>list和tuple是Python内置的有序集合，一个可变，一个不可变。根据需要来选择使用它们。</p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8001/" target="_blank" rel="noopener">Python 语言基础01</a><br><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8002/" target="_blank" rel="noopener">Python 语言基础02</a><br><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8003/" target="_blank" rel="noopener">Python 语言基础03</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/20/2018/07/Python-语言基础04/" data-id="cjl3byfl4000igcaplh4zf8il" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/07/Python-语言基础03" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/19/2018/07/Python-语言基础03/" class="article-date">
+  <time datetime="2018-07-19T04:02:14.000Z" itemprop="datePublished">2018-07-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/19/2018/07/Python-语言基础03/">Python 语言基础03</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>基础语法分为两块，包含条件判断和循环两块。条件判断主要是if语句的相关使用。循环主要是while模块的使用。</p>
+</blockquote>
+<h1 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h1><p>在Python程序中，用 if 语句实现：<br><img src="https://wx4.sinaimg.cn/large/80ceacb8ly1ftf20ds8lrj204u086aai.jpg" alt="image1"><br><strong>注意不要少了冒号 ：</strong></p>
+<h3 id="if-语句完整结构："><a href="#if-语句完整结构：" class="headerlink" title="if 语句完整结构："></a>if 语句完整结构：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> &lt;条件判断<span class="number">1</span>&gt;:</span><br><span class="line">	&lt;执行<span class="number">1</span>&gt;</span><br><span class="line"><span class="comment">#elif 为 else if 的缩写</span></span><br><span class="line"><span class="keyword">elif</span> &lt;条件判断<span class="number">2</span>&gt;:</span><br><span class="line">	&lt;执行<span class="number">2</span>&gt;</span><br><span class="line"><span class="keyword">elif</span> &lt;条件判断<span class="number">3</span>&gt;:</span><br><span class="line">	&lt;执行<span class="number">3</span>&gt;</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	&lt;执行<span class="number">4</span>&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="if-语句特点："><a href="#if-语句特点：" class="headerlink" title="if 语句特点："></a>if 语句特点：</h3><p><strong>条件判断从上向下匹配，当满足条件时执行对应的块内语句，后续的elif和else都不再执行。</strong></p>
+<p><strong>!!!注：</strong>因为 input() 返回的数据类型是 str ， str 不能直接和整数比较，必须先把 str 转换成整数。Python提供了 int() 函数来完成这件事情。</p>
+<hr>
+<h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><p><strong>循环是让计算机做重复任务的有效的方法。</strong></p>
+<ul>
+<li>第一种循环：for … in 循环，比如计算1-10的整数之和，可以用一个sum变量做累加。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sum = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>]:</span><br><span class="line">	sum = sum + x</span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>第二种循环：while 循环，只要满足条件，就不断循环，条件不满足时退出循环。比如计算100以内所有奇数之和。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sum = <span class="number">0</span></span><br><span class="line">n = <span class="number">99</span></span><br><span class="line"><span class="keyword">while</span> n &gt; <span class="number">0</span>:</span><br><span class="line">	sum = sum + n</span><br><span class="line">	n= n - <span class="number">2</span></span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
+<p>　　在循环内部变量n不断自减，直到变为-1时，不再满足while条件，循环退出。
+　　</p>
+<h1 id="break-和-comtinue"><a href="#break-和-comtinue" class="headerlink" title="break 和 comtinue"></a>break 和 comtinue</h1><blockquote>
+<p>break语句可以在循环过程中直接退出循环，而continue语句可以提前结束本轮循环，并直接开始下一轮循环。这两个语句通常都必须配合if语句使用。<strong>要特别注意</strong>，不要滥用break和continue语句。break和continue会造成代码执行逻辑分叉过多，容易出错。</p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8001/" target="_blank" rel="noopener">Python 语言基础01</a><br><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8002/" target="_blank" rel="noopener">Python 语言基础02</a><br><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8004/" target="_blank" rel="noopener">Python 语言基础04</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/19/2018/07/Python-语言基础03/" data-id="cjl3byfky000egcap2j4mgarg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/07/Python-语言基础02" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/17/2018/07/Python-语言基础02/" class="article-date">
+  <time datetime="2018-07-17T04:30:18.000Z" itemprop="datePublished">2018-07-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/17/2018/07/Python-语言基础02/">Python 语言基础02</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="字符串和编码"><a href="#字符串和编码" class="headerlink" title="字符串和编码"></a>字符串和编码</h2><p><img src="https://wx3.sinaimg.cn/large/80ceacb8ly1ftblmcf9kij20gg06a0ss.jpg" alt="image1"></p>
+<ul>
+<li><p>在计算机内存中，统一使用Unicode编码，当需要保存到硬盘或者需要传输的时候，就转换为UTF-8编码。</p>
+</li>
+<li><p>用记事本编辑的时候，从文件读取的UTF-8字符被转换为Unicode字符到内存里，编辑完成后，保存的时候再把Unicode转换为UTF-8保存到文件：</p>
+</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/80ceacb8ly1ftblnpacltj208j07qdg8.jpg" alt="image2"></p>
+<ul>
+<li>浏览网页的时候，服务器会把动态生成的Unicode内容转换为UTF-8再传输到浏览器：</li>
+</ul>
+<p><img src="https://wx2.sinaimg.cn/large/80ceacb8ly1ftblp0mtntj208e07edg3.jpg" alt="image3"></p>
+<h3 id="Python的字符串"><a href="#Python的字符串" class="headerlink" title="Python的字符串"></a>Python的字符串</h3><blockquote>
+<p>在最新的Python 3版本中，字符串是以<strong>Unicode编码</strong>的，也就是说，Python的字符串支持多语言。</p>
+</blockquote>
+<p>对于单个字符的编码：</p>
+<ul>
+<li><p>ord() 函数获取字符的整数表示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>ord(<span class="string">'A'</span>)</span><br><span class="line"><span class="number">65</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>ord(<span class="string">'中'</span>)</span><br><span class="line"><span class="number">20013</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>chr() 函数把编码转换成对应的字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>chr(<span class="number">66</span>)</span><br><span class="line"><span class="string">'B'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>chr(<span class="number">25991</span>)</span><br><span class="line"><span class="string">'文'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>由于 Python 的字符串类型是<code>str</code>，在内存中以Unicode表示，一个字符对应若干个字节。如果要在网络上传输，或者保存到磁盘上，就需要把<code>str</code>变为以字节为单位的<code>bytes</code>。 </p>
+</blockquote>
+<ul>
+<li><p>Python 对 bytes 类型的数据用<strong>带b前缀</strong>的单引号或双引号表示：x = b’ABC’</p>
+</li>
+<li><p>以Unicode表示的<code>str</code>通过 encode() 方法可以编码为指定的 bytes。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'ABC'</span>.encode(<span class="string">'ascii'</span>)</span><br><span class="line"><span class="string">b'ABC'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'中文'</span>.encode(<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="string">b'\xe4\xb8\xe6\x96\x87'</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="注："><a href="#注：" class="headerlink" title="!!!注："></a><strong>!!!注</strong>：<br></h3><p>1.纯英文的 str 可以用 ASCII 编码为 bytes，内容是一样的。<br><br>2.含有中文的 str 可以用 UTF-8 编码为bytes，但无法用 ASCII 编码，因为中文编码超出了 ASCII 编码的范围，Python会报错。</p>
+<hr>
+<blockquote>
+<p>反过来，如果我们从网络或磁盘上读取了字节流，那么读到的数据就是 bytes  。要把 bytes 变为str ，就需要用 decode() 方法。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="string">b'ABC'</span>.decode(<span class="string">'ascii'</span>)</span><br><span class="line"><span class="string">'ABC'</span></span><br><span class="line">&gt;&gt;&gt;<span class="string">b'\xe4\xb8\xad\xe6\x96\x87'</span>.decode(<span class="string">'utf-8'</span>)</span><br><span class="line"><span class="string">'中文'</span></span><br></pre></td></tr></table></figure>
+<h3 id="注：-1"><a href="#注：-1" class="headerlink" title="!!!注："></a><strong>!!!注</strong>：<br></h3><p>1.如果 bytes 中包含无法解码的字节，decode() 方法会报错。<br><br>2.如果 bytes 中只有一小部分无效字节，可以传入errors=’ignore’ 忽略错误的字节。</p>
+<hr>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
+<li>要计算 str 包含<strong>多少个字符</strong>，可以用 len() 函数。<br></li>
+</ul>
+<ul>
+<li>要计算 bytes 包含<strong>多少个字节</strong>，可以用 len() 函数。<br></li>
+</ul>
+<ul>
+<li>在操作字符串时，我们经常遇到 str 和 bytes 的互相转换。为了避免乱码问题，应当始终坚持使用 UTF-8 编码对 str 和 bytes 进行转换。<br></li>
+</ul>
+<ul>
+<li>由于Python源代码也是一个文本文件，所以，当你的源代码中包含中文的时候，在保存源代码时，就需要务必指定保存为UTF-8编码。当Python解释器读取源代码时，为了让它按UTF-8编码读取，我们通常在文件开头写上这两行：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python3</span><br><span class="line"># -*- coding: utf-8 -*-</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>第一行注释是为了告诉Linux/OS X系统，这是一个Python可执行程序，Windows系统会忽略这个注释；</p>
+<p>第二行注释是为了告诉Python解释器，按照UTF-8编码读取源代码，否则，你在源代码中写的中文输出可能会有乱码。</p>
+<p>申明了UTF-8编码并不意味着你的.py文件就是UTF-8编码的，必须并且要确保文本编辑器正在使用UTF-8 without BOM编码。</p>
+<hr>
+<h2 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a>格式化</h2><p><img src="https://wx3.sinaimg.cn/large/80ceacb8ly1ftbncmjqnvj20c206f0st.jpg" alt="image3"></p>
+<p>在Python中，采用的格式化方式和C语言是一致的，用%实现，举例如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'Hello, %s'</span> % <span class="string">'world'</span></span><br><span class="line"><span class="string">'Hello, world'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'Hi, %s, you have $%d.'</span> % (<span class="string">'Michael'</span>, <span class="number">1000000</span>)</span><br><span class="line"><span class="string">'Hi, Michael, you have $1000000.'</span></span><br></pre></td></tr></table></figure>
+<p>常见的占位符有：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">占位符</th>
+<th style="text-align:center">替换内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">%d</td>
+<td style="text-align:center">整数</td>
+</tr>
+<tr>
+<td style="text-align:center">%f</td>
+<td style="text-align:center">浮点数</td>
+</tr>
+<tr>
+<td style="text-align:center">%s</td>
+<td style="text-align:center">字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">%x</td>
+<td style="text-align:center">十六进制整数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="注：-2"><a href="#注：-2" class="headerlink" title="!!!注："></a><strong>!!!注</strong>：<br></h3><p>1.格式化整数和浮点数还可以指定是否补0和整数与小数的位数。</p>
+<p>2.如果你不太确定应该用什么，%s 永远起作用，它会把任何数据类型转换为字符串。</p>
+<p>3.有些时候，字符串里面的%是一个普通字符怎么办？这个时候就需要转义，用%%来表示一个%。</p>
+<h3 id="format"><a href="#format" class="headerlink" title="format()"></a>format()</h3><blockquote>
+<p>另一种格式化字符串的方法是使用字符串的format()方法，它会用传入的参数依次替换字符串内的占位符{0}、{1}……，不过这种方式写起来比%要麻烦得多。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'Hello, &#123;0&#125;, 成绩提升了 &#123;1:.1f&#125;%'</span>.format(<span class="string">'小明'</span>, <span class="number">17.125</span>)</span><br><span class="line"><span class="string">'Hello, 小明, 成绩提升了 17.1%'</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8001/" target="_blank" rel="noopener">Python 语言基础01</a><br><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8003/" target="_blank" rel="noopener">Python 语言基础03</a><br><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8004/" target="_blank" rel="noopener">Python 语言基础04</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/17/2018/07/Python-语言基础02/" data-id="cjl3byfl1000ggcapw6lt2sxo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/07/Python-语言基础01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/16/2018/07/Python-语言基础01/" class="article-date">
+  <time datetime="2018-07-16T03:13:02.000Z" itemprop="datePublished">2018-07-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/16/2018/07/Python-语言基础01/">Python 语言基础01</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>计算机顾名思义就是可以做数学计算的机器，因此，计算机程序理所当然地可以处理各种数值。但是，计算机能处理的远不止数值，还可以处理文本、图形、音频、视频、网页等各种各样的数据，不同的数据，需要定义不同的数据类型。在Python中，能够直接处理的数据类型有以下几种：
+　　</p>
+<h2 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h2><p>Python可以处理任意大小的整数，当然包括负整数，在程序中的表示方法和数学上的写法一模一样，例如：1，100，-8080，0，等等。</p>
+<p>计算机由于使用二进制，所以，有时候用十六进制表示整数比较方便，<strong>十六进制</strong>用 <strong>0x</strong> 前缀和0-9，a-f表示，例如：0xff00，0xa5b4c3d2，等等。</p>
+<h2 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h2><p><strong>浮点数也就是小数</strong>，之所以称为浮点数，是因为按照科学记数法表示时，一个浮点数的小数点位置是可变的，比如，1.23x10^9和12.3x10^8是完全相等的。浮点数可以用数学写法，如1.23，3.14，-9.01，等等。但是对于很大或很小的浮点数，就必须用科学计数法表示，把<strong>10用e替代</strong>，1.23x10^9就是1.23e9，或者12.3e8，0.000012可以写成1.2e-5，等等。</p>
+<p><strong>整数和浮点数在计算机内部存储的方式是不同的，整数运算永远是精确的（除法难道也是精确的？是的！），而浮点数运算则可能会有四舍五入的误差。</strong></p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>字符串是以单引号 <strong>‘</strong> 或双引号 <strong>“</strong> 括起来的任意文本，比如’abc’，”xyz”等等。<strong>请注意</strong>，’’或””本身只是一种表示方式，不是字符串的一部分，因此，字符串’abc’只有a，b，c这3个字符。如果’本身也是一个字符，那就可以用””括起来，比如”I’m OK”包含的字符是I，’，m，空格，O，K这6个字符。</p>
+<p>如果字符串内部既包含 ‘ 又包含 “ 怎么办？可以用<strong>转义字符\</strong>来标识，比如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'I\'m \"OK\"!'</span></span><br><span class="line"><span class="comment">#表示的字符串内容是：</span></span><br><span class="line">I<span class="string">'m "OK"!</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>\n表示换行</p>
+</li>
+<li><p>\t表示制表符</p>
+</li>
+<li><p>字符 \ 本身也要转义，所以 \ 表示的字符就是 \ </p>
+</li>
+<li><p>Python允许使用 <strong>‘’’…’’’</strong>的格式表示多行内容，还可以在前面加上 <strong>r</strong> 使用 <strong>r’’’…’’’</strong></p>
+</li>
+</ul>
+<h2 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h2><p>在Python中，可以直接用True、False表示布尔值<strong>（注意大小写）</strong>。</p>
+<ul>
+<li><p>布尔运算</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">True</span></span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">False</span></span><br><span class="line"><span class="keyword">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">3</span> &gt; <span class="number">2</span></span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">3</span> &gt; <span class="number">5</span></span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>布尔值可以用 and 、or 和 not 运算<br><br>and 运算是<strong>与运算</strong>，只有所有都为 True , and 运算结果才是True：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">True</span> <span class="keyword">and</span> <span class="keyword">True</span></span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">True</span> <span class="keyword">and</span> <span class="keyword">False</span></span><br><span class="line"><span class="keyword">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">False</span> <span class="keyword">and</span> <span class="keyword">False</span></span><br><span class="line"><span class="keyword">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">5</span> &gt; <span class="number">3</span> <span class="keyword">and</span> <span class="number">3</span> &gt; <span class="number">1</span></span><br><span class="line"><span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>　　or 运算是<strong>或运算</strong>，只要其中有一个为 True ，or 运算结果就是 True。<br><br>　　not 运算是<strong>非运算</strong>，它是一个<strong>单目运算符</strong>，把True变成False，False变成True。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">not</span> <span class="keyword">True</span></span><br><span class="line"><span class="keyword">False</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">not</span> <span class="keyword">False</span></span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">not</span> <span class="number">1</span> &gt; <span class="number">2</span></span><br><span class="line"><span class="keyword">True</span></span><br></pre></td></tr></table></figure>
+<p>　　布尔值经常用在条件判断中，比如：<br><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">    print(<span class="string">'adult'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line"> 	print(<span class="string">'tennager'</span>)</span><br></pre></td></tr></table></figure></p>
+<h2 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h2><p>空值是Python里一个特殊的值，用None表示。<strong>None不能理解为0</strong>，因为0是有意义的，而None是一个特殊的空值。</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>变量的概念基本上和初中代数的方程变量是一致的，只是在计算机程序中，变量不仅可以是数字，还可以是任意数据类型。<br></p>
+<p>变量在程序中就是用一个变量名表示了，变量名必须是<strong>大小写英文、数字和 _ 的组合，且不能用数字开头</strong></p>
+<p><strong>动态语言</strong>：变量本身类型不固定。<br><br><strong>静态语言</strong>：在定义变量时必须制定变量类型，如果赋值时类型不匹配，就会报错。例如Java语言。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">123</span>;<span class="comment">//a是整数型变量</span></span><br><span class="line">a = <span class="string">"ABC"</span>; <span class="comment">//错误：不能把字符串赋给整型变量</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>所谓常量就是不能变的变量，比如常用的数学常数 π 就是一个常量。在Python中，通常用<strong>全部大写</strong>的变量名表示常量：</p>
+<blockquote>
+<p>PI = 3.14159265359</p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8002/" target="_blank" rel="noopener">Python 语言基础02</a><br><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8003/" target="_blank" rel="noopener">Python 语言基础03</a><br><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8004/" target="_blank" rel="noopener">Python 语言基础04</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/16/2018/07/Python-语言基础01/" data-id="cjl3byfkw000cgcap20nj2q51" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/07/Java-语言简介和开发环境" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/15/2018/07/Java-语言简介和开发环境/" class="article-date">
+  <time datetime="2018-07-15T03:42:50.000Z" itemprop="datePublished">2018-07-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/15/2018/07/Java-语言简介和开发环境/">Java 语言简介和开发环境</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Java-语言简介"><a href="#Java-语言简介" class="headerlink" title="Java 语言简介"></a>Java 语言简介</h3><p>Java是一种高级计算机语言，它是由SUN公司（已被Oracle公司收购）于1995年5月推出的一种一个编写<strong>跨平台</strong>应用软件、完全<strong>面向对象</strong>的程序设计语言。</p>
+<p>Java语言<strong>简单易用、安全可靠</strong>，主要面向Internet编程，自问世以来，与之相关的技术和应用发展的非常快。如今，Java技术无处不在。</p>
+<p>Java三个开发方向</p>
+<ul>
+<li>Java  SE(Java Platform Standard Edition)标准版，是为开发普通桌面和商务应用程序提供的解决方案。Java SE是三个平台中最核心的部分，Java EE 和 Java ME 都是从Java SE 的基础上发展而来，<strong>Java SE平台中包括了Java最核心的类库</strong>，如集合、IO、数据库连接以及网络编程等。</li>
+</ul>
+<ul>
+<li>Java EE(Java Platform Enterprise Edition)企业版，是为开发企业级应用程序提供的解决方案。Java EE可以被看做一个技术平台，该平台用于开发、装配以及部署企业级应用程序，其中主要包括Servlet、JSPJavaBean、JDBC、EJB、WebService等技术。</li>
+</ul>
+<ul>
+<li>Java ME(Java Platform Micro Edition)小型版，是为了开发电子消费产品和嵌入式设备提供解决方案。</li>
+</ul>
+<p><strong>Java语言的特点</strong>：简单、面向对象、安全、跨平台、支持多线程。</p>
+<h3 id="开发环境搭建"><a href="#开发环境搭建" class="headerlink" title="开发环境搭建"></a>开发环境搭建</h3><p>SUN公司提供了一套Java开发环境，简称<strong>JDK</strong>(Java Development Kit),它是整个Java的核心，其中包括Java编译器、Java运行工具、Java文档生成工具、Java打包工具等。</p>
+<p>除了JDK，还提供了一种<strong>JRE</strong>(Java Runtime Environment)工具，它是Java 运行环境。JRE中只包含Java运行工具，<strong>JRE = JVM + API</strong>，且<strong>JDK工具中自带了一个JRE工具</strong>，开发人员只用在计算机上<strong><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">安装JDK即可</a></strong>。</p>
+<h4 id="JDK目录介绍"><a href="#JDK目录介绍" class="headerlink" title="JDK目录介绍"></a>JDK目录介绍</h4><p>JDK安装完毕后，会在硬盘上生成一个目录，该目录被称为JDK安装目录。</p>
+<ul>
+<li>bin 目录：该目录存放一些可执行程序，如javac.exe（Java 编译器）、java.exe（Java 运行工具）等等。</li>
+</ul>
+<ul>
+<li>db 目录：db目录是一个小型的数据库。装一个数据库软件，选择直接使用JavaDB即可。</li>
+</ul>
+<ul>
+<li>jre 目录：意为Java程序运行时环境。它包含Java虚拟机，运行时的类包、Java应用启动器以及一个bin目录。<strong>不包含开发环境中的开发工具。</strong></li>
+</ul>
+<ul>
+<li>include 目录：由于JDK是通过C和C++实现的，因此在启动时需要引入一些C语言的头文件，该目录就是存放这些东西的。</li>
+</ul>
+<ul>
+<li>src.zip 文件：压缩文件，其中存放Java核心类的源代码，通过该文件可以查看Java基础类的源代码。</li>
+</ul>
+<h4 id="特别注意："><a href="#特别注意：" class="headerlink" title="特别注意："></a>特别注意：</h4><blockquote>
+<ul>
+<li><strong>javac.exe</strong> 是Java的编译工具，它可以将编写好的Java文件编译成字节码文件（可执行的Java程序）。Java源文件的扩展名为 <strong>.java</strong>,编译后生成的Java字节码文件的扩展名为<strong>.class</strong>。</li>
+</ul>
+<ul>
+<li><strong>java.exe</strong> 是Java运行工具，它会启动一个<strong>Java虚拟机（JVM）</strong>进程，Java虚拟机相当于一个虚拟的操作系统，它专门负责运行Java 编译器生成的字节码文件（.class 文件）</li>
+</ul>
+</blockquote>
+<h4 id="path-环境变量"><a href="#path-环境变量" class="headerlink" title="path 环境变量"></a>path 环境变量</h4><blockquote>
+<p>path环境变量是系统环境变量的一种，它是用于保存一系列的路径，每个路径之间以分号分隔。</p>
+</blockquote>
+<p>设置path环境变量步骤（win10）：此电脑–&gt;右键属性–&gt;高级系统设置–&gt;环境变量–&gt;系统环境变量–&gt;找到Path，将javac命令所在目录（JDK下bin目录）路径粘贴到其中–&gt;设置完毕，打开命令行窗口输入javac，命令行会显示帮助信息。</p>
+<p><img src="http://wx2.sinaimg.cn/large/80ceacb8ly1ftah5z7ugdj20r60e7dgw.jpg" alt="image"></p>
+<h4 id="classpath-环境变量"><a href="#classpath-环境变量" class="headerlink" title="classpath 环境变量"></a>classpath 环境变量</h4><blockquote>
+<p>classpath 环境变量也用于保存一系列路径，它和 path 环境变量的查看与配置方式完全相同。当 Java 虚拟机需要运行一个类时，会在classpath环境变量中锁定路径下寻找所需的 class 文件。<strong>注</strong>：从JDK5.0开始，如果classpath 环境变量没有进行设置，Java虚拟机会自动将其设置为“.” ，也就是当前目录。</p>
+</blockquote>
+<h3 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h3><ul>
+<li><p><a href="https://notepad-plus.en.softonic.com/" target="_blank" rel="noopener">notepad++</a>/<a href="https://www.editplus.com/download.html" target="_blank" rel="noopener">Editpuls</a>/<a href="http://www.ultraedit.com/downloads/uex.html" target="_blank" rel="noopener">UltraEdit</a>: 文本编辑器，入门推荐</p>
+</li>
+<li><p><a href="https://www.eclipse.org/downloads/" target="_blank" rel="noopener">Eclipse</a>：IDE，插件式，通用灵活，中期可用</p>
+</li>
+<li><p><a href="http://www.jetbrains.com/idea/" target="_blank" rel="noopener">Inteilj Idea</a>：IDE，功能强大，新宠，Java EE 和 Java web 开发必备</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/15/2018/07/Java-语言简介和开发环境/" data-id="cjl3byfkr0007gcapp0lwfvgr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/07/Python 语言简介和初体验" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/11/2018/07/Python 语言简介和初体验/" class="article-date">
+  <time datetime="2018-07-11T06:02:06.000Z" itemprop="datePublished">2018-07-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/11/2018/07/Python 语言简介和初体验/">Python 语言简介和初体验</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>文章纯手打，如果文章哪里有错别字还请谅解！</p>
+</blockquote>
+<hr>
+<h3 id="Python语言介绍："><a href="#Python语言介绍：" class="headerlink" title="Python语言介绍："></a>Python语言介绍：</h3><ul>
+<li><p><strong>面向对象，解释型计算机程序设计</strong></p>
+</li>
+<li><p><strong>设计哲学</strong>：优雅，明确，简单，可读性强</p>
+</li>
+<li><p><strong>优点</strong>：功能强大，开发效率高，应用广泛，易上手，语法简洁</p>
+</li>
+<li><p><strong>缺点</strong>：</p>
+<p>①运行速度慢    和C语言相比，因为Python是解释型的语言，代码会在执行时会一行一行地翻译成CPU能理解的机器码<br><img src="http://wx3.sinaimg.cn/large/80ceacb8ly1ftac0qb0eqj20am05274d.jpg" alt="image01"></p>
+<p>C语言，运行前直接编译成CPU能执行的机器码</p>
+<p>②代码不能加密</p>
+<p> <strong>用途</strong>：网页开发、可视化（GUI）界面开发、网络、系统编程、数据分析、及其学习、网络爬虫、科学计算    </p>
+</li>
+<li><p><strong>著名网站</strong>：雅虎地图、谷歌中很多组成部分、Youtube、豆瓣网</p>
+</li>
+<li><p><strong>与其他语言比较</strong>：</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Java</span></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">	</span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"Hello World"</span>);</span><br><span class="line">		</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Python</span></span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line">print(<span class="string">"Hello World"</span>)</span><br></pre></td></tr></table></figure>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://wx3.sinaimg.cn/large/80ceacb8ly1ftac6vgrd4j20by050t8w.jpg" alt="image2"></h2><h2 id="安装Python和配置环境："><a href="#安装Python和配置环境：" class="headerlink" title="安装Python和配置环境："></a>安装Python和配置环境：</h2><p>1.安装Python</p>
+<p><strong>注</strong>：确认设备为32位还是64位操作系统，注意平台分为AMD和Intel，特别要注意勾上    Add Python 3.6 to PATH，然后点“Install Now”即可完成安装。</p>
+<p>2.启动Python</p>
+<ul>
+<li><p>启动方式：Python图形化界面</p>
+</li>
+<li><p>Windows:启动命令提示符窗口-&gt;输入python-&gt;退出exit()并回车</p>
+</li>
+<li><p>Mac&amp;&amp;Linux:-打开终端-&gt;运行python3</p>
+</li>
+</ul>
+<p>3.Python Interpreter(Python解释器)</p>
+<ul>
+<li>python.exe 为python解释器</li>
+</ul>
+<p>4.环境变量</p>
+<ul>
+<li>将解释器的路径加入系统环境变量的path中</li>
+</ul>
+<hr>
+<h3 id="使用文本编辑器"><a href="#使用文本编辑器" class="headerlink" title="使用文本编辑器"></a>使用文本编辑器</h3><p>用文本编辑器写Python程序，然后保存为后缀为.py的文件，就可以用Python直接运行程序了。</p>
+<p><strong>Python交互模式和直接运行.py文件有什么区别？</strong></p>
+<ul>
+<li>直接输入 python 直接进入交互模式，相当于启动了Python解释器，但是等你一行一行输入源码，每输入一行就执行一行。</li>
+<li>直接运行.py 文件相当于启动了Python解释器，然后一次性执行多行代码。</li>
+</ul>
+<p><img src="https://wx2.sinaimg.cn/large/80ceacb8ly1ftacckvcyaj208w06oweh.jpg" alt="image3"></p>
+<h3 id="输入和输出"><a href="#输入和输出" class="headerlink" title="输入和输出"></a>输入和输出</h3><ul>
+<li>输出</li>
+</ul>
+<p>　　用print()在括号中加上字符串，就可以想屏幕上输出指定的文字。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'Hello World!'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>　　print()函数也可以接受多个字符串，用逗号”,”隔开，就可以连成一串输出。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'My name'</span>,<span class="string">'is'</span>,<span class="string">'xxx'</span>)</span><br><span class="line"><span class="comment">#输出结果</span></span><br><span class="line">My name <span class="keyword">is</span> xxx</span><br></pre></td></tr></table></figure></p>
+<p>　　print()会依次打印每个字符串，遇到逗号”,”就会输出一个空格。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'This is'</span>,<span class="string">'my'</span>,<span class="string">'book'</span>)</span><br><span class="line"><span class="comment">#输出结果</span></span><br><span class="line">This <span class="keyword">is</span> my book</span><br></pre></td></tr></table></figure></p>
+<p>　　print()也可以打印整数，或者计算结果：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">300</span>)</span><br><span class="line"><span class="number">300</span></span><br><span class="line">print(<span class="number">100</span> + <span class="number">200</span>)</span><br><span class="line"><span class="number">300</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>输入</li>
+</ul>
+<p>　　Python提供了一个input(),可以让用户输入字符串，并存放到一个变量里。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = input() <span class="comment">#输入任意字符，按下回车完成输入</span></span><br><span class="line">name <span class="comment">#输入变量名name，查看变量内容</span></span><br><span class="line">Michael</span><br></pre></td></tr></table></figure></p>
+<p>　　input()可以让你显示一个字符串来提示用户。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = input(<span class="string">'please enter your name: '</span>)</span><br><span class="line">please enter your name:</span><br><span class="line">print(<span class="string">'hello,'</span>, name)</span><br></pre></td></tr></table></figure>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><blockquote>
+<p>1.认识Python<br>2.学会如何把Python安装到计算机中，并且熟练打开和退出Python交互式环境。</p>
+<ul>
+<li>在Windows上运行Python时，请先启动命令行，然后运行python。</li>
+<li>在Mac和Linux上运行Python时，请打开终端，然后运行python3。</li>
+</ul>
+<p>3.在Python交互式模式下，可以直接输入代码，然后执行，并立刻得到结果。<br>　命令行模式下，可以直接运行.py文件。<br>4.输入是Input，输出是Output，因此，我们把输入输出统称为Input/Output，或者简写为IO。</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/11/2018/07/Python 语言简介和初体验/" data-id="cjl3byfks0008gcaprpe6ck3q" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Hello-World！" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/09/Hello-World！/" class="article-date">
+  <time datetime="2018-07-09T06:08:02.000Z" itemprop="datePublished">2018-07-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/09/Hello-World！/">Hello World！</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://wx2.sinaimg.cn/large/80ceacb8ly1ft3l7ku2b9j20m80dwq3z.jpg" alt="enter image description here"></p>
+<h1 id="Hello-World！"><a href="#Hello-World！" class="headerlink" title="Hello World！"></a>Hello World！</h1><h2 id="博客第一帖。"><a href="#博客第一帖。" class="headerlink" title="博客第一帖。"></a>博客第一帖。</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/09/Hello-World！/" data-id="cjl3byfjh0000gcap4f42nhuc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/多学一招/">多学一招</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/08/2018/08/Java-面向对象/">Java 面向对象</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/05/2018/08/Java-语言基础05/">Java 语言基础05</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/03/2018/08/Java-语言基础04/">Java 语言基础04</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/2018/08/Java-语言基础03/">Java 语言基础03</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/2018/07/Java-语言基础02/">Java 语言基础02</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

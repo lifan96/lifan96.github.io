@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2018/08/Java-面向对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/08/2018/08/Java-面向对象/" class="article-date">
+  <time datetime="2018-08-08T04:23:13.000Z" itemprop="datePublished">2018-08-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/08/2018/08/Java-面向对象/">Java 面向对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>面向对象特点：封装性、继承性、多态性</p>
+</blockquote>
+<h1 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<li>类是对某一类事物的抽象描述，它用于描述一组对象的共同特征和行为。</li>
+<li>对象用于表示现实中该类事物的个体。</li>
+<li>类中可以定义<strong>成员变量</strong>和<strong>成员方法</strong>，其中成员变量用于描述对象的特征，也被称作属性。成员方法用于描述对象的行为，可简称方法。</li>
+<li>定义在类中的变量称为<strong>成员变量</strong>，定义方法在方法中的变量称为<strong>局部变量</strong>。</li>
+</ul>
+<h2 id="对象的创建和使用"><a href="#对象的创建和使用" class="headerlink" title="对象的创建和使用"></a>对象的创建和使用</h2><ul>
+<li><p>在 Java 程序中可以使用 <strong>new 关键字</strong>来创建对象。</p>
+<blockquote>
+<p>类名 对象名称 = new 类名 ( ) ;</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> age = <span class="number">10</span>;   <span class="comment">//类中定义的变量被称作成员变量</span></span><br><span class="line">    <span class="comment">//定义speak()方法</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> age = <span class="number">60</span>;   <span class="comment">//方法内部定义的变量被称作局部变量</span></span><br><span class="line">        System.out.println(<span class="string">"大家好，我今年"</span>+age+<span class="string">"岁!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>  <img src="http://ws2.sinaimg.cn/large/80ceacb8ly1fug2j0xm9kj20ek08d3z7.jpg" alt="image"></p>
+<ul>
+<li><p>通过对象的引用来访问对象所有的成员。</p>
+<blockquote>
+<p>对象引用 <strong>.</strong> 对象成员</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example01</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mian</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Person p1 = <span class="keyword">new</span> Person();  <span class="comment">//创建第一个Person对象</span></span><br><span class="line">        Person p2 = <span class="keyword">new</span> Person();  <span class="comment">//创建第二个Person对象</span></span><br><span class="line">        p1.age = <span class="number">18</span>;               <span class="comment">//为age属性赋值</span></span><br><span class="line">        p1.speak();                <span class="comment">//调用对象方法</span></span><br><span class="line">        p2.speak();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://ws3.sinaimg.cn/large/80ceacb8ly1fug2vno33jj20cs09gjs8.jpg" alt="image"></p>
+</li>
+<li><p>Java虚拟机会自动为成员变量初始化，针对不同类型的成员变量，Java虚拟机会赋予不同的初始值。</p>
+<p><img src="http://wx4.sinaimg.cn/large/80ceacb8ly1fug3bqi3kaj20tg07lgn0.jpg" alt="image"></p>
+</li>
+<li><p><strong>当没有任何变量引用这个对象时，它将成为垃圾对象，不能再被实现。</strong></p>
+</li>
+</ul>
+<h2 id="类成员的封装"><a href="#类成员的封装" class="headerlink" title="类成员的封装"></a>类成员的封装</h2><ul>
+<li>所谓类的封装是指在定义一个类时，将类中的<strong>属性私有化</strong>，即使用 <strong>private 关键字</strong>来修饰。</li>
+<li>私有属性只能在它所在类中被访问。</li>
+<li>为了能让外界访问私有属性，需要提供一些使用 public 修饰的公有方法，其中包括用于获取属性值的 getXxx() 方法和设置属性值的 setXxx() 方法。 </li>
+</ul>
+<h1 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h1><h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>在一个类中定义的方法如果同时满足以下三个条件，该方法称为构造方法：</p>
+<ol>
+<li>方法名与类名相同。</li>
+<li>在方法名的前面没有返回值类型的声明。</li>
+<li>在方法中不能使用 return 语句返回一个值。</li>
+</ol>
+<ul>
+<li><strong>new 语句不仅会实例化类对象，还会调用类中的构造方法。</strong></li>
+<li>在一个类中除了定义无参的构造方法，还可以定义有参的构造方法，通过有参的构造方法就可以实现对属性的赋值。</li>
+</ul>
+<h2 id="构造方法的重载"><a href="#构造方法的重载" class="headerlink" title="构造方法的重载"></a>构造方法的重载</h2><ul>
+<li><p>与普通方法一样，构造方法也可以重载，在一个类中可以定义多个构造方法，只要每个<strong>构造方法的参数类型或个数不同</strong>即可。</p>
+</li>
+<li><p><strong>注：</strong></p>
+<p><strong>1.  在Java中的每个类都至少有一个构造方法，如果一个类中没有定义构造方法，系统会自动为这个类创建一个默认的构造方法，这个默认的构造方法没有参数，在其方法体中没有任何代码，即什么也不做。</strong></p>
+<p><strong>2. 构造方法不用 private 修饰 ，通常用 public 来修饰</strong>。</p>
+</li>
+</ul>
+<h2 id="this-关键字的使用"><a href="#this-关键字的使用" class="headerlink" title="this 关键字的使用"></a>this 关键字的使用</h2><ul>
+<li><p>this 关键字在程序中的三种常见用法：</p>
+<ol>
+<li><p>通过 this 关键字可以明确地去访问一个类的成员变量，解决与局部变量名称冲突问题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过 this 关键字调用成员方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">openMouth</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ... </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.openMonth();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造方法是在实例化对象时被Java虚拟机自动调用的，在程序中不能像调用其他方法一样去掉用构造方法，但可以在一个构造方法中使用“ <strong>this([参数1，参数2…])</strong>”的形式来调用其他的构造方法。</p>
+<ul>
+<li><p>只能在构造方法中使用 this 调用其他构造方法，不能在成员方法中使用。</p>
+</li>
+<li><p>在构造方法中，使用 this 调用构造方法的语句必须位于第一行，且只能出现一次。</p>
+</li>
+<li><p>不能在一个类的两个构造方法中使用 this 互相调用。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="super-关键字的使用"><a href="#super-关键字的使用" class="headerlink" title="super 关键字的使用"></a>super 关键字的使用</h2><ul>
+<li><p>问题：当子类重写父类的方法后，子类对象无法访问父类被重写的方法。</p>
+<p>解决：Java 提供一个 super 关键字用于访问父类的成员。</p>
+</li>
+<li><p>使用 super 关键字调用父类的成员变量和成员方法。</p>
+<blockquote>
+<p>super.成员变量</p>
+<p>super.成员方法([参数1，参数2…])</p>
+</blockquote>
+</li>
+<li><p>使用 super 关键字调用父类的构造方法。</p>
+<blockquote>
+<p>super([参数1，参数2…])</p>
+</blockquote>
+</li>
+<li><p><strong>注意：</strong></p>
+<p><strong>1. 通过 super 调用父类构造方法的代码必须位于子类构造方法的第一行，并且只能出现一次。</strong></p>
+<p><strong>2. 在定义一个类时，如果没有特殊需求，尽量在类中定义一个无参的构造方法，避免被继承时出现错误。</strong></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/08/2018/08/Java-面向对象/" data-id="cjl3byfle000tgcap32bebezi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/08/Java-语言基础05" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/05/2018/08/Java-语言基础05/" class="article-date">
+  <time datetime="2018-08-05T10:28:04.000Z" itemprop="datePublished">2018-08-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/05/2018/08/Java-语言基础05/">Java 语言基础05</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><h2 id="异常概念"><a href="#异常概念" class="headerlink" title="异常概念"></a>异常概念</h2><blockquote>
+<p>在程序运行的过程中，会发生各种非正常状况，比如程序运行时磁盘空间不足，网络连接中断，被装载的类不存在。针对这种情况，在Java语言中，引入了异常，以异常类的形式对这些非正常情况进行封装，通过异常处理机制对程序运行时发生的各种问题进行处理。</p>
+</blockquote>
+<p><img src="http://wx3.sinaimg.cn/large/80ceacb8ly1fu5y1awhtnj20ex07rgmd.jpg" alt="image"></p>
+<blockquote>
+<p>Throwable 有两个直接子类Error 和 Exception，其中Error代表程序中产生的错误，Exception代表程序中产生的异常。</p>
+</blockquote>
+<ul>
+<li><p>Error 类称为错误类，它表示Java 运行时产生的系统内部错误或资源耗尽的错误，是比较严重的，仅靠修改程序本身是不能恢复执行的。</p>
+</li>
+<li><p>Exception 类称为异常类，它表示程序本身可以处理的错误，在开发Java程序中进行的异常处理，都是针对Exception类及其子类。在Exception 类的众多子类中有一个特殊的<strong>RuntimeException类，该类及其子类用于表示运行时异常</strong>，除了此类，Exception 类下所有其他的子类都用于表示编译时异常。</p>
+</li>
+<li><p>Throwable 类中的常用方法</p>
+<p><img src="http://wx2.sinaimg.cn/large/80ceacb8ly1fu5y9wks7nj20m103rq3u.jpg" alt="image"></p>
+</li>
+</ul>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><ul>
+<li><p>try … catch</p>
+<blockquote>
+<p>Java 中提供一种对异常进行处理的方式——异常捕获</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//程序代码块</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(ExceptionType(Exception 类及其子类) e)&#123;</span><br><span class="line">    <span class="comment">//对ExceptionType的处理</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中在try 代码块中编写可能发生异常的Java 语句，catch 代码块中编写针对异常进行处理的代码。当try 代码块的程序发生了异常，系统会将这个异常的信息封装成一个异常对象，并将这个对象传递给catch代码块。catch 代码块需要一个参数指明它所能够接受的异常类型，这个参数的类型必须是Exception类或其子类。</p>
+<hr>
+</li>
+<li><p>finally</p>
+<blockquote>
+<p>在程序中，有时候我们希望语句无论程序是否发生异常都要执行，这个时候在try … catch语句后，加一个 finally 代码块。</p>
+</blockquote>
+<p><strong>注：</strong></p>
+<p><strong>不论程序是否发生异常还是使用 return 语句结束，finally语中的语句都会执行。用途：例如释放系统资源。</strong></p>
+<p><strong>在try … catch中如果执行了System.exit(0)语句，finally中的语句就不会执行。System.exit(0)表示退出当前的Java虚拟机，Java虚拟机停止了，任何代码都不能再执行。</strong></p>
+<hr>
+</li>
+<li><p>throws</p>
+<blockquote>
+<p>如果去调用一个别人写的方法时，是否知道别人写的方法是否会异常呢？这就很难做出判断。针对这种情况，Java中允许在方法的后面使用 throws 关键字对外声明该方法有可能发生的异常，这样调用者在调用方法时，就明确地知道该方法有异常，并且必须在程序中对异常进行处理，否则无法编译通过。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">修饰符 返回值类型 方法名([参数<span class="number">1</span>，参数<span class="number">2</span>...])<span class="keyword">throws</span> ExceptionType1[,ExceptionType2...]&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>从上述语法格式中可以看出，throws关键字需要写在方法声明的后面，throws后面需要声方法中发生异常的类型，通常将这种做法称为<strong>方法声明抛一个异常。</strong></p>
+</li>
+</ul>
+<h2 id="异常分类"><a href="#异常分类" class="headerlink" title="异常分类"></a>异常分类</h2><ol>
+<li><p>编译时异常</p>
+<p>在Java中，Exception 类除了RuntimeException 类及其子类都是编译时异常。编译时异常的特点是Java 编译器会对其进行检查，如果出现异常就必须对异常进行处理，否则程序无法通过编译。</p>
+<p><strong>处理编译时期的异常的两种方式：</strong></p>
+<ul>
+<li>使用 try … catch 语句对异常进行捕获。</li>
+<li>使用 throws 关键字声明抛出异常，调用者对其处理。</li>
+</ul>
+<hr>
+</li>
+<li><p>运行时异常</p>
+<p>RuntimeException 类及其子类都是运行时异常。运行时异常特点是Java编译器不会对其检查，也就是说，当程序中出现这类异常时，即使没有使用 try … catch 语句捕获或使用 throws 关键字声明抛出，程序也能编译通过，运行时异常一般是由程序中的逻辑错误引起的，在程序运行时无法恢复。</p>
+</li>
+</ol>
+<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><blockquote>
+<p>Java允许用户自定义异常，但自定义的异常类必须继承自 Exception 或其子类。</p>
+</blockquote>
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//下面的代码是自定义一个异常类继承自 Exception</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyException</span> <span class="keyword">extends</span> <span class="title">Exception</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyException</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();           <span class="comment">//调用 Exception 无参的构造方法</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyException</span><span class="params">(String message)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();		 <span class="comment">//调用 Exception 有参的构造方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在实际开发中，如果没有特殊的要求，自定义的异常类只需继承 Exception 类，在构造方法中使用 super() 语句调用Exception 的构造方法即可。</p>
+<p>使用自定义异常使用 throw 关键字，throw 关键字用于在方法中抛出异常的实例对象。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">throw</span> Exception异常对象</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/05/2018/08/Java-语言基础05/" data-id="cjl3byflc000rgcapy0i8jfwy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/08/Java-语言基础04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/03/2018/08/Java-语言基础04/" class="article-date">
+  <time datetime="2018-08-03T10:26:48.000Z" itemprop="datePublished">2018-08-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/03/2018/08/Java-语言基础04/">Java 语言基础04</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="函数方法"><a href="#函数方法" class="headerlink" title="函数方法"></a>函数方法</h1><h2 id="方法基础"><a href="#方法基础" class="headerlink" title="方法基础"></a>方法基础</h2><ul>
+<li><p>方法定义</p>
+<p>在Java中，声明一个方法的具体语法格式如下：</p>
+<blockquote>
+<p>修饰符 返回值类型 方法名([参数类型 参数名1，参数类型 参数名2，…]){</p>
+<p>​    执行语句</p>
+<p>​    …</p>
+<p>​    return 返回值；</p>
+<p>}</p>
+</blockquote>
+<p>方法的返回值必须为方法声明的返回值类型，如果方法中没有返回值，返回值类型要声明为void，此时，方法中return语句可以省略。</p>
+</li>
+<li><p>方法调用</p>
+<blockquote>
+<p>方法名（参数列表）</p>
+</blockquote>
+</li>
+<li><p>参数的传递</p>
+<ul>
+<li><p>值传递</p>
+<p>方法调用时，实际参数把它的值传递给对应的形式参数，函数接收的是原始值的一个copy，<strong>此时内存中存在两个相等的基本类型，即实际参数和形式参数</strong>，<strong>后面方法中的操作都是对形参这个值的修改，不影响实际参数的值</strong>。 </p>
+</li>
+<li><p>引用传递</p>
+<p>也称为传地址。方法调用时，实际参数的引用(地址，而不是参数的值)被传递给方法中相对应的形式参数，函数接收的是原始值的内存地址； <strong>在方法执行中，形参和实参内容相同，指向同一块内存地址，方法执行中对引用的操作将会影响到实际对象</strong>。 </p>
+</li>
+</ul>
+</li>
+<li><p>变量作用域</p>
+<ul>
+<li><p>全局变量</p>
+<p>定义：又称“外部变量”，它不属于哪个方法，作用域从定义的地址开始到源文件结束。</p>
+</li>
+<li><p>局部变量</p>
+<p>定义：在方法内定义的变量称为“局部变量”或“临时变量”，方法结束后局部变量占用的内存将被释放。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="重载方法"><a href="#重载方法" class="headerlink" title="重载方法"></a>重载方法</h2><blockquote>
+<p>Java 允许在一个程序中定义多个名称相同的方法，但是参数的类型或个数必须不同，这就是方法的重载。<strong>注：方法的重载与返回值类型无关。</strong></p>
+</blockquote>
+<h2 id="方法的递归"><a href="#方法的递归" class="headerlink" title="方法的递归"></a>方法的递归</h2><blockquote>
+<p>方法的递归是指在一个方法的内部调用自身的过程，<strong>递归必须要有结束条件</strong>，不然就会陷入无限递归的状态，永远无法结束调用。</p>
+</blockquote>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><blockquote>
+<p>数组是一种数据结构，用来存储<strong>同一类型值的</strong>集合。通过整型下标（下标从0开始）可以访问数组中的每一个值。</p>
+</blockquote>
+<h2 id="数组的初始化"><a href="#数组的初始化" class="headerlink" title="数组的初始化"></a>数组的初始化</h2><ol>
+<li><p><strong>动态初始化</strong></p>
+<p>在声明数组变量时，需要指出数组类型（数据元素类型后紧跟[]）和数组变量名字。</p>
+<blockquote>
+<p>int[] a;</p>
+</blockquote>
+<p>上面这条语句只声明了变量a，并没有将a初始化一个真正的数组。应该使用new运算符创建数组。</p>
+<blockquote>
+<p>int[] a = new int[100];</p>
+</blockquote>
+<p>这条语句创建了一个可以存储100个整型的数组。数组长度不要求是常量：new int[n]会创建一个长度为n的数组。</p>
+</li>
+<li><p><strong>静态初始化</strong></p>
+<blockquote>
+<p>int[] a = {2,3,8,5,4,6};</p>
+</blockquote>
+<p>这种语法形式可以在不创建新变量的情况下重新初始化一个数组。</p>
+</li>
+</ol>
+<h2 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++)&#123;</span><br><span class="line">    a[i] = i; <span class="comment">//fills the array with numbers 0 to 99</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建一个数字数组时，所有元素都初始化为0。</li>
+<li>boolean 数组的元素会初始化为false。</li>
+<li>对象数组的元素则初始化为一个特殊值null，这表示这些元素还未存放对象。</li>
+</ul>
+<h2 id="数组元素个数"><a href="#数组元素个数" class="headerlink" title="数组元素个数"></a>数组元素个数</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++)&#123;</span><br><span class="line">    System.out.println(a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>获取数组元素个数使用array.length。</li>
+<li><strong>一旦创建了数组，就不能再改变它的大小。</strong></li>
+</ul>
+<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><ol>
+<li><p>数组声明</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] a;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组初始化</p>
+<ul>
+<li><p>静态初始化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>][<span class="number">6</span>];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动态初始化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] a = &#123;&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;,&#123;<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>&#125;&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><a href="https://www.yunmok.top/2018/07/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8001/" target="_blank" rel="noopener">Java 语言基础01</a></p>
+<p><a href="https://www.yunmok.top/2018/07/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8002/" target="_blank" rel="noopener">Java 语言基础02</a></p>
+<p><a href="https://www.yunmok.top/2018/08/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8003/" target="_blank" rel="noopener">Java 语言基础03</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/03/2018/08/Java-语言基础04/" data-id="cjl3byflg000vgcapz8g4kpxh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/08/Java-语言基础03" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/01/2018/08/Java-语言基础03/" class="article-date">
+  <time datetime="2018-08-01T08:30:32.000Z" itemprop="datePublished">2018-08-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/01/2018/08/Java-语言基础03/">Java 语言基础03</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><blockquote>
+<p>在Java中，使用算术运算符+、-、*、/表示加减乘除运算。当参与/运算的两个操作数是整数时，表示整数除法；否则，表示浮点除法。整数的求余操作用%表示。</p>
+<p><strong>注：</strong>整数被0除将会产生一个异常，而浮点数被0除将会得到一个无穷大或NaN结果。</p>
+</blockquote>
+<ul>
+<li><p>二元运算符</p>
+<blockquote>
+<p>x += 4;//等价于 x = x + 4;</p>
+</blockquote>
+</li>
+<li><p>自增运算符与自减运算符</p>
+<ol>
+<li><p>前缀方式：++n</p>
+</li>
+<li><p>后缀方式：n++</p>
+<p>区别：前缀方式先对变量进行 +1 运算；后缀方式则先使用变量原来的值，在对变量进行 +1 运算。</p>
+</li>
+</ol>
+</li>
+<li><p>关系运算符与boolean运算符</p>
+<ol>
+<li><p>使用两个等号 == 检测是否相等。</p>
+<blockquote>
+<p>3 == 7 //值为false</p>
+</blockquote>
+</li>
+<li><p>使用 != 检测是否不相等。</p>
+<blockquote>
+<p>3! = 7 //值为true</p>
+</blockquote>
+</li>
+<li><p>经常使用的还有&lt;(小于)、&gt;（大于）、&lt;=（小于等于）和 &gt;=（大于等于）。</p>
+</li>
+<li><p>用&amp;&amp;表示逻辑 “与” 、用 ||表示逻辑 “或”。</p>
+<blockquote>
+<p>如果第一个操作数已经能够确定表达式的值，第二个操作数就不必计算了。</p>
+<p>expression1 &amp;&amp; expression2</p>
+<p>expression1 || expression2</p>
+</blockquote>
+</li>
+<li><p>三元操作符 ?:</p>
+<blockquote>
+<p>condition ? expression1 : expression2</p>
+<p>当条件condition 为 true 时计算第1个表达，否则计算第2个表达。例：</p>
+<p>x&lt;y ? x : y //返回 x 和 y 中较小的那个值。</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>位运算符</p>
+<blockquote>
+<p>&amp;(“与”)、|（“或”）、^（“异或”）、~（“非”）</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h1 id="访问修饰符"><a href="#访问修饰符" class="headerlink" title="访问修饰符"></a>访问修饰符</h1><blockquote>
+<p>Java 中4种访问修饰符public / protected / default(friendly) / private</p>
+</blockquote>
+<ol>
+<li>对于public修饰符，它具有最大的访问权限，可以访问任何一个在CLASSPATH下的类、接口、异常等。它往往用于对外的情况，也就是对象或类对外的一种接口的形式。 </li>
+<li>对于protected修饰符，它主要的作用就是用来保护子类的。它的含义在于子类可以用它修饰的成员，其他的不可以，它相当于传递给子类的一种继承的东西。 </li>
+<li>对于default来说，有点的时候也成为friendly（友员），它是针对本包访问而设计的，任何处于本包下的类、接口、异常等，都可以相互访问，即使是父类没有用protected修饰的成员也可以。 </li>
+<li>对于private来说，它的访问权限仅限于类的内部，是一种封装的体现，例如，大多数的成员变量都是修饰符为private的，它们不希望被其他任何外部的类访问。 </li>
+</ol>
+<ul>
+<li>下表为Java访问控制符的含义和使用情况 :</li>
+</ul>
+<p><img src="http://ws4.sinaimg.cn/large/80ceacb8ly1ftvokyhvx5j20jx05laa4.jpg" alt="image"></p>
+<p>  区别：</p>
+<p>  (1) public:可以被所有其他类所访问。</p>
+<p>  (2) private:只能被自己修改。</p>
+<p>  (3) protected:自身，子类及同一个包中类可以访问。</p>
+<p>  (4) default(默认):同一包中的类可以访问，声明时没有加修饰符，认为是friendly。</p>
+<p>  <strong>注意</strong>：Java的访问控制是停留在编译层的，也就是它不会在.class文件中留下任何的痕迹，只在编译的时候进行访问控制的检查。其实，通过反射的手段，是可以访问任何包下任何类中的成员，例如，访问类的私有成员也是可能的。 </p>
+<hr>
+<h1 id="基本结构语句"><a href="#基本结构语句" class="headerlink" title="基本结构语句"></a>基本结构语句</h1><ul>
+<li><p>顺序结构语句</p>
+</li>
+<li><p>选择结构语句</p>
+<ul>
+<li><p>if语句</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(condition)&#123;</span><br><span class="line">    statement1.</span><br><span class="line">        statement2</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>&#123;</span><br><span class="line">    statement3</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多重选择：switch 语句</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(choice)&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>：</span><br><span class="line">        ...</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        ...</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        ...</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>case 标签可以是：</p>
+<ul>
+<li>类型为 char、byte、short 或 int（或其包装类）的常量表达式。</li>
+<li>枚举常量</li>
+<li>字符串字面量</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>循环结构语句</p>
+<ul>
+<li><p>while循环</p>
+<p>当条件为true时，while循环执行一条语句。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(condition)&#123;</span><br><span class="line">    statement</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>while 循环语句首先检测循环条件。因此，循环体中的代码有可能不被执行。</p>
+</li>
+<li><p>do while循环<br>如果希望循环体至少执行一次，则应该将检测条件放在最后。使用do/while循环语句执行这种操作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    statement</span><br><span class="line">&#125; <span class="keyword">while</span>()</span><br></pre></td></tr></table></figure>
+<p>这种循环语句先执行语句，再检测循环条件；然后重复语句，再检测循环条件，以此类推。</p>
+</li>
+<li><p>for循环</p>
+<p>for 循环语句是支持迭代的一种通用结构，利用每次迭代之后更新的计数器或类似的变量来控制迭代次数。下面程序将数字1~10输出到屏幕上：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt;= <span class="number">10</span>;i++)</span><br><span class="line">    System.out.println(i);</span><br></pre></td></tr></table></figure>
+<p>for语句的第一部分通常用于对计数器初始化；第二部分给出每次新一轮循环执行前要检测的循环条件；第三部分指示如何更新计数器。</p>
+<p><strong>注：如果在for语句内部定义一个变量，这个变量就不能在循环体之外使用。另一方面，可以在各自独立的不同for循环中定义同名的变量。</strong></p>
+</li>
+<li><p>for each 循环</p>
+<p>语句格式：for(variable :collection) statement </p>
+<p>定义一个变量暂存集合中的每一个元素，并执行相应的语句/语句块。collection这一集合表达式必须是一个数组或者是一个实现了Iterable接口的类对象。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> element : a)</span><br><span class="line">    System.out.println(element);</span><br></pre></td></tr></table></figure>
+<p>这个循环应该读作“循环a中的每一个元素”。</p>
+</li>
+<li><p>循环控制 break 和 continue 语句</p>
+<ul>
+<li>break 的作用就是跳出一个循环或者结束一个循环。</li>
+<li>continue 的作用是立即结束本次循环，继续执行下一次循环。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://www.yunmok.top/2018/07/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8001/" target="_blank" rel="noopener">Java 语言基础01</a></p>
+<p><a href="https://www.yunmok.top/2018/07/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8002/" target="_blank" rel="noopener">Java 语言基础02</a></p>
+<p><a href="https://www.yunmok.top/2018/08/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8004/" target="_blank" rel="noopener">Java 语言基础04</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/01/2018/08/Java-语言基础03/" data-id="cjl3byfla000ogcapu0gkzfom" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/07/Java-语言基础02" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/29/2018/07/Java-语言基础02/" class="article-date">
+  <time datetime="2018-07-29T05:36:31.000Z" itemprop="datePublished">2018-07-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/29/2018/07/Java-语言基础02/">Java 语言基础02</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h1 id="1-基本数据类型"><a href="#1-基本数据类型" class="headerlink" title="1.基本数据类型"></a>1.基本数据类型</h1><blockquote>
+<p>Java 是一种强类型语言（每一个变量必须声明一种类型）。在Java中，一共有8种数据类型，其中有4种整型、2种浮点型、1种用于表示Unicode编码的字符单元的字符类型char和一种表示真值的boolean类型。</p>
+</blockquote>
+<h3 id="1-1-整型（表示没有小数部分的数值，允许为负数）"><a href="#1-1-整型（表示没有小数部分的数值，允许为负数）" class="headerlink" title="1.1.整型（表示没有小数部分的数值，允许为负数）"></a>1.1.整型（表示没有小数部分的数值，允许为负数）</h3><p><img src="http://wx2.sinaimg.cn/large/80ceacb8ly1ftqok9zd9bj20ng047t9t.jpg" alt="image"></p>
+<ul>
+<li>int 最常用</li>
+<li>long 类型，数值后有一个<strong>后缀L</strong>，用于表示比如星球上的居住人数。</li>
+<li>byte 和 short 类型用于特定场合。比如，底层的文件处理或者需要控制占用存储空间量的大数组。</li>
+</ul>
+<hr>
+<h3 id="1-2-浮点类型（表示有小数部分的数值）"><a href="#1-2-浮点类型（表示有小数部分的数值）" class="headerlink" title="1.2.浮点类型（表示有小数部分的数值）"></a>1.2.浮点类型（表示有小数部分的数值）</h3><p><img src="http://wx2.sinaimg.cn/large/80ceacb8ly1ftqoqxm1bgj20mx02owff.jpg" alt="image"></p>
+<ul>
+<li><p>double 表示这种类型的数值精度是 float 类型的两倍（双精度数值），绝大部分应用程序采用这种数据类型。</p>
+</li>
+<li><p>float类型（单精度数值），数值后有一个<strong>后缀F</strong>，在很多情况下，精度难以满足，所以有很少的情况适合使用float类型。</p>
+<p><strong>注:</strong>没有后缀 F 的默认为 double 类型。</p>
+</li>
+</ul>
+<hr>
+<h3 id="1-3-char-类型（表示单个字符，通常用来表示字符常量，用单引号’-‘括起来）"><a href="#1-3-char-类型（表示单个字符，通常用来表示字符常量，用单引号’-‘括起来）" class="headerlink" title="1.3.char 类型（表示单个字符，通常用来表示字符常量，用单引号’ ‘括起来）"></a>1.3.char 类型（表示单个字符，通常用来表示字符常量，用单引号’ ‘括起来）</h3><h3 id="1-4-boolean-类型"><a href="#1-4-boolean-类型" class="headerlink" title="1.4.boolean 类型"></a>1.4.boolean 类型</h3><ul>
+<li>boolean 类型有两个值：false 和 true，用来判断逻辑条件。整型值和布尔值之间不能转换。</li>
+</ul>
+<hr>
+<h1 id="2-字符串（String）"><a href="#2-字符串（String）" class="headerlink" title="2.字符串（String）"></a>2.字符串（String）</h1><blockquote>
+<p>Java 字符串就是Unicode 字符序列。Java 没有内置的字符串类型，而是预先定义了一个类String，每个<strong>用双引号括起来的字符串</strong>都是String类的一个实例。</p>
+</blockquote>
+<h3 id="2-1-子串"><a href="#2-1-子串" class="headerlink" title="2.1.子串"></a>2.1.子串</h3><ul>
+<li><p>String 类的 substring 方法可以从一个较大的字符串提取一个子串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String greeting = <span class="string">"Hello"</span>;</span><br><span class="line">String s = greeting.substring(<span class="number">0</span>,<span class="number">3</span>);</span><br><span class="line">System.out.println(s);<span class="comment">//输出：Hel</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-2-拼接"><a href="#2-2-拼接" class="headerlink" title="2.2.拼接"></a>2.2.拼接</h3><ul>
+<li><p>Java 语言允许使用 + 号连接（拼接）两个字符串。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="string">"Hello "</span>;</span><br><span class="line">String b = <span class="string">"World!"</span>;</span><br><span class="line">String message = a + b;</span><br><span class="line">System.out.println(message);<span class="comment">//输出：Hello World!</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>当一个字符串与一个非字符串的值进行拼接时，<strong>后者</strong>被转换成字符串。</p>
+</li>
+</ul>
+<h3 id="2-3-不可变字符串"><a href="#2-3-不可变字符串" class="headerlink" title="2.3.不可变字符串"></a>2.3.不可变字符串</h3><ul>
+<li>Sring 类没有提供用于修改字符串的方法。由于不能修改，所以在Java文档中将String 类对象称为不可变字符串。</li>
+</ul>
+<h3 id="2-4-检测字符串是否相等"><a href="#2-4-检测字符串是否相等" class="headerlink" title="2.4.检测字符串是否相等"></a>2.4.检测字符串是否相等</h3><ul>
+<li><p>可以用 <strong>equals</strong>方法检测两个字符串是否相等。对于表达式：s.equals(t)，如果字符串s与字符串t相等，则返回true，否则，返回false。</p>
+<p><strong>注：</strong>不能使用 == 运算符号检测两个字符串是否相等！这个运算符只能确定两个字符串是否放在同一个位置上（同一地址）。</p>
+</li>
+</ul>
+<h3 id="2-5-空串与Null串"><a href="#2-5-空串与Null串" class="headerlink" title="2.5.空串与Null串"></a>2.5.空串与Null串</h3><ul>
+<li><p>空串 “ ” 是长度为0的字符串。可以使用代码检查一个字符串是否为空：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(str.length() == <span class="number">0</span>)</span><br><span class="line"><span class="comment">//或</span></span><br><span class="line"><span class="keyword">if</span>(str.equals(<span class="string">""</span>))</span><br></pre></td></tr></table></figure>
+<p>空串是一个Java对象，有自己的串长度（0）和内容（空）。</p>
+</li>
+<li><p>String还可以放一个特殊的值，名为 null，这表示没有任何对象与该变量有关。要检查一个字符串是否为 null ，要使用以下条件：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(str == <span class="keyword">null</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要检查一个字符串既不是 null 也不是空串，需要使用以下条件：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(str != <span class="keyword">null</span> &amp;&amp; str.length() != <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://yunmok.top/2018/07/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8001/" target="_blank" rel="noopener">Java 语言基础01</a></p>
+<p><a href="https://www.yunmok.top/2018/08/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8003/" target="_blank" rel="noopener">Java 语言基础03</a></p>
+<p><a href="https://www.yunmok.top/2018/08/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8004/" target="_blank" rel="noopener">Java 语言基础04</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/29/2018/07/Java-语言基础02/" data-id="cjl3byfkp0005gcaplcvq6gwp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/07/算法之二分查找法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/27/2018/07/算法之二分查找法/" class="article-date">
+  <time datetime="2018-07-27T00:12:08.000Z" itemprop="datePublished">2018-07-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/算法/">算法</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/27/2018/07/算法之二分查找法/">算法之二分查找法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简单查找法"><a href="#简单查找法" class="headerlink" title="简单查找法"></a>简单查找法</h2><p>使用简单查找法查找元素时，在最糟情况下需要查看每个元素。因此，如果列表包含8个数字，你最多需要检查8个数字。用O(n)表示简单查找法的运行时间。</p>
+<h2 id="二分查找法"><a href="#二分查找法" class="headerlink" title="二分查找法"></a>二分查找法</h2><blockquote>
+<p>二分查找是一种算法，其输入是一个<strong>有序的元素列表</strong>。如果要查找的元素包含在列表中，二分查找返回其位置；否则返回 null 。</p>
+</blockquote>
+<ul>
+<li>猜数字游戏（1-100）</li>
+</ul>
+<p><img src="http://wx1.sinaimg.cn/large/80ceacb8ly1fto3tbqjgsj20ob06bgn6.jpg" alt="image"></p>
+<p>小了，但排除了一半的数字！至此，你知道1～50都小了。接下来，你猜75。</p>
+<p><img src="http://ws2.sinaimg.cn/large/80ceacb8ly1fto3uux3svj20iu070q3t.jpg" alt="image"></p>
+<p>大了，那余下的数字又排除了一半！使用二分查找时，你猜测的是中间的数字，从而每次都<br>将余下的数字排除一半。接下来，你猜63（50和75中间的数字）。</p>
+<p><img src="http://wx4.sinaimg.cn/large/80ceacb8ly1fto3vjk0brj20mz06hq4j.jpg" alt="image"></p>
+<p>这就是二分法。</p>
+<p><img src="http://wx4.sinaimg.cn/large/80ceacb8ly1fto3w30ewoj20rx04aq3m.jpg" alt="image"></p>
+<hr>
+<h2 id="对数"><a href="#对数" class="headerlink" title="对数"></a>对数</h2><p>log 10 100相当于问“将多少个10相乘的结果为100”。答案是两个：10 × 10 = 100。因此，log 10 100 = 2。对数运算是幂运算的逆运算。用O(log2 n)表示二分法的运行时间，也就是O(log n)。</p>
+<hr>
+<h2 id="一些常见的大O运行时间"><a href="#一些常见的大O运行时间" class="headerlink" title="一些常见的大O运行时间"></a>一些常见的大O运行时间</h2><p><strong>下面按从快到慢的顺序列出经常遇到的5种大O运行时间：</strong></p>
+<ul>
+<li><p>O(log n)：对数时间，这样的算法包括二分查找。</p>
+</li>
+<li><p>O(n)：线性时间，这样的算法包括简单查找。</p>
+</li>
+<li><p>O(n * log n)：这样的算法包括快速排序。</p>
+</li>
+<li><p>O(n2)：这样的算法包括选择排序。</p>
+</li>
+<li><p>O(n!)：这样的算法包括旅行商问题的解决方案。</p>
+</li>
+</ul>
+<hr>
+<h2 id="旅行商"><a href="#旅行商" class="headerlink" title="旅行商"></a>旅行商</h2><p>有一位旅行商。<br>他需要前往5个城市。</p>
+<p><img src="http://wx3.sinaimg.cn/large/80ceacb8ly1fto4hxgkp8j20a707xaar.jpg" alt="image"></p>
+<p>这位旅行商（姑且称之为Opus吧）要前往这5个城市，同时要确保旅程最短。为此，可考虑前往这些城市的各种可能顺序。</p>
+<p><img src="http://wx4.sinaimg.cn/large/80ceacb8ly1fto4ixqt99j20hd072t9j.jpg" alt="image"></p>
+<p>推而广之，涉及n个城市时，需要执行n!（n的阶乘）次操作才能计算出结果。因此运行时间为O(n!)，即阶乘时间。除非涉及的城市数很少，否则需要执行非常多的操作。如果涉及的城市数超过100，根本就不能在合理的时间内计算出结果——等你计算出结果，太阳都没了。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ul>
+<li>二分查找的速度比简单查找要快许多，数据越大，差距就越明显。</li>
+<li>O(log n)比O(n)快。需要搜索的元素越多，前者比后者就快得越多。</li>
+<li>算法运行时间并不以秒为单位。</li>
+<li>算法运行时间是从其增速的角度来度量的。</li>
+<li>算法运行时间用大O表示法表示。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/27/2018/07/算法之二分查找法/" data-id="cjl3byfl8000mgcapq1zbh4si" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/07/Git-学习笔记01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/26/2018/07/Git-学习笔记01/" class="article-date">
+  <time datetime="2018-07-26T04:23:40.000Z" itemprop="datePublished">2018-07-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/多学一招/">多学一招</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/26/2018/07/Git-学习笔记01/">Git 学习笔记01</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h1><blockquote>
+<p><strong>pwd</strong> 命令用于显示当前目录</p>
+<p>初始化一个仓库，使用 <strong>git init</strong> 命令</p>
+<p>查看文件内容：使用 <strong>cat <file></file></strong>命令</p>
+<p>修改文件内容：使用 <strong>vi <file></file></strong> 命令</p>
+</blockquote>
+<ul>
+<li><p>添加文件到Git仓库，分两步：</p>
+<p>1.使用命令 <strong>git add <file></file></strong>，注意，可反复多次使用，添加多个文件。</p>
+<p>2.使用命令 <strong>git commit -m <message></message></strong>，完成           -m 后输入本次提交说明</p>
+</li>
+</ul>
+<p><strong>注：</strong>Windows目录一定要使用英文路径，绝不能出现中文。</p>
+<hr>
+<h1 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h1><blockquote>
+<p>要随时掌握工作区的状态，使用 <strong>git status</strong> 命令</p>
+<p>如果 <strong>git status</strong> 告诉你有文件被修改过，用 <strong>git diff</strong> 可以查看修改内容</p>
+<p>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用got reset –hard commit_id</p>
+</blockquote>
+<ul>
+<li>穿梭前，用 <strong>git log</strong> 可以查看提交的历史，以便确定要回退带哪个版本  参数 –pretty=oneline（简洁版）</li>
+<li>要重返未来，用<strong>git reflog</strong>查看历史命令，以便确定要回到未来那个版本（关机重启、命令窗口关闭使用此方法）</li>
+</ul>
+<p><strong>注：</strong>在Git中，用HEAD表示当前版本，上一个版本就是HEAD^，上上一个版本就是HEAD^^，往上个版本就是HEAD~100。例：git rest –hard HEAD^,查找时版本号没必要写全，Git会自动查找。</p>
+<hr>
+<h1 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h1><p>工作区：就是电脑里能看到的目录，如：learngit</p>
+<p>版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库</p>
+<p><img src="http://wx2.sinaimg.cn/large/80ceacb8ly1ftn7bsbhttj20cq06iaa8.jpg" alt="image"></p>
+<p><strong>stage(index)</strong>为暂存区</p>
+<p>Git自动创建第一个<strong>分支master</strong></p>
+<p>指向master的一个<strong>指针HEAD</strong></p>
+<p>分解：</p>
+<p>​        ① 使用git add 实际上就是把文件添加到暂存区</p>
+<p>​        ② 使用git commit 实际上就是把暂存区的所有内容提交到当前分支</p>
+<p>创建Git版本库时，Git自动创建了一个master分支，所以，git commit就是往分支master上提交更改</p>
+<hr>
+<h1 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h1><p><strong>注：</strong>每修改一次需要git add，不然不会进入commit 中</p>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul>
+<li>场景一：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改版，使用命令 <strong>git checkout  –file</strong>。</li>
+<li>场景二：当你不但改乱了工作区某个文件的内容，还添加到暂存区时，想丢弃修改，分两步，第一步用命令<strong>git reset HEAD file </strong>就回到了场景1，然后使用场景一的方法。</li>
+<li>场景三：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<strong>版本回退</strong>一节，前提是没有推送到远程仓库 。</li>
+</ul>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><p>命令<strong>rm file</strong>用于删除工作区的文件。</p>
+<p>命令 <strong>git rm file</strong> 用于删除一个文件。如果一个文件已经被提交到版本库，用于那不要担心删除，但是只能恢复到文件最新版本，且会丢失最后一次提交后修改的内容。 </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/26/2018/07/Git-学习笔记01/" data-id="cjl3byfko0004gcap5vbgvpsw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/07/各进制之间的转换" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/24/2018/07/各进制之间的转换/" class="article-date">
+  <time datetime="2018-07-24T05:56:39.000Z" itemprop="datePublished">2018-07-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/多学一招/">多学一招</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/24/2018/07/各进制之间的转换/">各进制之间的转换</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-十进制和二进制之间的转换"><a href="#1-十进制和二进制之间的转换" class="headerlink" title="1.十进制和二进制之间的转换"></a>1.十进制和二进制之间的转换</h3><ul>
+<li><p>十进制转二进制</p>
+<p>十进制转换成二进制就是一个除以2取余的过程。最后将所有余数倒序排列，得到的数就是转换的果。</p>
+<p><img src="http://ws4.sinaimg.cn/large/80ceacb8ly1ftkx3k4negj205205fwek.jpg" alt="image"></p>
+</li>
+<li><p>二进制转十进制</p>
+<p>二进制转换成十进制要从右向左用二进制位上的每个数去乘以2的相应次方。</p>
+<p>如：把一个二进制数0100 0100转换为十进制，转换方式如下：</p>
+<p><img src="http://wx3.sinaimg.cn/large/80ceacb8ly1ftkztt9xmtj20ia00tjrr.jpg" alt="image"></p>
+</li>
+</ul>
+<h3 id="2-二进制和八进制、十六进制之间的转换"><a href="#2-二进制和八进制、十六进制之间的转换" class="headerlink" title="2.二进制和八进制、十六进制之间的转换"></a>2.二进制和八进制、十六进制之间的转换</h3><ul>
+<li><p>二进制转八进制</p>
+<p>二进制转八进制时，首先需要将二进制数自右向左<strong>每三位</strong>分成一段，然后将二进制的每段的三位转为八进制的一位，转换过程中数值的对应关系如下。（<strong>注意八进制必须以0为开头</strong>）</p>
+<p><img src="http://ws3.sinaimg.cn/large/80ceacb8ly1ftl04ao351j20jm040mxs.jpg" alt="image"></p>
+</li>
+<li><p>二进制转十六进制</p>
+<p>二进制转十六进制，首先需要将二进制数<strong>每四位</strong>分成一段，查表转换即可。（<strong>注意十六进制必须以0x或0X开头</strong>）</p>
+<p><img src="http://wx1.sinaimg.cn/large/80ceacb8ly1ftl07u2ifkj20ju04jt9s.jpg" alt="image"></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/24/2018/07/各进制之间的转换/" data-id="cjl3byfl6000jgcapda8rqn2z" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/07/Java-语言基础01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/24/2018/07/Java-语言基础01/" class="article-date">
+  <time datetime="2018-07-24T04:56:49.000Z" itemprop="datePublished">2018-07-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/24/2018/07/Java-语言基础01/">Java 语言基础01</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><blockquote>
+<p>关键字的编程语言里事先定义好并赋予了特殊含义的单词，也称作保留词。</p>
+<p>使用Java关键字时，有几个要注意的地方：</p>
+<ul>
+<li>所有程序的关键字都是小写。</li>
+<li>程序中的标识符不能以关键字命名。</li>
+</ul>
+</blockquote>
+<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><blockquote>
+<p>在编程中，经常需要在程序中定义一些符号来标记一些名称，如包名，类名，方法名，参数名，变量名等，这些符号被称为标识符。</p>
+<p>定义标识符应遵循以下规则：</p>
+<ul>
+<li>包名所有字母一律小写，例如：cn.lisite.test。</li>
+<li>类名和接口名每个单词的首字母都要大写，例如：Person。</li>
+<li>常量名和方法名的每一个单词首字母小写，从第二个单词首字母大写，例如：lineNumber。</li>
+<li>在程序中，应尽量使用有意义的单词来定义标识符，使得程序便于阅读。</li>
+</ul>
+</blockquote>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><blockquote>
+<p>注释是对程序的某个功能或某行代码的解释说明，它只是在Java源文件中有效，在编译程序时编译器会忽略这些注释信息，不会将其编译到class字节码文件中去。</p>
+<p>Java 中的注释有三种类型，具体如下：</p>
+<ul>
+<li>单行注释，用符号“//”表示。</li>
+<li>多行注释，以符号“ / <em> ”开头，以符号” </em> / “结尾。</li>
+<li>文档注释，以符号“ /*<em> ”开头，并在这是内容末尾以“ </em>/ ”结束。</li>
+</ul>
+</blockquote>
+<h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><h4 id="1-整型常量"><a href="#1-整型常量" class="headerlink" title="1.整型常量"></a>1.整型常量</h4><p>整型常量是整数类型的数据，有二进制、八进制、十进制和十六进制4种表示形式。</p>
+<ul>
+<li>二进制：由数字0和1组成的数字序列，前面要以 0b 或者 0B 开头。</li>
+<li>八进制：以0开头并且其后由0~7范围内（包括 0 和 7 ）的整数组成的数字序列。</li>
+<li>十进制：由数字0~9范围内（包括0和9）的整数组成的数字序列。</li>
+<li>十六进制：以 0x 或者 0X 开头并且其后由0~9,A~F（包括两端）组成的数字序列。</li>
+</ul>
+<h4 id="2-浮点数常量"><a href="#2-浮点数常量" class="headerlink" title="2.浮点数常量"></a>2.浮点数常量</h4><p>浮点数常量就是在数学中用到的小数，分为 float 单精度浮点数和 double 双精度浮点数两种类型。</p>
+<ul>
+<li>单精度浮点数：后面以F或f结尾</li>
+<li>双精度浮点数：后面以D或d结尾</li>
+</ul>
+<p><strong>注：在使用浮点数时也可以在结尾处不加任何的后缀，虚拟机会默认为 double 双精度浮点数。</strong></p>
+<h4 id="3-字符常量"><a href="#3-字符常量" class="headerlink" title="3.字符常量"></a>3.字符常量</h4><p>字符常量用以表示一个字符，一个字符常量要用一对英文半角格式的单引号 ‘ ‘ 引起来。</p>
+<p><strong>注：因为Java采用的是Unicode字符集，Unicode字符以 \u 开头，空白字符在Unicode码表中对应的值为 ‘\u0000’ 。</strong></p>
+<h4 id="4-字符串常量"><a href="#4-字符串常量" class="headerlink" title="4.字符串常量"></a>4.字符串常量</h4><p>字符串常量用以表示一串连续的字符，一个字符串常量要用一对英文半角格式的双引号 “ “ 引起来。</p>
+<p><strong>注：一个字符串可以包含一个字符或多个字符，也可以不包含任何字符，即长度为0。</strong></p>
+<h4 id="5-布尔常量"><a href="#5-布尔常量" class="headerlink" title="5.布尔常量"></a>5.布尔常量</h4><p>布尔常量即布尔型的两个值 true 和 false ，该常量用于区分一个事物的真与假。</p>
+<h4 id="6-null-常量"><a href="#6-null-常量" class="headerlink" title="6.null 常量"></a>6.null 常量</h4><p>null 常量只有一个值 null ，表示对象的引用为空。</p>
+<blockquote>
+<p><a href="https://www.yunmok.top/2018/07/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8002/" target="_blank" rel="noopener">Java 语言基础02</a></p>
+<p><a href="https://www.yunmok.top/2018/08/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8003/" target="_blank" rel="noopener">Java 语言基础03</a></p>
+<p><a href="https://www.yunmok.top/2018/08/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8004/" target="_blank" rel="noopener">Java 语言基础04</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/24/2018/07/Java-语言基础01/" data-id="cjl3byfke0001gcapmei0i2ke" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2018/07/Python-函数" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/22/2018/07/Python-函数/" class="article-date">
+  <time datetime="2018-07-22T03:47:04.000Z" itemprop="datePublished">2018-07-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/22/2018/07/Python-函数/">Python 函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h2><blockquote>
+<p>Python内置了很多有用的函数，我们可以直接调用。</p>
+</blockquote>
+<ul>
+<li>调用求绝对值函数 abs 函数：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>abs(<span class="number">100</span>)</span><br><span class="line"><span class="number">100</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>abs(<span class="number">-20</span>)</span><br><span class="line"><span class="number">20</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>函数max() 可以接手任意多个参数，并返回最大的那个：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>max(<span class="number">2</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">-5</span>)</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>int()、float()、str()、bool()函数可以把其他数据类型转换成相对应的数据类型：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="string">'123'</span>)</span><br><span class="line"><span class="number">123</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>int(<span class="number">12.34</span>)</span><br><span class="line"><span class="number">12</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>float(<span class="string">'12.34'</span>)</span><br><span class="line"><span class="number">12.34</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str(<span class="number">1.23</span>)</span><br><span class="line"><span class="string">'1.23'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>str(<span class="number">100</span>)</span><br><span class="line"><span class="string">'100'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bool(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">True</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>bool(<span class="string">''</span>)</span><br><span class="line"><span class="keyword">False</span></span><br></pre></td></tr></table></figure>
+<h2 id="定义函数"><a href="#定义函数" class="headerlink" title="定义函数"></a>定义函数</h2><blockquote>
+<p>在Python中，定义一个函数要使用 def 语句，依次写出函数名、括号、括号中的参数和冒号 : ，然后，在缩进块中编写函数体，函数的 返回值 用 return语句 返回。 </p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 函数名 <span class="params">(参数)</span>:</span></span><br><span class="line">    <span class="keyword">return</span></span><br></pre></td></tr></table></figure>
+<p><strong>注：</strong>如果没有 return 语句，函数执行完毕后也会返回结果，只是结果为 None 。return None 可以简写为 return。 函数可以同时返回多个值，但其实就是一个tuple。</p>
+<h2 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h2><ul>
+<li>位置参数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">poewr</span><span class="params">(x)</span>:</span></span><br><span class="line">	<span class="keyword">return</span> x * x</span><br></pre></td></tr></table></figure>
+<p>对于 power(x) 函数，参数x就是一个位置参数。</p>
+<ul>
+<li>默认参数</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">power</span><span class="params">(x,n=<span class="number">2</span>)</span>:</span></span><br><span class="line">    s = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">0</span>:</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line">        s = s * x</span><br><span class="line">    <span class="keyword">return</span> s</span><br></pre></td></tr></table></figure>
+<p>对于 power()函数，参数 n=2就是一个默认参数。</p>
+<p><strong>设置默认参数时，有几点要注意：</strong></p>
+<blockquote>
+<ol>
+<li>必选参数在前，默认参数在后，否则Python的解释器会报错。</li>
+<li>如何设置默认参数，当函数有多个参数时，把变化大的参数放前面，变化小的参数放后面。变化小的参数就可以作为默认参数。</li>
+<li>默认参数必须指向不变对象。</li>
+</ol>
+</blockquote>
+<p><strong>使用默认参数的好处？</strong></p>
+<blockquote>
+<p>最大的好处是能降低调用函数的难度。</p>
+</blockquote>
+<ul>
+<li>可变参数</li>
+</ul>
+<blockquote>
+<p>在Python函数中，还可以定义可变参数 。顾名思义，可变参数就是传入的参数个数是可变的，可以是1个、2个到任意个，还可以是0个。 </p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span><span class="params">(*numbers)</span>:</span></span><br><span class="line">    sum = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> numbers:</span><br><span class="line">        sum = sum + n * n</span><br><span class="line">    <span class="keyword">return</span> sum</span><br></pre></td></tr></table></figure>
+<p>*numbers 是可变参数，numbers 接收的是一个tuple。</p>
+<p>把 list 或 tuple的元素变成可变参数传进去：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; nums = [1,2,3]</span><br><span class="line">&gt;&gt;&gt; calc(*nums)</span><br><span class="line">14</span><br></pre></td></tr></table></figure>
+<p>*nums 表示把 nums 这个 list 的所有元素作为可变参数传进去。</p>
+<ul>
+<li>关键字参数</li>
+</ul>
+<blockquote>
+<p>关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict 。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person</span><span class="params">(name,age,**kw)</span>:</span></span><br><span class="line">    print(<span class="string">'name:'</span>,name,<span class="string">'age:'</span>,age,<span class="string">'other:'</span>,kw)</span><br></pre></td></tr></table></figure>
+<p>**kw是关键字参数，kw接收的是一个dict。</p>
+<p><strong>关键字参数有什么用？</strong></p>
+<blockquote>
+<p>它可以扩展函数的功能。比如，在person函数里，我们保证能接收到name和age这两个参数，但是，如果调用者愿意提供更多的参数，我们也能收到。试想你正在做一个用户注册的功能，除了用户名和年龄是必填项外，其他都是可选项，利用关键字参数来定义这个函数就能满足注册的需求。 </p>
+</blockquote>
+<ul>
+<li>命名关键字参数</li>
+</ul>
+<p>如果要限制关键字参数的名字，就可以用命名关键字参数，例如，只接收 city 和 job 作为关键字参数。这种方式定义的函数如下： </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">person</span><span class="params">(name,age,*,city,job)</span>:</span></span><br><span class="line">    print(name,age,city,job)</span><br></pre></td></tr></table></figure>
+<p>和关键字参数 *<em>kw不同 ，命名关键字参数需要一个特殊分隔符 </em> ， * 后面的参数被视为命名关键字参数。 </p>
+<ul>
+<li>参数组合</li>
+</ul>
+<blockquote>
+<p>在Python中定义函数，可以用必选参数、默认参数、可变参数、关键字参数和命名关键字参数，这5种参数都可以组合使用。但是请注意，参数定义的顺序必须是：<strong>必选参数、默认参数、可变参数、命名关键字参数和关键字参数。 </strong></p>
+</blockquote>
+<h2 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h2><blockquote>
+<p>在函数内部，可以调用其他函数。如果一个函数在内部调用自身本身，这个函数就是递归函数。 </p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#计算阶乘 n! = 1 x 2 x 3 x ... x n,用函数fact(n)表示fact(n) = n! = fact(n-1) x n</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fact</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> n==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> n * fact(n<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>递归函数的优点是定义简单，逻辑清晰。缺点是过深的调用会导致栈溢出。</strong></p>
+<ul>
+<li>解决递归调用栈溢出的方法是通过<strong>尾递归优化</strong></li>
+</ul>
+<blockquote>
+<p>尾递归是指，在函数返回的时候，调用自身本身，并且，return语句不能包含表达式。这样，编译器或者解释器就可以把尾递归做优化，使递归本身无论调用多少次，都只占用一个栈帧，不会出现栈溢出的情况。 </p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fact</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> fact_iter(n,<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fact_iter</span><span class="params">(num,product)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> num == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> product</span><br><span class="line">    <span class="keyword">return</span> fact_iter(num - <span class="number">1</span>,num * product)</span><br></pre></td></tr></table></figure>
+<p>针对尾递归优化的语言可以通过尾递归防止栈溢出。尾递归事实上和循环是等价的，没有循环语句的编程语言只能通过尾递归实现循环。 </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/22/2018/07/Python-函数/" data-id="cjl3byfku0009gcap69brlpwl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/多学一招/">多学一招</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/08/2018/08/Java-面向对象/">Java 面向对象</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/05/2018/08/Java-语言基础05/">Java 语言基础05</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/03/2018/08/Java-语言基础04/">Java 语言基础04</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/2018/08/Java-语言基础03/">Java 语言基础03</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/2018/07/Java-语言基础02/">Java 语言基础02</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

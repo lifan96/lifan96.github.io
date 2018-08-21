@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Python 语言基础04 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Python 的特性list Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。  123&amp;gt;&amp;gt;&amp;gt; classmates = [&apos;Michael&apos;,&apos;Bob&apos;,&apos;Tracy&apos;]&amp;gt;&amp;gt;&amp;gt; classmates[&apos;Michael&apos;,&apos;Bob&apos;,&apos;Tracy&apos;]  变量 classmates 就是一个 list 。用l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python 语言基础04">
+<meta property="og:url" content="http://yoursite.com/2018/07/20/2018/07/Python-语言基础04/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Python 的特性list Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。  123&amp;gt;&amp;gt;&amp;gt; classmates = [&apos;Michael&apos;,&apos;Bob&apos;,&apos;Tracy&apos;]&amp;gt;&amp;gt;&amp;gt; classmates[&apos;Michael&apos;,&apos;Bob&apos;,&apos;Tracy&apos;]  变量 classmates 就是一个 list 。用l">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-03T10:08:01.621Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python 语言基础04">
+<meta name="twitter:description" content="Python 的特性list Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。  123&amp;gt;&amp;gt;&amp;gt; classmates = [&apos;Michael&apos;,&apos;Bob&apos;,&apos;Tracy&apos;]&amp;gt;&amp;gt;&amp;gt; classmates[&apos;Michael&apos;,&apos;Bob&apos;,&apos;Tracy&apos;]  变量 classmates 就是一个 list 。用l">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2018/07/Python-语言基础04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/20/2018/07/Python-语言基础04/" class="article-date">
+  <time datetime="2018-07-20T08:53:18.000Z" itemprop="datePublished">2018-07-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python 语言基础04
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python-的特性"><a href="#Python-的特性" class="headerlink" title="Python 的特性"></a>Python 的特性</h1><h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><blockquote>
+<p>Python内置的一种数据类型是列表：list。list是一种有序的集合，可以随时添加和删除其中的元素。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates = [<span class="string">'Michael'</span>,<span class="string">'Bob'</span>,<span class="string">'Tracy'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>,<span class="string">'Bob'</span>,<span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>变量 classmates 就是一个 list 。用<strong>len()</strong> 函数可以获得list<strong>元素的个数</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>len(classmates)</span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用索引来访问list中每一个位置的元素，记得<strong>索引是从 0 开始的</strong>。当索引超出范围，Python会报一个IndexError 错误，所以，要确保索引不要越界，记得最后一个元素的索引是<strong>len(classmates) - 1</strong>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates[<span class="number">0</span>]</span><br><span class="line"><span class="string">'Michael'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>除了计算索引位置外，还可用 -1 做索引，直接获取最后一个元素，以此类推，可以获取倒数第二个、第三个：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates[<span class="number">-1</span>]</span><br><span class="line"><span class="string">'Tracy'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list 是一个可变的有序表，可以使用函数 <strong>append()</strong> 往 list 中追加元素到<strong>末尾</strong>:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.append(<span class="string">'Adam'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>,<span class="string">'Bob'</span>,<span class="string">'Tracy'</span>,<span class="string">'Adam'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用函数 <strong>insert()</strong> 将元素插入到指定位置，比如索引为 1 的位置:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.insert(<span class="number">1</span>,<span class="string">'Jack'</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Jack'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>, <span class="string">'Adam'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要删除list <strong>末尾的元素</strong>，用 <strong>pop()</strong> 方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.pop()</span><br><span class="line"><span class="string">'Adam'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Jack'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要删除指定位置的元素，用 <strong>pop(i)</strong> 方法，其中 i 是索引位置：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates.pop(<span class="number">1</span>)</span><br><span class="line"><span class="string">'Jack'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Bob'</span>, <span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要把某个元素替换成别的元素，可以直接赋值给对应的索引的位置：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates[<span class="number">1</span>] = <span class="string">'Sarah'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates</span><br><span class="line">[<span class="string">'Michael'</span>, <span class="string">'Sarah'</span>, <span class="string">'Tracy'</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list 里面的元素的数据类型也可以不同，比如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="string">'Apple'</span>, <span class="number">123</span>, <span class="keyword">True</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list 元素也可以是另一个 list（list的嵌套），比如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = [<span class="string">'python'</span>, <span class="string">'java'</span>, [<span class="string">'asp'</span>, <span class="string">'php'</span>], <span class="string">'scheme'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>len(s)</span><br><span class="line"><span class="number">4</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>拆开写：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>p = [<span class="string">'asp'</span>, <span class="string">'php'</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>s = [<span class="string">'python'</span>, <span class="string">'java'</span>, p, <span class="string">'scheme'</span>]</span><br><span class="line"><span class="comment">#如果想拿到 ‘php’ 可以写成p[1] 或者 s[2][1]，因此 s 可以看成是一个二维数组。</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>如果list中一个元素也没有，就是一个<strong>空的list，它的长度为0</strong>。</li>
+</ul>
+<hr>
+<h2 id="tuple"><a href="#tuple" class="headerlink" title="tuple"></a>tuple</h2><blockquote>
+<p>另一种有序列表叫元组：tuple。tuple和list非常类似，但是tuple一旦初始化就<strong>不能修改</strong>。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>classmates = (<span class="string">'Michael'</span>,<span class="string">'Bob'</span>,<span class="string">'Tracy'</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>!!!注：</strong>classmates这个tuple不能变了，<strong>它没有append(),insert()这样的方法</strong>，其他获取元素的方法和list是一样的，但不能赋值成另外的元素。</p>
+<ul>
+<li><p>不可变的tuple有什么意义？？？<br><br>因为tuple不可变，所以代码更加安全。如果可能，能用tuple替代list就尽量用tuple。</p>
+</li>
+<li><p>tuple的陷阱：当定义一个tuple时，在定义的时候，tuple的元素就必须确定下来。如果要定义一个空的tuple，可以写成（）；但是，要定义一个只有1个元素的tuple：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>t = (<span class="number">1</span>)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>t</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>定义的不是tuple，是1这个数！这是因为括号()既可以表示tuple，又可以表示数学公式中的小括号，这就产生了歧义，因此，Python规定，这种情况下，按小括号进行计算，计算结果自然是1。 </p>
+<p>所以，<strong>只有1个元素的tuple</strong>定义时必须加一个<strong>逗号,</strong>，来消除歧义： </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>t = (<span class="number">1</span>,)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>t</span><br><span class="line">(<span class="number">1</span>,)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><blockquote>
+<p>list和tuple是Python内置的有序集合，一个可变，一个不可变。根据需要来选择使用它们。</p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8001/" target="_blank" rel="noopener">Python 语言基础01</a><br><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8002/" target="_blank" rel="noopener">Python 语言基础02</a><br><a href="https://www.yunmok.top/2018/07/Python-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8003/" target="_blank" rel="noopener">Python 语言基础03</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/20/2018/07/Python-语言基础04/" data-id="cjl3byfl4000igcaplh4zf8il" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/07/22/2018/07/Python-函数/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Python 函数
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/19/2018/07/Python-语言基础03/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python 语言基础03</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/多学一招/">多学一招</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/08/2018/08/Java-面向对象/">Java 面向对象</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/05/2018/08/Java-语言基础05/">Java 语言基础05</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/03/2018/08/Java-语言基础04/">Java 语言基础04</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/2018/08/Java-语言基础03/">Java 语言基础03</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/2018/07/Java-语言基础02/">Java 语言基础02</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

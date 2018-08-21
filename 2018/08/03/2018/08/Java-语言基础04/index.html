@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Java 语言基础04 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="函数方法方法基础 方法定义 在Java中，声明一个方法的具体语法格式如下：  修饰符 返回值类型 方法名([参数类型 参数名1，参数类型 参数名2，…]){ ​    执行语句 ​    … ​    return 返回值； }  方法的返回值必须为方法声明的返回值类型，如果方法中没有返回值，返回值类型要声明为void，此时，方法中return语句可以省略。  方法调用  方法名（参数列表）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 语言基础04">
+<meta property="og:url" content="http://yoursite.com/2018/08/03/2018/08/Java-语言基础04/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="函数方法方法基础 方法定义 在Java中，声明一个方法的具体语法格式如下：  修饰符 返回值类型 方法名([参数类型 参数名1，参数类型 参数名2，…]){ ​    执行语句 ​    … ​    return 返回值； }  方法的返回值必须为方法声明的返回值类型，如果方法中没有返回值，返回值类型要声明为void，此时，方法中return语句可以省略。  方法调用  方法名（参数列表）">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-11T04:29:46.626Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java 语言基础04">
+<meta name="twitter:description" content="函数方法方法基础 方法定义 在Java中，声明一个方法的具体语法格式如下：  修饰符 返回值类型 方法名([参数类型 参数名1，参数类型 参数名2，…]){ ​    执行语句 ​    … ​    return 返回值； }  方法的返回值必须为方法声明的返回值类型，如果方法中没有返回值，返回值类型要声明为void，此时，方法中return语句可以省略。  方法调用  方法名（参数列表）">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2018/08/Java-语言基础04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/08/03/2018/08/Java-语言基础04/" class="article-date">
+  <time datetime="2018-08-03T10:26:48.000Z" itemprop="datePublished">2018-08-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java 语言基础04
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="函数方法"><a href="#函数方法" class="headerlink" title="函数方法"></a>函数方法</h1><h2 id="方法基础"><a href="#方法基础" class="headerlink" title="方法基础"></a>方法基础</h2><ul>
+<li><p>方法定义</p>
+<p>在Java中，声明一个方法的具体语法格式如下：</p>
+<blockquote>
+<p>修饰符 返回值类型 方法名([参数类型 参数名1，参数类型 参数名2，…]){</p>
+<p>​    执行语句</p>
+<p>​    …</p>
+<p>​    return 返回值；</p>
+<p>}</p>
+</blockquote>
+<p>方法的返回值必须为方法声明的返回值类型，如果方法中没有返回值，返回值类型要声明为void，此时，方法中return语句可以省略。</p>
+</li>
+<li><p>方法调用</p>
+<blockquote>
+<p>方法名（参数列表）</p>
+</blockquote>
+</li>
+<li><p>参数的传递</p>
+<ul>
+<li><p>值传递</p>
+<p>方法调用时，实际参数把它的值传递给对应的形式参数，函数接收的是原始值的一个copy，<strong>此时内存中存在两个相等的基本类型，即实际参数和形式参数</strong>，<strong>后面方法中的操作都是对形参这个值的修改，不影响实际参数的值</strong>。 </p>
+</li>
+<li><p>引用传递</p>
+<p>也称为传地址。方法调用时，实际参数的引用(地址，而不是参数的值)被传递给方法中相对应的形式参数，函数接收的是原始值的内存地址； <strong>在方法执行中，形参和实参内容相同，指向同一块内存地址，方法执行中对引用的操作将会影响到实际对象</strong>。 </p>
+</li>
+</ul>
+</li>
+<li><p>变量作用域</p>
+<ul>
+<li><p>全局变量</p>
+<p>定义：又称“外部变量”，它不属于哪个方法，作用域从定义的地址开始到源文件结束。</p>
+</li>
+<li><p>局部变量</p>
+<p>定义：在方法内定义的变量称为“局部变量”或“临时变量”，方法结束后局部变量占用的内存将被释放。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="重载方法"><a href="#重载方法" class="headerlink" title="重载方法"></a>重载方法</h2><blockquote>
+<p>Java 允许在一个程序中定义多个名称相同的方法，但是参数的类型或个数必须不同，这就是方法的重载。<strong>注：方法的重载与返回值类型无关。</strong></p>
+</blockquote>
+<h2 id="方法的递归"><a href="#方法的递归" class="headerlink" title="方法的递归"></a>方法的递归</h2><blockquote>
+<p>方法的递归是指在一个方法的内部调用自身的过程，<strong>递归必须要有结束条件</strong>，不然就会陷入无限递归的状态，永远无法结束调用。</p>
+</blockquote>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><blockquote>
+<p>数组是一种数据结构，用来存储<strong>同一类型值的</strong>集合。通过整型下标（下标从0开始）可以访问数组中的每一个值。</p>
+</blockquote>
+<h2 id="数组的初始化"><a href="#数组的初始化" class="headerlink" title="数组的初始化"></a>数组的初始化</h2><ol>
+<li><p><strong>动态初始化</strong></p>
+<p>在声明数组变量时，需要指出数组类型（数据元素类型后紧跟[]）和数组变量名字。</p>
+<blockquote>
+<p>int[] a;</p>
+</blockquote>
+<p>上面这条语句只声明了变量a，并没有将a初始化一个真正的数组。应该使用new运算符创建数组。</p>
+<blockquote>
+<p>int[] a = new int[100];</p>
+</blockquote>
+<p>这条语句创建了一个可以存储100个整型的数组。数组长度不要求是常量：new int[n]会创建一个长度为n的数组。</p>
+</li>
+<li><p><strong>静态初始化</strong></p>
+<blockquote>
+<p>int[] a = {2,3,8,5,4,6};</p>
+</blockquote>
+<p>这种语法形式可以在不创建新变量的情况下重新初始化一个数组。</p>
+</li>
+</ol>
+<h2 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++)&#123;</span><br><span class="line">    a[i] = i; <span class="comment">//fills the array with numbers 0 to 99</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建一个数字数组时，所有元素都初始化为0。</li>
+<li>boolean 数组的元素会初始化为false。</li>
+<li>对象数组的元素则初始化为一个特殊值null，这表示这些元素还未存放对象。</li>
+</ul>
+<h2 id="数组元素个数"><a href="#数组元素个数" class="headerlink" title="数组元素个数"></a>数组元素个数</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">100</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; a.length; i++)&#123;</span><br><span class="line">    System.out.println(a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>获取数组元素个数使用array.length。</li>
+<li><strong>一旦创建了数组，就不能再改变它的大小。</strong></li>
+</ul>
+<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><ol>
+<li><p>数组声明</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] a;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组初始化</p>
+<ul>
+<li><p>静态初始化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>][<span class="number">6</span>];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动态初始化</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[][] a = &#123;&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;,&#123;<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>&#125;&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p><a href="https://www.yunmok.top/2018/07/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8001/" target="_blank" rel="noopener">Java 语言基础01</a></p>
+<p><a href="https://www.yunmok.top/2018/07/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8002/" target="_blank" rel="noopener">Java 语言基础02</a></p>
+<p><a href="https://www.yunmok.top/2018/08/Java-%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%8003/" target="_blank" rel="noopener">Java 语言基础03</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/08/03/2018/08/Java-语言基础04/" data-id="cjl3byflg000vgcapz8g4kpxh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/08/05/2018/08/Java-语言基础05/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java 语言基础05
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/08/01/2018/08/Java-语言基础03/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java 语言基础03</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/多学一招/">多学一招</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/08/2018/08/Java-面向对象/">Java 面向对象</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/05/2018/08/Java-语言基础05/">Java 语言基础05</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/03/2018/08/Java-语言基础04/">Java 语言基础04</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/2018/08/Java-语言基础03/">Java 语言基础03</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/2018/07/Java-语言基础02/">Java 语言基础02</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
