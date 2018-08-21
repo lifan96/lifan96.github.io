@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.4.0" rel="stylesheet" type="text/css" />
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=6.4.0">
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.4.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="面向对象特点：封装性、继承性、多态性  类和对象定义 类是对某一类事物的抽象描述，它用于描述一组对象的共同特征和行为。 对象用于表示现实中该类事物的个体。 类中可以定义成员变量和成员方法，其中成员变量用于描述对象的特征，也被称作属性。成员方法用于描述对象的行为，可简称方法。 定义在类中的变量称为成员变量，定义方法在方法中的变量称为局部变量。  对象的创建和使用 在 Java 程序中可以使用 ne">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 面向对象">
+<meta property="og:url" content="https://blog.yunmok.top/2018/08/Java-面向对象/index.html">
+<meta property="og:site_name" content="闲事队长">
+<meta property="og:description" content="面向对象特点：封装性、继承性、多态性  类和对象定义 类是对某一类事物的抽象描述，它用于描述一组对象的共同特征和行为。 对象用于表示现实中该类事物的个体。 类中可以定义成员变量和成员方法，其中成员变量用于描述对象的特征，也被称作属性。成员方法用于描述对象的行为，可简称方法。 定义在类中的变量称为成员变量，定义方法在方法中的变量称为局部变量。  对象的创建和使用 在 Java 程序中可以使用 ne">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://ws2.sinaimg.cn/large/80ceacb8ly1fug2j0xm9kj20ek08d3z7.jpg">
+<meta property="og:image" content="http://ws3.sinaimg.cn/large/80ceacb8ly1fug2vno33jj20cs09gjs8.jpg">
+<meta property="og:image" content="http://wx4.sinaimg.cn/large/80ceacb8ly1fug3bqi3kaj20tg07lgn0.jpg">
+<meta property="og:updated_time" content="2018-08-21T05:39:09.782Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java 面向对象">
+<meta name="twitter:description" content="面向对象特点：封装性、继承性、多态性  类和对象定义 类是对某一类事物的抽象描述，它用于描述一组对象的共同特征和行为。 对象用于表示现实中该类事物的个体。 类中可以定义成员变量和成员方法，其中成员变量用于描述对象的特征，也被称作属性。成员方法用于描述对象的行为，可简称方法。 定义在类中的变量称为成员变量，定义方法在方法中的变量称为局部变量。  对象的创建和使用 在 Java 程序中可以使用 ne">
+<meta name="twitter:image" content="http://ws2.sinaimg.cn/large/80ceacb8ly1fug2j0xm9kj20ek08d3z7.jpg">
+
+
+
+
+
+
+  <link rel="canonical" href="https://blog.yunmok.top/2018/08/Java-面向对象/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Java 面向对象 | 闲事队长</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+  
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">闲事队长</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+    
+      
+    
+    <a href="https://github.com/lifan96" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg>
+    
+      </a>
+    
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.yunmok.top/2018/08/Java-面向对象/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="small96">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="闲事队长">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java 面向对象
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-08 12:23:13" itemprop="dateCreated datePublished" datetime="2018-08-08T12:23:13+08:00">2018-08-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-08-21 13:39:09" itemprop="dateModified" datetime="2018-08-21T13:39:09+08:00">2018-08-21</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/08/Java-面向对象/" class="leancloud_visitors" data-flag-title="Java 面向对象">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+			 <span>℃</span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>面向对象特点：封装性、继承性、多态性</p>
+</blockquote>
+<h1 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ul>
+<li>类是对某一类事物的抽象描述，它用于描述一组对象的共同特征和行为。</li>
+<li>对象用于表示现实中该类事物的个体。</li>
+<li>类中可以定义<strong>成员变量</strong>和<strong>成员方法</strong>，其中成员变量用于描述对象的特征，也被称作属性。成员方法用于描述对象的行为，可简称方法。</li>
+<li>定义在类中的变量称为<strong>成员变量</strong>，定义方法在方法中的变量称为<strong>局部变量</strong>。</li>
+</ul>
+<h2 id="对象的创建和使用"><a href="#对象的创建和使用" class="headerlink" title="对象的创建和使用"></a>对象的创建和使用</h2><ul>
+<li><p>在 Java 程序中可以使用 <strong>new 关键字</strong>来创建对象。</p>
+<blockquote>
+<p>类名 对象名称 = new 类名 ( ) ;</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> age = <span class="number">10</span>;   <span class="comment">//类中定义的变量被称作成员变量</span></span><br><span class="line">    <span class="comment">//定义speak()方法</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> age = <span class="number">60</span>;   <span class="comment">//方法内部定义的变量被称作局部变量</span></span><br><span class="line">        System.out.println(<span class="string">"大家好，我今年"</span>+age+<span class="string">"岁!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>  <img src="http://ws2.sinaimg.cn/large/80ceacb8ly1fug2j0xm9kj20ek08d3z7.jpg" alt="image"></p>
+<ul>
+<li><p>通过对象的引用来访问对象所有的成员。</p>
+<blockquote>
+<p>对象引用 <strong>.</strong> 对象成员</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example01</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mian</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Person p1 = <span class="keyword">new</span> Person();  <span class="comment">//创建第一个Person对象</span></span><br><span class="line">        Person p2 = <span class="keyword">new</span> Person();  <span class="comment">//创建第二个Person对象</span></span><br><span class="line">        p1.age = <span class="number">18</span>;               <span class="comment">//为age属性赋值</span></span><br><span class="line">        p1.speak();                <span class="comment">//调用对象方法</span></span><br><span class="line">        p2.speak();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://ws3.sinaimg.cn/large/80ceacb8ly1fug2vno33jj20cs09gjs8.jpg" alt="image"></p>
+</li>
+<li><p>Java虚拟机会自动为成员变量初始化，针对不同类型的成员变量，Java虚拟机会赋予不同的初始值。</p>
+<p><img src="http://wx4.sinaimg.cn/large/80ceacb8ly1fug3bqi3kaj20tg07lgn0.jpg" alt="image"></p>
+</li>
+<li><p><strong>当没有任何变量引用这个对象时，它将成为垃圾对象，不能再被实现。</strong></p>
+</li>
+</ul>
+<h2 id="类成员的封装"><a href="#类成员的封装" class="headerlink" title="类成员的封装"></a>类成员的封装</h2><ul>
+<li>所谓类的封装是指在定义一个类时，将类中的<strong>属性私有化</strong>，即使用 <strong>private 关键字</strong>来修饰。</li>
+<li>私有属性只能在它所在类中被访问。</li>
+<li>为了能让外界访问私有属性，需要提供一些使用 public 修饰的公有方法，其中包括用于获取属性值的 getXxx() 方法和设置属性值的 setXxx() 方法。 </li>
+</ul>
+<h1 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h1><h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>在一个类中定义的方法如果同时满足以下三个条件，该方法称为构造方法：</p>
+<ol>
+<li>方法名与类名相同。</li>
+<li>在方法名的前面没有返回值类型的声明。</li>
+<li>在方法中不能使用 return 语句返回一个值。</li>
+</ol>
+<ul>
+<li><strong>new 语句不仅会实例化类对象，还会调用类中的构造方法。</strong></li>
+<li>在一个类中除了定义无参的构造方法，还可以定义有参的构造方法，通过有参的构造方法就可以实现对属性的赋值。</li>
+</ul>
+<h2 id="构造方法的重载"><a href="#构造方法的重载" class="headerlink" title="构造方法的重载"></a>构造方法的重载</h2><ul>
+<li><p>与普通方法一样，构造方法也可以重载，在一个类中可以定义多个构造方法，只要每个<strong>构造方法的参数类型或个数不同</strong>即可。</p>
+</li>
+<li><p><strong>注：</strong></p>
+<p><strong>1.  在Java中的每个类都至少有一个构造方法，如果一个类中没有定义构造方法，系统会自动为这个类创建一个默认的构造方法，这个默认的构造方法没有参数，在其方法体中没有任何代码，即什么也不做。</strong></p>
+<p><strong>2. 构造方法不用 private 修饰 ，通常用 public 来修饰</strong>。</p>
+</li>
+</ul>
+<h2 id="this-关键字的使用"><a href="#this-关键字的使用" class="headerlink" title="this 关键字的使用"></a>this 关键字的使用</h2><ul>
+<li><p>this 关键字在程序中的三种常见用法：</p>
+<ol>
+<li><p>通过 this 关键字可以明确地去访问一个类的成员变量，解决与局部变量名称冲突问题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过 this 关键字调用成员方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">openMouth</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ... </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.openMonth();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造方法是在实例化对象时被Java虚拟机自动调用的，在程序中不能像调用其他方法一样去掉用构造方法，但可以在一个构造方法中使用“ <strong>this([参数1，参数2…])</strong>”的形式来调用其他的构造方法。</p>
+<ul>
+<li><p>只能在构造方法中使用 this 调用其他构造方法，不能在成员方法中使用。</p>
+</li>
+<li><p>在构造方法中，使用 this 调用构造方法的语句必须位于第一行，且只能出现一次。</p>
+</li>
+<li><p>不能在一个类的两个构造方法中使用 this 互相调用。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="super-关键字的使用"><a href="#super-关键字的使用" class="headerlink" title="super 关键字的使用"></a>super 关键字的使用</h2><ul>
+<li><p>问题：当子类重写父类的方法后，子类对象无法访问父类被重写的方法。</p>
+<p>解决：Java 提供一个 super 关键字用于访问父类的成员。</p>
+</li>
+<li><p>使用 super 关键字调用父类的成员变量和成员方法。</p>
+<blockquote>
+<p>super.成员变量</p>
+<p>super.成员方法([参数1，参数2…])</p>
+</blockquote>
+</li>
+<li><p>使用 super 关键字调用父类的构造方法。</p>
+<blockquote>
+<p>super([参数1，参数2…])</p>
+</blockquote>
+</li>
+<li><p><strong>注意：</strong></p>
+<p><strong>1. 通过 super 调用父类构造方法的代码必须位于子类构造方法的第一行，并且只能出现一次。</strong></p>
+<p><strong>2. 在定义一个类时，如果没有特殊需求，尽量在类中定义一个无参的构造方法，避免被继承时出现错误。</strong></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+	
+	<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+  
+  <div>
+      
+        
+      
+</div>
+
+	</div>
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>small96</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://blog.yunmok.top/2018/08/Java-面向对象/" title="Java 面向对象">https://blog.yunmok.top/2018/08/Java-面向对象/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/Java-语言基础05/" rel="next" title="Java 语言基础05">
+                <i class="fa fa-chevron-left"></i> Java 语言基础05
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="small96" />
+            
+              <p class="site-author-name" itemprop="name">small96</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类和对象"><span class="nav-number">1.</span> <span class="nav-text">类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象的创建和使用"><span class="nav-number">1.2.</span> <span class="nav-text">对象的创建和使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类成员的封装"><span class="nav-number">1.3.</span> <span class="nav-text">类成员的封装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#构造方法"><span class="nav-number">2.</span> <span class="nav-text">构造方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-1"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造方法的重载"><span class="nav-number">2.2.</span> <span class="nav-text">构造方法的重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#this-关键字的使用"><span class="nav-number">2.3.</span> <span class="nav-text">this 关键字的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#super-关键字的使用"><span class="nav-number">2.4.</span> <span class="nav-text">super 关键字的使用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-coffee"user></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">small96</span>
+
+  
+
+  
+</div>
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+-->
+
+<!--
+
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.0</div>
+-->
+
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+  <span>Hosted by <a href="https://pages.coding.me" >Coding Pages</a></span>
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script>
+    
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
+        .done(function ({ results }) {
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
+          }
+        })
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
+    }
+    
+
+    $(function() {
+      $.get('https://app-router.leancloud.cn/2/route?appId=' + "43QcLn0xGUVmoBGlVsbimkDS-gzGzoHsz")
+        .done(function ({ api_server }) {
+          var Counter = function (method, url, data) {
+            return $.ajax({
+              method: method,
+              url: `https://${api_server}/1.1${url}`,
+              headers: {
+                'X-LC-Id': "43QcLn0xGUVmoBGlVsbimkDS-gzGzoHsz",
+                'X-LC-Key': "Xqkh3JTorxn4Jw9PNjuTgIDS",
+                'Content-Type': 'application/json',
+              },
+              data: data,
+            });
+          };
+          
+          addCount(Counter);
+          
+        })
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+<!-- 页面点击小红心 --> 
+<script type="text/javascript" src="/js/src/love.js"></script>
+</html>
