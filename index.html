@@ -87,7 +87,7 @@
     root: '/',
     scheme: 'Mist',
     version: '6.4.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","width":300,"display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -227,7 +227,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类<span class="badge">4</span></a>
   </li>
         
         
@@ -235,7 +235,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">17</span></a>
   </li>
         
         
@@ -322,14 +322,14 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/08/Java-面向对象/" itemprop="url">
                   Java 面向对象
                 </a>
               
             
-          </h2>
+          </h1>
         
 
         <div class="post-meta">
@@ -437,7 +437,9 @@
 面向对象特点：封装性、继承性、多态性
 
 类和对象定义
-类是对某一类事物的抽象描述，它用于描述一组对
+类是对某一类事物的抽象描述，它用于描述一组对象的共同特征和行为。
+对象用于表示现实中该类事物的个体。
+类中可以定义成员变量和成员方法，其中成员变
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -523,14 +525,14 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/08/Java-语言基础05/" itemprop="url">
                   Java 语言基础05
                 </a>
               
             
-          </h2>
+          </h1>
         
 
         <div class="post-meta">
@@ -635,7 +637,7 @@
         
           
           异常异常概念
-在程序运行的过程中，会发生各种非正常状况，比如程序运行时磁盘空间不足，网络连接中断，被
+在程序运行的过程中，会发生各种非正常状况，比如程序运行时磁盘空间不足，网络连接中断，被装载的类不存在。针对这种情况，在Java语言中，引入了异常，以异常类的形式对这些非正常情况进行封装，
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -721,14 +723,14 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/08/Java-语言基础04/" itemprop="url">
                   Java 语言基础04
                 </a>
               
             
-          </h2>
+          </h1>
         
 
         <div class="post-meta">
@@ -836,7 +838,10 @@
 方法定义
 在Java中，声明一个方法的具体语法格式如下：
 
-修饰符 返回值类型 方
+修饰符 返回值类型 方法名([参数类型 参数名1，参数类型 参数名2，…]){
+​    执行语句
+​    …
+​   
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -922,14 +927,14 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/08/Java-语言基础03/" itemprop="url">
                   Java 语言基础03
                 </a>
               
             
-          </h2>
+          </h1>
         
 
         <div class="post-meta">
@@ -1034,7 +1039,8 @@
         
           
           运算符
-在Java中，使用算术运算符+、-、*、/表示加减乘除运算。当参与/运算的两个操作数是整数时
+在Java中，使用算术运算符+、-、*、/表示加减乘除运算。当参与/运算的两个操作数是整数时，表示整数除法；否则，表示浮点除法。整数的求余操作用%表示。
+注：整数被0除将会产生一个异常，而浮点
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1120,14 +1126,14 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/07/Java-语言基础02/" itemprop="url">
                   Java 语言基础02
                 </a>
               
             
-          </h2>
+          </h1>
         
 
         <div class="post-meta">
@@ -1232,7 +1238,7 @@
         
           
           数据类型1.基本数据类型
-Java 是一种强类型语言（每一个变量必须声明一种类型）。在Java中，一
+Java 是一种强类型语言（每一个变量必须声明一种类型）。在Java中，一共有8种数据类型，其中有4种整型、2种浮点型、1种用于表示Unicode编码的字符单元的字符类型ch
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1318,14 +1324,14 @@ Java 是一种强类型语言（每一个变量必须声明一种类型）。在
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/07/算法之二分查找法/" itemprop="url">
                   算法之二分查找法
                 </a>
               
             
-          </h2>
+          </h1>
         
 
         <div class="post-meta">
@@ -1417,7 +1423,9 @@ Java 是一种强类型语言（每一个变量必须声明一种类型）。在
       
         
           
-          简单查找法使用简单查找法查找元素时，在最糟情况下需要查看每个元素。因此，如果列表包含8个数字，你最多
+          简单查找法使用简单查找法查找元素时，在最糟情况下需要查看每个元素。因此，如果列表包含8个数字，你最多需要检查8个数字。用O(n)表示简单查找法的运行时间。
+二分查找法
+二分查找是一种算法，其输入是一个
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1503,14 +1511,14 @@ Java 是一种强类型语言（每一个变量必须声明一种类型）。在
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/07/Git-学习笔记01/" itemprop="url">
                   Git 学习笔记01
                 </a>
               
             
-          </h2>
+          </h1>
         
 
         <div class="post-meta">
@@ -1605,7 +1613,12 @@ Java 是一种强类型语言（每一个变量必须声明一种类型）。在
           创建版本库
 pwd 命令用于显示当前目录
 初始化一个仓库，使用 git init 命令
-查看文件内容
+查看文件内容：使用 cat 命令
+修改文件内容：使用 vi  命令
+
+
+添加文件到Git仓库，分两步：
+1.使用
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1691,14 +1704,14 @@ pwd 命令用于显示当前目录
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/07/各进制之间的转换/" itemprop="url">
                   各进制之间的转换
                 </a>
               
             
-          </h2>
+          </h1>
         
 
         <div class="post-meta">
@@ -1792,7 +1805,11 @@ pwd 命令用于显示当前目录
           
           1.十进制和二进制之间的转换
 十进制转二进制
-十进制转换成二进制就是一个除以2取余的过程。最后将所有
+十进制转换成二进制就是一个除以2取余的过程。最后将所有余数倒序排列，得到的数就是转换的果。
+
+
+二进制转十进制
+二进制转换成十进制要从右向左用二进制位上的
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1878,14 +1895,14 @@ pwd 命令用于显示当前目录
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/07/Java-语言基础01/" itemprop="url">
                   Java 语言基础01
                 </a>
               
             
-          </h2>
+          </h1>
         
 
         <div class="post-meta">
@@ -1991,7 +2008,13 @@ pwd 命令用于显示当前目录
           
           基本语法关键字
 关键字的编程语言里事先定义好并赋予了特殊含义的单词，也称作保留词。
-使用Java关键
+使用Java关键字时，有几个要注意的地方：
+
+所有程序的关键字都是小写。
+程序中的标识符不能以关键字命名。
+
+
+标识
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2077,14 +2100,14 @@ pwd 命令用于显示当前目录
 
         
         
-          <h2 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">
                 
                 <a class="post-title-link" href="/2018/07/Python-函数/" itemprop="url">
                   Python 函数
                 </a>
               
             
-          </h2>
+          </h1>
         
 
         <div class="post-meta">
@@ -2193,6 +2216,8 @@ Python内置了很多有用的函数，我们可以直接调用。
 
 
 调用求绝对值函数 abs 函数：
+
+1234&gt;&gt;&gt; abs(100)100&gt;&gt;&gt; abs(-20
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -2373,8 +2398,6 @@ Python内置了很多有用的函数，我们可以直接调用。
 </div>
 
 
-  
-
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
@@ -2382,13 +2405,11 @@ Python内置了很多有用的函数，我们可以直接调用。
 </span>
 </div>
 
-<!--
-  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
--->
+<!---->
 
 <!--
 
-  <div class="theme-info">主题 – <a class="theme-link" target="_blank" rel="external nofollow" href="https://theme-next.org">NexT.Mist</a> v6.4.0</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.0</div>
 -->
 
 
@@ -2590,6 +2611,21 @@ Python内置了很多有用的函数，我们可以直接调用。
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
@@ -2605,6 +2641,75 @@ Python内置了很多有用的函数，我们可以直接调用。
   
 
   
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
   
 </body>
