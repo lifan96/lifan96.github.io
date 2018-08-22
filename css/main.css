@@ -2019,7 +2019,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff26df;
+  background: #4b873e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2992,5 +2992,5 @@ body {
   margin-top: 60px;
   padding: 30px 20px 30px 20px;
   background: #fff;
-  opacity: 0.8;
+  opacity: 0.95;
 }
