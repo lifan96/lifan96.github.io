@@ -116,12 +116,12 @@
 <meta property="og:site_name" content="闲事队长">
 <meta property="og:description" content="创建版本库 pwd 命令用于显示当前目录 初始化一个仓库，使用 git init 命令 查看文件内容：使用 cat 命令 修改文件内容：使用 vi  命令   添加文件到Git仓库，分两步： 1.使用命令 git add ，注意，可反复多次使用，添加多个文件。 2.使用命令 git commit -m ，完成           -m 后输入本次提交说明   注：Windows目录一定要使用英文路">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://wx2.sinaimg.cn/large/80ceacb8ly1ftn7bsbhttj20cq06iaa8.jpg">
-<meta property="og:updated_time" content="2018-07-26T06:01:04.992Z">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/80ceacb8ly1ftn7bsbhttj20cq06iaa8.jpg">
+<meta property="og:updated_time" content="2018-08-22T09:58:10.150Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 学习笔记01">
 <meta name="twitter:description" content="创建版本库 pwd 命令用于显示当前目录 初始化一个仓库，使用 git init 命令 查看文件内容：使用 cat 命令 修改文件内容：使用 vi  命令   添加文件到Git仓库，分两步： 1.使用命令 git add ，注意，可反复多次使用，添加多个文件。 2.使用命令 git commit -m ，完成           -m 后输入本次提交说明   注：Windows目录一定要使用英文路">
-<meta name="twitter:image" content="http://wx2.sinaimg.cn/large/80ceacb8ly1ftn7bsbhttj20cq06iaa8.jpg">
+<meta name="twitter:image" content="https://wx2.sinaimg.cn/large/80ceacb8ly1ftn7bsbhttj20cq06iaa8.jpg">
 
 
 
@@ -352,12 +352,24 @@
                 
               
 
-              <time title="创建时间：2018-07-26 12:23:40 / 修改时间：14:01:04" itemprop="dateCreated datePublished" datetime="2018-07-26T12:23:40+08:00">2018-07-26</time>
+              <time title="创建时间：2018-07-26 12:23:40" itemprop="dateCreated datePublished" datetime="2018-07-26T12:23:40+08:00">2018-07-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-08-22 17:58:10" itemprop="dateModified" datetime="2018-08-22T17:58:10+08:00">2018-08-22</time>
               
             
           </span>
@@ -447,14 +459,15 @@
 <hr>
 <h1 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h1><p>工作区：就是电脑里能看到的目录，如：learngit</p>
 <p>版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库</p>
-<p><img src="http://wx2.sinaimg.cn/large/80ceacb8ly1ftn7bsbhttj20cq06iaa8.jpg" alt="image"></p>
+<p><img src="https://wx2.sinaimg.cn/large/80ceacb8ly1ftn7bsbhttj20cq06iaa8.jpg" alt="image"></p>
 <p><strong>stage(index)</strong>为暂存区</p>
 <p>Git自动创建第一个<strong>分支master</strong></p>
 <p>指向master的一个<strong>指针HEAD</strong></p>
 <p>分解：</p>
-<p>​        ① 使用git add 实际上就是把文件添加到暂存区</p>
-<p>​        ② 使用git commit 实际上就是把暂存区的所有内容提交到当前分支</p>
-<p>创建Git版本库时，Git自动创建了一个master分支，所以，git commit就是往分支master上提交更改</p>
+<pre><code>① 使用git add 实际上就是把文件添加到暂存区
+
+② 使用git commit 实际上就是把暂存区的所有内容提交到当前分支
+</code></pre><p>创建Git版本库时，Git自动创建了一个master分支，所以，git commit就是往分支master上提交更改</p>
 <hr>
 <h1 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h1><p><strong>注：</strong>每修改一次需要git add，不然不会进入commit 中</p>
 <h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul>
