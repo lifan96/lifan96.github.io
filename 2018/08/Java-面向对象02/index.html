@@ -116,7 +116,7 @@
 <meta property="og:site_name" content="闲事队长">
 <meta property="og:description" content="内部类成员内部类 在一个类中除了可以定义成员变量、成员方法，还可以定义类，这样的类被称作成员内部类。在成员内部类中可以访问外部类的所有成员。  123456789101112131415161718192021class Outer&amp;#123;    private int num = 4; //定义类的成员变量    //下面的代码定义了一个成员方法，方法中访问内部类    public vo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-23T05:42:19.137Z">
+<meta property="og:updated_time" content="2018-08-23T05:51:56.691Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 面向对象02">
 <meta name="twitter:description" content="内部类成员内部类 在一个类中除了可以定义成员变量、成员方法，还可以定义类，这样的类被称作成员内部类。在成员内部类中可以访问外部类的所有成员。  123456789101112131415161718192021class Outer&amp;#123;    private int num = 4; //定义类的成员变量    //下面的代码定义了一个成员方法，方法中访问内部类    public vo">
@@ -350,7 +350,7 @@
                 
               
 
-              <time title="创建时间：2018-08-23 12:52:26 / 修改时间：13:42:19" itemprop="dateCreated datePublished" datetime="2018-08-23T12:52:26+08:00">2018-08-23</time>
+              <time title="创建时间：2018-08-23 12:52:26 / 修改时间：13:51:56" itemprop="dateCreated datePublished" datetime="2018-08-23T12:52:26+08:00">2018-08-23</time>
             
 
             
@@ -437,9 +437,8 @@
 <p>外部类名<strong>.</strong>内部类名 变量名 = new 外部类名<strong>.</strong>内部类名();</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Outer</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> num = <span class="number">6</span>;</span><br><span class="line">    <span class="comment">//下面的代码定义了一个静态内部类</span></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"num = "</span>+num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Outer.Inner inner = <span class="keyword">new</span> Outer.Inner();<span class="comment">//创建内部类对象</span></span><br><span class="line">        inner.show();                         <span class="comment">//调用内部类的方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>注：① 在静态内部类中只能访问外部类的静态成员。</strong></p>
-<pre><code>**② 在静态内部类中可以定义静态的成员，而在非静态的内部类中不允许定义静态的成员。**
-</code></pre><hr>
+<p><strong>注：① 在静态内部类中只能访问外部类的静态成员。<br>② 在静态内部类中可以定义静态的成员，而在非静态的内部类中不允许定义静态的成员。</strong></p>
+<hr>
 <h2 id="方法内部类"><a href="#方法内部类" class="headerlink" title="方法内部类"></a>方法内部类</h2><blockquote>
 <p>方法内部类是指在成员方法中定义的类，它<strong>只能在当前方法中被使用</strong>。</p>
 </blockquote>
