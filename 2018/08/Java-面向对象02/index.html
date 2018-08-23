@@ -109,14 +109,17 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="内部类成员内部类 在一个类中除了可以定义成员变量、成员方法，还可以定义类，这样的类被称作成员内部类。在成员内部类中可以访问外部类的所有成员。  123456789101112131415161718192021class Outer&amp;#123;    private int num = 4; //定义类的成员变量    //下面的代码定义了一个成员方法，方法中访问内部类    public vo">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Java 面向对象02">
 <meta property="og:url" content="https://blog.yunmok.top/2018/08/Java-面向对象02/index.html">
 <meta property="og:site_name" content="闲事队长">
+<meta property="og:description" content="内部类成员内部类 在一个类中除了可以定义成员变量、成员方法，还可以定义类，这样的类被称作成员内部类。在成员内部类中可以访问外部类的所有成员。  123456789101112131415161718192021class Outer&amp;#123;    private int num = 4; //定义类的成员变量    //下面的代码定义了一个成员方法，方法中访问内部类    public vo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-23T04:53:23.825Z">
+<meta property="og:updated_time" content="2018-08-23T05:10:45.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 面向对象02">
+<meta name="twitter:description" content="内部类成员内部类 在一个类中除了可以定义成员变量、成员方法，还可以定义类，这样的类被称作成员内部类。在成员内部类中可以访问外部类的所有成员。  123456789101112131415161718192021class Outer&amp;#123;    private int num = 4; //定义类的成员变量    //下面的代码定义了一个成员方法，方法中访问内部类    public vo">
 
 
 
@@ -347,7 +350,7 @@
                 
               
 
-              <time title="创建时间：2018-08-23 12:52:26 / 修改时间：12:53:23" itemprop="dateCreated datePublished" datetime="2018-08-23T12:52:26+08:00">2018-08-23</time>
+              <time title="创建时间：2018-08-23 12:52:26 / 修改时间：13:10:45" itemprop="dateCreated datePublished" datetime="2018-08-23T12:52:26+08:00">2018-08-23</time>
             
 
             
@@ -415,7 +418,25 @@
       
 
       
-        
+        <hr>
+<h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><h2 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h2><blockquote>
+<p>在一个类中除了可以定义成员变量、成员方法，还可以定义类，这样的类被称作<strong>成员内部类</strong>。<strong>在成员内部类中可以访问外部类的所有成员。</strong></p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Outer</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> num = <span class="number">4</span>; <span class="comment">//定义类的成员变量</span></span><br><span class="line">    <span class="comment">//下面的代码定义了一个成员方法，方法中访问内部类</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Inner inner = <span class="keyword">new</span> Inner();</span><br><span class="line">        inner.show();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//下面的代码定义了一个成员内部类</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Inner</span></span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="comment">//在成员内部类的方法中访问外部类的成员变量</span></span><br><span class="line">            System.out.println(<span class="string">"num = "</span>+num);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Outer outer = <span class="keyword">new</span> Outer; <span class="comment">//创建外部类对象</span></span><br><span class="line">        outer.test();            <span class="comment">//调用test()方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果想通过外部类去访问内部类，则需要通过外部类对象去创建内部类对象。</p>
+<blockquote>
+<p>外部类名<strong>.</strong>内部类名 变量名 = new 外部类名()<strong>.</strong>new 内部类名();</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Outer.Inner inner = <span class="keyword">new</span> Outuer().new Inner();<span class="comment">//创建内部类对象</span></span><br><span class="line">        inner.show();                                <span class="comment">//调用 test() 方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>注：如果内部类被声明为私有，外界将无法访问。</strong></p>
+<hr>
+<h2 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h2><blockquote>
+<p>可以使用 static 关键字来修饰一个成员内部类，该内部类被称作静态内部类。它可以在不创建外部类对象的情况下被实例化。</p>
+</blockquote>
+<blockquote>
+<p>外部类名<strong>.</strong>内部类名 变量名 = new 外部类名<strong>.</strong>内部类名();</p>
+</blockquote>
+
       
     </div>
 
@@ -534,8 +555,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -603,6 +633,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类"><span class="nav-number">1.</span> <span class="nav-text">内部类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#成员内部类"><span class="nav-number">1.1.</span> <span class="nav-text">成员内部类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态内部类"><span class="nav-number">1.2.</span> <span class="nav-text">静态内部类</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
