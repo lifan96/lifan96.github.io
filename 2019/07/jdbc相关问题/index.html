@@ -109,24 +109,24 @@
 
 
 
-  <meta name="description" content="泛型入门 Java 集合有个缺点——当我们把一个对象“丢进”集合里后，集合就“会忘记”这个对象的数据类型，当再次取出该对象时，该对象的编译类型就变成了Object类型（其运行时类型没变）。   集合对元素类型没有任何限制，这样可能引发一些问题。例如，想创建一个只能保存Dog对象的集合，但程序也可以轻易地将Cat对象“丢”进去，所以可能引发异常。  由于把对象“丢进”集合时，集合丢失了对象的状态信息">
+  <meta name="description" content="导入驱动jar包 复制mysql-connector-java-5.1.37-bin.jar到项目的libs目录下 右键–&amp;gt;Add As Library  各个对象 DriverManager：驱动管理对象 * 功能：  ① 注册驱动：**告诉程序该使用哪一个数据库驱动jar** static void registerDriver(Driver driver) :注册与给定的驱动程序 Dr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 泛型">
-<meta property="og:url" content="https://blog.yunmok.top/2018/08/Java-泛型/index.html">
+<meta property="og:title" content="JDBC相关问题">
+<meta property="og:url" content="https://blog.yunmok.top/2019/07/jdbc相关问题/index.html">
 <meta property="og:site_name" content="闲事队长">
-<meta property="og:description" content="泛型入门 Java 集合有个缺点——当我们把一个对象“丢进”集合里后，集合就“会忘记”这个对象的数据类型，当再次取出该对象时，该对象的编译类型就变成了Object类型（其运行时类型没变）。   集合对元素类型没有任何限制，这样可能引发一些问题。例如，想创建一个只能保存Dog对象的集合，但程序也可以轻易地将Cat对象“丢”进去，所以可能引发异常。  由于把对象“丢进”集合时，集合丢失了对象的状态信息">
+<meta property="og:description" content="导入驱动jar包 复制mysql-connector-java-5.1.37-bin.jar到项目的libs目录下 右键–&amp;gt;Add As Library  各个对象 DriverManager：驱动管理对象 * 功能：  ① 注册驱动：**告诉程序该使用哪一个数据库驱动jar** static void registerDriver(Driver driver) :注册与给定的驱动程序 Dr">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-29T13:08:53.135Z">
+<meta property="og:updated_time" content="2019-07-30T09:19:53.469Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java 泛型">
-<meta name="twitter:description" content="泛型入门 Java 集合有个缺点——当我们把一个对象“丢进”集合里后，集合就“会忘记”这个对象的数据类型，当再次取出该对象时，该对象的编译类型就变成了Object类型（其运行时类型没变）。   集合对元素类型没有任何限制，这样可能引发一些问题。例如，想创建一个只能保存Dog对象的集合，但程序也可以轻易地将Cat对象“丢”进去，所以可能引发异常。  由于把对象“丢进”集合时，集合丢失了对象的状态信息">
+<meta name="twitter:title" content="JDBC相关问题">
+<meta name="twitter:description" content="导入驱动jar包 复制mysql-connector-java-5.1.37-bin.jar到项目的libs目录下 右键–&amp;gt;Add As Library  各个对象 DriverManager：驱动管理对象 * 功能：  ① 注册驱动：**告诉程序该使用哪一个数据库驱动jar** static void registerDriver(Driver driver) :注册与给定的驱动程序 Dr">
 
 
 
 
 
 
-  <link rel="canonical" href="https://blog.yunmok.top/2018/08/Java-泛型/"/>
+  <link rel="canonical" href="https://blog.yunmok.top/2019/07/jdbc相关问题/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>Java 泛型 | 闲事队长</title>
+  <title>JDBC相关问题 | 闲事队长</title>
   
 
 
@@ -230,7 +230,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类<span class="badge">4</span></a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类<span class="badge">5</span></a>
   </li>
         
         
@@ -238,7 +238,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">21</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">33</span></a>
   </li>
         
         
@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.yunmok.top/2018/08/Java-泛型/">
+    <link itemprop="mainEntityOfPage" href="https://blog.yunmok.top/2019/07/jdbc相关问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="small96">
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java 泛型
+          <h1 class="post-title" itemprop="name headline">JDBC相关问题
               
             
           </h1>
@@ -350,12 +350,24 @@
                 
               
 
-              <time title="创建时间：2018-08-29 17:24:30 / 修改时间：21:08:53" itemprop="dateCreated datePublished" datetime="2018-08-29T17:24:30+08:00">2018-08-29</time>
+              <time title="创建时间：2019-07-29 09:23:13" itemprop="dateCreated datePublished" datetime="2019-07-29T09:23:13+08:00">2019-07-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-30 17:19:53" itemprop="dateModified" datetime="2019-07-30T17:19:53+08:00">2019-07-30</time>
               
             
           </span>
@@ -386,7 +398,7 @@
 
           
           
-             <span id="/2018/08/Java-泛型/" class="leancloud_visitors" data-flag-title="Java 泛型">
+             <span id="/2019/07/jdbc相关问题/" class="leancloud_visitors" data-flag-title="JDBC相关问题">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -418,23 +430,205 @@
       
 
       
-        <h1 id="泛型入门"><a href="#泛型入门" class="headerlink" title="泛型入门"></a>泛型入门</h1><blockquote>
-<p>Java 集合有个缺点——当我们把一个对象“丢进”集合里后，集合就“会忘记”这个对象的数据类型，当再次取出该对象时，该对象的编译类型就变成了Object类型（其运行时类型没变）。</p>
-</blockquote>
+        <h2 id="导入驱动jar包"><a href="#导入驱动jar包" class="headerlink" title="导入驱动jar包"></a>导入驱动jar包</h2><ol>
+<li>复制mysql-connector-java-5.1.37-bin.jar到项目的libs目录下</li>
+<li><strong>右键–&gt;Add As Library</strong></li>
+</ol>
+<h2 id="各个对象"><a href="#各个对象" class="headerlink" title="各个对象"></a>各个对象</h2><ol>
+<li><p>DriverManager：驱动管理对象</p>
+<pre><code>* 功能：
+
+① 注册驱动：**告诉程序该使用哪一个数据库驱动jar**
+static void registerDriver(Driver driver) :注册与给定的驱动程序 DriverManager 。 
+写代码使用：  Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+通过查看源码发现：在com.mysql.jdbc.Driver类中存在静态代码块
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &#123;</span><br><span class="line">	        <span class="keyword">try</span> &#123;</span><br><span class="line">	            java.sql.DriverManager.registerDriver(<span class="keyword">new</span> Driver());</span><br><span class="line">	        &#125; <span class="keyword">catch</span> (SQLException E) &#123;</span><br><span class="line">	            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"Can't register driver!"</span>);</span><br><span class="line">	        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre></li>
+</ol>
+<pre><code>    **注意：mysql 5之后的驱动jar包可以省略注册驱动的步骤。**
+
+​     ② 获取数据库连接：
+
+​        方法：static Connection getConnection(String url, String user, String password) 
+
+​            参数：
+
+​                url：指定连接的路径
+
+​                语法：jdbc:mysql://ip地址(域名):端口号/数据库名称
+
+​                例子：jdbc:mysql://localhost:3306/db3
+
+​                    **细节：如果连接的是本机mysql服务器，并且mysql服务默认端口是3306，则url可以简                                写为：jdbc:mysql:///数据库名称**
+
+​                user：用户名
+
+​                password：密码 
+</code></pre><ol start="2">
+<li><p>Connection：数据库连接对象</p>
 <ul>
-<li><p>集合对元素类型没有任何限制，这样可能引发一些问题。例如，想创建一个只能保存Dog对象的集合，但程序也可以轻易地将Cat对象“丢”进去，所以可能引发异常。</p>
+<li><p>功能：</p>
+<p>① 获取执行sql 的对象</p>
 </li>
-<li><p>由于把对象“丢进”集合时，集合丢失了对象的状态信息，集合只知道它盛装的是 Object，因此取出集合元素后通常还需要进行强制类型转换。这种强制类型转换既增加了编程的复杂度，也可能引发ClassCastException异常。</p>
+<li><p>Statement createStatement()</p>
 </li>
 </ul>
-<hr>
-<h2 id="编译不检查类型的异常"><a href="#编译不检查类型的异常" class="headerlink" title="编译不检查类型的异常"></a>编译不检查类型的异常</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ListErr</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//创建一个只想保存字符串的List集合</span></span><br><span class="line">        List strList = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        strList.add(<span class="string">"我是："</span>);</span><br><span class="line">        strList.add(<span class="string">"中学生"</span>);</span><br><span class="line">        <span class="comment">//“不小心” 把一个Integer对象“丢进”了集合</span></span><br><span class="line">        strList.add(<span class="number">5</span>);   <span class="comment">//①</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; strList.size(); i++ )&#123;</span><br><span class="line">            <span class="comment">//因为List里取出的全部都是Object，所以必须进行强制类型转换</span></span><br><span class="line">            <span class="comment">//最后一个元素将出现 ClassCastException异常</span></span><br><span class="line">            String str = (String)strList.get(i);   <span class="comment">//②</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面程序创建了一个List集合，而且只希望该List集合保存字符串对象——但我们没有办法进行任何限制，如果程序在①处“不小心”把一个Integer对象“丢进”了List集合中，这将导致程序在②处引发ClassCastExcaption异常，因为程序试图把一个Integer对象转换成String类型。</p>
-<h2 id="手动实现编译时检查类型"><a href="#手动实现编译时检查类型" class="headerlink" title="手动实现编译时检查类型"></a>手动实现编译时检查类型</h2><p>如果希望创建一个List对象，且该List对象中只能保存字符串类型，那么我们可以扩展ArrayList类。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//自定义一个StrList集合类，使用组合的方式来复用ArrayList类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StrList</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> List strList = <span class="keyword">new</span> ArrayList();</span><br><span class="line">    <span class="comment">//定义StrList 的 add 方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(String ele)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> strList.add(ele);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//重写get()方法，将get()方法的返回值类型改为String类型</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">get</span><span class="params">(<span class="keyword">int</span> index)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (String)strList.get(index);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> strList.size();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这个方法虽然有效，但局限性每场明显——程序员需要定义大量的List子类，从Java5后，Java，引入“参数化类型”的 概念，允许我们在创建集合能保存字符串类型的对象。<strong>Java的参数化类型被称为泛型。</strong></p>
-<h2 id="使用泛型"><a href="#使用泛型" class="headerlink" title="使用泛型"></a>使用泛型</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个只想保存字符串的List集合</span></span><br><span class="line">List&lt;String&gt; strList = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br></pre></td></tr></table></figure>
-<h1 id="深入泛型"><a href="#深入泛型" class="headerlink" title="深入泛型"></a>深入泛型</h1><h2 id="定义泛型接口、类"><a href="#定义泛型接口、类" class="headerlink" title="定义泛型接口、类"></a>定义泛型接口、类</h2>
+<ul>
+<li><p>PreparedStatement prepareStatement(String sql)  </p>
+<p>②管理事务：</p>
+</li>
+<li>开启事务：setAutoCommit(boolean autoCommit) ：调用该方法设置参数为false，即开启事务</li>
+<li>提交事务：commit() </li>
+<li>回滚事务：rollback() </li>
+</ul>
+</li>
+<li><p>Statement：执行sql的对象</p>
+<p>  ① 执行sql</p>
+<ul>
+<li>boolean execute(String sql) ：可以执行任意的sql 了解 </li>
+<li>int executeUpdate(String sql) ：执行DML（insert、update、delete）语句、DDL(create，alter、drop)语句<ul>
+<li>返回值：影响的行数，可以通过这个影响的行数判断DML语句是否执行成功 返回值&gt;0的则执行成功，反之，则失败。</li>
+<li>ResultSet executeQuery(String sql)  ：执行DQL（select)语句</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ResultSet：结果集对象,封装查询结果</p>
+<ul>
+<li>boolean next(): 游标向下移动一行，判断当前行是否是最后一行末尾(是否有数据)，如果是，则返回false，如果不是则返回true</li>
+</ul>
+<ul>
+<li><p>getXxx(参数):获取数据</p>
+<pre><code>- Xxx：代表数据类型   如： int getInt() ,    String getString()
+</code></pre><ul>
+<li>参数：<ol>
+<li>int：代表列的编号,从1开始   如： getString(1)</li>
+<li>String：代表列名称。 如： getDouble(“balance”)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>结果集对象也需要关闭资源</strong></p>
+</li>
+</ul>
+</li>
+<li><p><strong>PerparedStatement :执行sql对象</strong></p>
+<p>  ① SQL注入问题：在拼接sql时，有一些sql的特殊关键字参与字符串的拼接。会造成安全性问题</p>
+<ul>
+<li><p>输入用户任意，输入密码 ‘a’ or ‘a’ = ‘a’  (false or true)</p>
+<p>② 解决SQL注入问题：使用 PreparedStatement 对象来解决</p>
+<p>③ 预编译的SQL：参数使用 ？作为占位符</p>
+<p>④ 给 ？赋值：</p>
+<p>方法：setxxx(参数1，参数2)</p>
+<pre><code>- 参数1：？的位置 从1开始
+- 参数2：？的值
+</code></pre></li>
+</ul>
+</li>
+</ol>
+<pre><code>## JDBC事务
+
+### 操作
+
+- 开启事务：setAutoCommit(boolean autoCommit)：参数设置为false，即开始，默认为关闭
+  - 在执行sql之前开启事务
+- 提交事务：commit()
+  - 当所有sql都执行万提交事务
+- 回滚事务：rollback()
+  - 在catch中回滚事务
+
+## 数据库连接池
+
+&gt; 当系统初始化好后，容器被创建，容器中会申请一些连接对象，当用户来访问数据库时，从容器中获取连接对象，用户访问完之后，会将连接对象归还给容器。
+
+好处：
+
+    1. 节约资源
+     2. 用户访问高效
+
+标准接口：DataSource 
+
+- 方法：
+  - 获取连接：getConnection()
+  - 归还连接：Connection.close()。如果连接对象Connection是从连接池中获取的，那么调用Connection.close()方法，则不会再关闭连接了。而是归还连接
+- 数据库厂商实现
+  - C3P0：数据库连接池技术
+  - Druid：数据库连接池实现技术，由阿里巴巴提供的
+
+### C3P0数据库连接池技术
+
+步骤：
+
+1. 导入jar包
+   - c3p0-0.9.5.2.jar
+   - mchange-commons-java-0.2.12.jar
+   - mysql-connector-java-5.1.37-bin.jar（切记不能忘了导入这个）
+2. 定义配置文件
+   - 名称： c3p0.properties 或者 c3p0-config.xml
+   - 路径：直接将文件放在src目录下即可。
+3. 创建核心对象 
+   - 数据库连接池对象 ComboPooledDataSource
+4. 获取连接： getConnection
+
+注意：
+
+1. 使用默认配置
+
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataSource ds = <span class="keyword">new</span> ComboPooledDataSource();</span><br></pre></td></tr></table></figure>
+
+2. 使用指定名称配置
+
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataSource ds = <span class="keyword">new</span> ComboPooledDataSource(<span class="string">"otherc3p0"</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+### Druid数据库连接池技术
+
+步骤：
+
+1.  导入jar包
+   - druid-1.0.9.jar
+2. 定义配置文件
+   - properties形式
+   - 可以叫任意名称，可以放在任意目录下
+3. 加载配置文件，使用Properties类
+4. 获取数据库连接池对象：通过工厂类获取  DruidDataSourceFactory
+5. 获取连接：getConnection
+
+定义工具类：
+
+1. 定义一个类 JDBCUtils
+2. 提供静态代码块加载配置文件，初始化连接池对象
+3. 提供方法
+   - 获取连接方法：通过数据库连接池获取连接
+   - 释放资源
+   - 获取连接池的方法 
+
+
+
+## Spring JDBC
+
+步骤：
+
+1. 导入jar包
+
+2. 创建JdbcTemplate对象，依赖于数据源DataSource
+
+   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JdbcTemplate template = <span class="keyword">new</span> JdbcTemplate(ds);</span><br></pre></td></tr></table></figure>
+
+3. 调用JdbcTemplate的方法来完成CRUD的操作
+
+   - update()：执行DML语句。增、删、改语句
+   - queryForMap()：查询结果将结果集封装为map集合，将列名作为key，将值作为value 将这条记录封装为一个map集合 。**注意：这个方法查询的结果集长度只能是1（真能查询一条记录）**
+   - queryForList()：查询结果将结果集封装为list集合
+   - query()：查询结果，将结果封装为JavaBean对象
+     - query的参数：RowMapper
+       - 一般我们使用BeanPropertyRowMapper实现类。可以完成数据到JavaBean的自动封装
+       - new BeanPropertyRowMapper&lt;类型&gt;(类型.class)
+   - queryForObject：查询结果，将结果封装为对象
+     - 一般用于聚合函数的查询
+</code></pre>
       
     </div>
 
@@ -480,7 +674,7 @@
     <strong>本文作者： </strong>small96</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://blog.yunmok.top/2018/08/Java-泛型/" title="Java 泛型">https://blog.yunmok.top/2018/08/Java-泛型/</a>
+    <a href="https://blog.yunmok.top/2019/07/jdbc相关问题/" title="JDBC相关问题">https://blog.yunmok.top/2019/07/jdbc相关问题/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -500,8 +694,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/Java-面向对象04/" rel="next" title="Java 面向对象04">
-                <i class="fa fa-chevron-left"></i> Java 面向对象04
+              <a href="/2019/07/servlet相关/" rel="next" title="servlet相关">
+                <i class="fa fa-chevron-left"></i> servlet相关
               </a>
             
           </div>
@@ -509,6 +703,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/Response/" rel="prev" title="Response">
+                Response <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -582,7 +780,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -603,7 +801,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -641,7 +841,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型入门"><span class="nav-number">1.</span> <span class="nav-text">泛型入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#编译不检查类型的异常"><span class="nav-number">1.1.</span> <span class="nav-text">编译不检查类型的异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#手动实现编译时检查类型"><span class="nav-number">1.2.</span> <span class="nav-text">手动实现编译时检查类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用泛型"><span class="nav-number">1.3.</span> <span class="nav-text">使用泛型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#深入泛型"><span class="nav-number">2.</span> <span class="nav-text">深入泛型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义泛型接口、类"><span class="nav-number">2.1.</span> <span class="nav-text">定义泛型接口、类</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#导入驱动jar包"><span class="nav-number">1.</span> <span class="nav-text">导入驱动jar包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#各个对象"><span class="nav-number">2.</span> <span class="nav-text">各个对象</span></a></li></ol></div>
             
 
           </div>
@@ -662,7 +862,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-coffee"user></i>
   </span>
