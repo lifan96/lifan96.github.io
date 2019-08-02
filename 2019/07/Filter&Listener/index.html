@@ -109,28 +109,24 @@
 
 
 
-  <meta name="description" content="数组一、为什么很多编程语言中数组都从0下标开始的 数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。  1. 如何实现随机访问？ 当计算机需要随机访问数组中的某个元素时，它会首先通过下面的寻址公式，计算出该元素存储的内存地址： a[i] address = base_address + i * data_type_size base_address：内存">
+  <meta name="description" content="Filter 过滤器 概念：  web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能 过滤器的作用：一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤…   使用步骤：  定义一个类，实现接口Filter  复写方法  配置拦截路径  web.xml  注解 @WebFilter(“/*”)//访问所有资源之前，都会执行该过滤器      过滤器细节">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构与算法-基础篇">
-<meta property="og:url" content="https://small96.coding.me/2019/06/数据结构与算法-基础篇/index.html">
+<meta property="og:title" content="Filter&amp;Listener">
+<meta property="og:url" content="https://small96.coding.me/2019/07/Filter&Listener/index.html">
 <meta property="og:site_name" content="后花园">
-<meta property="og:description" content="数组一、为什么很多编程语言中数组都从0下标开始的 数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。  1. 如何实现随机访问？ 当计算机需要随机访问数组中的某个元素时，它会首先通过下面的寻址公式，计算出该元素存储的内存地址： a[i] address = base_address + i * data_type_size base_address：内存">
+<meta property="og:description" content="Filter 过滤器 概念：  web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能 过滤器的作用：一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤…   使用步骤：  定义一个类，实现接口Filter  复写方法  配置拦截路径  web.xml  注解 @WebFilter(“/*”)//访问所有资源之前，都会执行该过滤器      过滤器细节">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://wx4.sinaimg.cn/large/80ceacb8ly1g4srcdkavej20qe0efq3s.jpg">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/80ceacb8ly1g4srkgt6jpj20pp08uwez.jpg">
-<meta property="og:image" content="https://wx3.sinaimg.cn/large/80ceacb8ly1g4srxt9fa7j20qy0bk756.jpg">
-<meta property="og:updated_time" content="2019-07-30T09:07:24.534Z">
+<meta property="og:updated_time" content="2019-08-02T08:45:20.457Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构与算法-基础篇">
-<meta name="twitter:description" content="数组一、为什么很多编程语言中数组都从0下标开始的 数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。  1. 如何实现随机访问？ 当计算机需要随机访问数组中的某个元素时，它会首先通过下面的寻址公式，计算出该元素存储的内存地址： a[i] address = base_address + i * data_type_size base_address：内存">
-<meta name="twitter:image" content="https://wx4.sinaimg.cn/large/80ceacb8ly1g4srcdkavej20qe0efq3s.jpg">
+<meta name="twitter:title" content="Filter&amp;Listener">
+<meta name="twitter:description" content="Filter 过滤器 概念：  web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能 过滤器的作用：一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤…   使用步骤：  定义一个类，实现接口Filter  复写方法  配置拦截路径  web.xml  注解 @WebFilter(“/*”)//访问所有资源之前，都会执行该过滤器      过滤器细节">
 
 
 
 
 
 
-  <link rel="canonical" href="https://small96.coding.me/2019/06/数据结构与算法-基础篇/"/>
+  <link rel="canonical" href="https://small96.coding.me/2019/07/Filter&Listener/"/>
 
 
 
@@ -140,7 +136,7 @@
   };
 </script>
 
-  <title>数据结构与算法-基础篇 | 后花园</title>
+  <title>Filter&Listener | 后花园</title>
   
 
 
@@ -312,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://small96.coding.me/2019/06/数据结构与算法-基础篇/">
+    <link itemprop="mainEntityOfPage" href="https://small96.coding.me/2019/07/Filter&Listener/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="small96">
@@ -329,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构与算法-基础篇
+          <h1 class="post-title" itemprop="name headline">Filter&Listener
               
             
           </h1>
@@ -354,7 +350,7 @@
                 
               
 
-              <time title="创建时间：2019-06-24 10:23:13" itemprop="dateCreated datePublished" datetime="2019-06-24T10:23:13+08:00">2019-06-24</time>
+              <time title="创建时间：2019-08-01 15:23:13" itemprop="dateCreated datePublished" datetime="2019-08-01T15:23:13+08:00">2019-08-01</time>
             
 
             
@@ -371,7 +367,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-30 17:07:24" itemprop="dateModified" datetime="2019-07-30T17:07:24+08:00">2019-07-30</time>
+                <time title="修改时间：2019-08-02 16:45:20" itemprop="dateModified" datetime="2019-08-02T16:45:20+08:00">2019-08-02</time>
               
             
           </span>
@@ -388,7 +384,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构与算法/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -421,71 +417,107 @@
       
 
       
-        <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="一、为什么很多编程语言中数组都从0下标开始的"><a href="#一、为什么很多编程语言中数组都从0下标开始的" class="headerlink" title="一、为什么很多编程语言中数组都从0下标开始的"></a>一、为什么很多编程语言中数组都从0下标开始的</h3><blockquote>
-<p>数组（Array）是一种<strong>线性表</strong>数据结构。它用一组<strong>连续的内存空间</strong>，来存储一组<strong>具有相同类型的数据</strong>。</p>
-</blockquote>
-<h4 id="1-如何实现随机访问？"><a href="#1-如何实现随机访问？" class="headerlink" title="1. 如何实现随机访问？"></a>1. 如何实现随机访问？</h4><ul>
-<li><p>当计算机需要随机访问数组中的某个元素时，它会首先通过下面的寻址公式，计算出该元素存储的内存地址：</p>
-<p><strong>a[i] address = base_address + i * data_type_size</strong></p>
-<p><strong>base_address</strong>：内存块首地址</p>
-<p><strong>data_type_size</strong>：数组中每个元素的大小（），数组中存储int类型，data_type_size为4个字节</p>
-</li>
-<li><p><strong>数组支持随机访问，根据下标随机访问的时间复杂度为 O(1) 。</strong></p>
-</li>
-</ul>
-<h4 id="2-低效的“插入”和“删除”操作"><a href="#2-低效的“插入”和“删除”操作" class="headerlink" title="2. 低效的“插入”和“删除”操作"></a>2. 低效的“插入”和“删除”操作</h4><ul>
-<li><p>如果我们需要将一个数据插入到数组中的<strong>第 k 个位置</strong>。为了把第 k 个位置腾出来，给新来的数据，我们需要将第 k ～ n 这部分的元素都顺序地往后挪一位；如果在<strong>数组的末尾插入元素</strong>，那就不需要移动数据了，这时的时间复杂度为 O(1) 。但如果在<strong>数组的开头插入元素</strong>，那所有的数据都需要依次往后移动一位，所以最坏时间复杂度是 O(n) 。</p>
-</li>
-<li><p>如果我们要删除第 k 个位置的数据，为了内存的连续性，也需要搬移数据，不然中间就会出现空洞，内存就不连续了。和插入类似，如果<strong>删除数组末尾的数据</strong>，则最好情况时间复杂度为 O(1) ；如果<strong>删除开头的数据</strong>，则最坏情况时间复杂度为 O(n)。</p>
-</li>
-</ul>
-<h4 id="3-警惕数组越界访问问题"><a href="#3-警惕数组越界访问问题" class="headerlink" title="3. 警惕数组越界访问问题"></a>3. 警惕数组越界访问问题</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">a[<span class="number">3</span>] = <span class="number">1</span>; <span class="comment">// java.lang.ArrayIndexOutOfBoundsException</span></span><br></pre></td></tr></table></figure>
-<h4 id="4-容器是否能完全代替数组？"><a href="#4-容器是否能完全代替数组？" class="headerlink" title="4. 容器是否能完全代替数组？"></a>4. 容器是否能完全代替数组？</h4><ul>
-<li>ArrayList最大的优势就是可以将很多数组操作的细节封装起来</li>
-<li>支持动态扩容</li>
-<li><strong>在平时的业务开发中，我们可以直接使用编程语言提供的容器类，但是，如果是特别底层的开发，直接使用数组可能会更合适</strong></li>
-</ul>
-<h4 id="5-解答"><a href="#5-解答" class="headerlink" title="5. 解答"></a>5. 解答</h4><ul>
-<li><p><strong>公式对比</strong>：</p>
-<p>以0为起始下标：a[k]_address = base_address + k * type_size</p>
-<p>以1位起始下标：a[k]_address = base_address + (k-1)*type_size</p>
-</li>
-<li><p><strong>结论</strong>：数组作为非常基础的数据结构，通过下标随机访问数组元素又是其非常基础的编程操作，效率的优化就要尽可能做到极致。所以为了减少一次减法操作，数组选择了从 0 开始编号，而不是从 1 开始。</p>
-</li>
-</ul>
-<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h3 id="一、如何实现LRU缓存淘汰算法？"><a href="#一、如何实现LRU缓存淘汰算法？" class="headerlink" title="一、如何实现LRU缓存淘汰算法？"></a>一、如何实现LRU缓存淘汰算法？</h3><blockquote>
-<p>缓存是一种提高数据读取性能的技术，在硬件设计、软件开发中都有着非常广泛的应用，比如常见的 CPU 缓存、数据库缓存、浏览器缓存等等。缓存的大小有限，当缓存被用满时，哪些数据应该被清理出去，哪些数据应该被保留？这就需要缓存淘汰策略来决定。常见的策略有三种：<strong>先进先出策略 FIFO</strong> （ First In ， First Out ）、<strong>最少使用策略 LFU</strong> （ Least Frequently Used ）、<strong>最近最少使用策略 LRU</strong> （ Least Recently Used ）。</p>
-</blockquote>
-<h4 id="1-单链表"><a href="#1-单链表" class="headerlink" title="1. 单链表"></a>1. 单链表</h4><p>我们习惯性地把第一个结点叫作<strong>头结点</strong>，把最后一个结点叫作<strong>尾结点</strong>。其中，<strong>头结点用来记录链表的基地址</strong>。有了它，我们就可以遍历得到整条链表。而尾结点特殊的地方是：指针不是指向下一个结点，而是<strong>指向一个空地址NULL</strong>，表示这是链表上最后一个结点</p>
+        <h2 id="Filter-过滤器"><a href="#Filter-过滤器" class="headerlink" title="Filter 过滤器"></a>Filter 过滤器</h2><ol>
+<li><p>概念：</p>
 <ul>
-<li><strong>查找</strong>：链表要想随机访问第 k 个元素，需要根据指针一个结点一个结点地依次遍历，直到找到相应的结点。</li>
-<li><strong>插入和删除</strong></li>
+<li>web中的过滤器：当访问服务器的资源时，过滤器可以将请求拦截下来，完成一些特殊的功能</li>
+<li>过滤器的作用：一般用于完成通用的操作。如：登录验证、统一编码处理、敏感字符过滤…</li>
 </ul>
-<p><img src="https://wx4.sinaimg.cn/large/80ceacb8ly1g4srcdkavej20qe0efq3s.jpg" alt="插入和删除"></p>
-<h4 id="2-循环链表"><a href="#2-循环链表" class="headerlink" title="2. 循环链表"></a>2. 循环链表</h4><ul>
-<li><strong>循环链表的尾结点指针是指向链表的头结点</strong>。</li>
-<li><strong>循环链表的优点是从链尾到链头比较方便</strong>。</li>
-<li>当要处理的数据具有环型结构特点时，就特别适合采用循环链表。比如著名的约瑟夫问题。</li>
-</ul>
-<h4 id="3-双向链表"><a href="#3-双向链表" class="headerlink" title="3. 双向链表"></a>3. 双向链表</h4><ul>
-<li><p>向链表，顾名思义，<strong>它支持两个方向</strong>，每个结点不止有一个后继指针 next 指向后面的结点，<strong>还有一个前驱指针 prev 指向前面的结点</strong>。</p>
-<p><img src="https://ws4.sinaimg.cn/large/80ceacb8ly1g4srkgt6jpj20pp08uwez.jpg" alt="双向链表"></p>
 </li>
-<li><p><strong>双向链表需要额外的两个空间来存储后继结点和前驱结点的地址。</strong></p>
-</li>
-</ul>
-<h4 id="4-双向循环链表"><a href="#4-双向循环链表" class="headerlink" title="4. 双向循环链表"></a>4. 双向循环链表</h4><p><img src="https://wx3.sinaimg.cn/large/80ceacb8ly1g4srxt9fa7j20qy0bk756.jpg" alt="双向循环链表"></p>
-<h4 id="5-数组和链表的最大区别"><a href="#5-数组和链表的最大区别" class="headerlink" title="5. 数组和链表的最大区别"></a>5. 数组和链表的最大区别</h4><p><strong>数组的缺点是大小固定</strong>，一经声明就要占用整块<strong>连续内存空间</strong>。如果声明的<strong>数组过大</strong>，系统可能没有足够的连续内存空间分配给它，导致 “ <strong>内存不足</strong>（ out of memory ） ” 。如果声明的<strong>数组过小</strong>，则可能<strong>出现不够用的情况</strong>。这时只能再申请一个更大的内存空间，把原数组拷贝进去，<strong>非常费时</strong>。链表本身没有大小的限制，天然地支持动态扩容，我觉得这也是它与数组最大的区别。</p>
-<h4 id="6-解答"><a href="#6-解答" class="headerlink" title="6. 解答"></a>6. 解答</h4><p>我们维护一个<strong>有序单链表</strong>，<strong>越靠近链表尾部的结点是越早之前访问的</strong>。当有一个新的数据被访问时，我们从链表头开始顺序遍历链表。</p>
+<li><p>使用步骤：</p>
 <ul>
-<li>如果此数据之前已经被缓存在链表中了，我们遍历得到这个数据对应的结点，并将其从原来的位置删除，然后再插入到链表的头部。</li>
-<li>如果此数据没有在缓存链表中，又可以分为两种情况：<ul>
-<li>如果此时缓存未满，则将此结点直接插入到链表的头部；</li>
-<li>如果此时缓存已满，则链表尾结点删除，将新的数据结点插入链表的头部。</li>
+<li><p>定义一个类，实现接口Filter</p>
+</li>
+<li><p>复写方法</p>
+</li>
+<li><p>配置拦截路径</p>
+<ul>
+<li><p>web.xml</p>
+</li>
+<li><p>注解</p>
+<p>@WebFilter(“/*”)//访问所有资源之前，都会执行该过滤器</p>
+</li>
 </ul>
 </li>
 </ul>
-<h4 id="7-设计思想"><a href="#7-设计思想" class="headerlink" title="7. 设计思想"></a>7. 设计思想</h4><p>时空替换思想： “ 用空间换时间 ”  与 “ 用时间换空间 ”<br>当内存空间充足的时候，如果我们更加追求代码的执行速度，我们就可以选择空间复杂度相对较高，时间复杂度小相对较低的算法和数据结构，缓存就是空间换时间的例子。如果内存比较紧缺，比如代码跑在手机或者单片机上，这时，就要反过来用时间换空间的思路。</p>
+</li>
+<li><p>过滤器细节</p>
+<ul>
+<li><p>web.xml 配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>demo1<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>cn.lifan.web.filter.FilterDemo1<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>demo1<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--拦截路径--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>过滤器执行流程</p>
+<ul>
+<li><p>执行过滤器</p>
+</li>
+<li><p>执行放行后的资源</p>
+</li>
+<li><p>回来执行过滤器放行代码下边的代码</p>
+</li>
+</ul>
+</li>
+<li><p>过滤器声明周期方法</p>
+<ul>
+<li>init：在服务器启动后，会创建Filter对象，然后调用init方法。只执行一次。<strong>用于加载资源</strong></li>
+<li>doFilter：每一次请求被拦截资源时，会执行。执行多次</li>
+<li>destory：在服务器关闭后，Filter对象被销毁。如果服务器是正常关闭，则会执行destroy方法。只执行一次。<strong>用于释放资源</strong></li>
+</ul>
+</li>
+<li><p>过滤器配置详解</p>
+<ul>
+<li><p>拦截路径配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 具体资源路径：/index.jsp 只有访问index.jsp资源时，过滤器才会被执行</span><br><span class="line">2. 拦截目录： /user/*	访问/user下的所有资源时，过滤器都会被执行</span><br><span class="line">3. 后缀名拦截： *.jsp		访问所有后缀名为jsp资源时，过滤器都会被执行</span><br><span class="line">4. 拦截所有资源：/*		访问所有资源时，过滤器都会被执行</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>拦截方式配置：资源被访问的方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* 注解配置：</span><br><span class="line">	* 设置dispatcherTypes属性</span><br><span class="line">	  1. REQUEST：默认值。浏览器直接请求资源</span><br><span class="line">	  2. FORWARD：转发访问资源</span><br><span class="line">	  3. INCLUDE：包含访问资源</span><br><span class="line">	  4. ERROR：错误跳转资源</span><br><span class="line">	  5. ASYNC：异步访问资源</span><br><span class="line">* web.xml配置</span><br><span class="line">	* 设置&lt;dispatcher&gt;&lt;/dispatcher&gt;标签即可</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>过滤器链（配置多个过滤器）</p>
+<ul>
+<li><p>执行顺序：如果有两个过滤器：过滤器1和过滤器2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">过滤器1--&gt;过滤器2--&gt;资源执行--&gt;过滤器2--&gt;过滤器1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>过滤器先后顺序问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 注解配置：按照类名的字符串比较规则比较，值小的先执行</span><br><span class="line">	* 如： AFilter 和 BFilter，AFilter就先执行了</span><br><span class="line">2. web.xml配置： &lt;filter-mapping&gt;谁定义在上边，谁先执行</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>增强对象的功能：使用设计模式（一些通用的解决固定问题的方式）</p>
+<ul>
+<li><p>装饰模式</p>
+</li>
+<li><p>代理模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">* 概念：</span><br><span class="line"> 1. 真实对象：被代理的对象</span><br><span class="line"> 2. 代理对象：</span><br><span class="line"> 3. 代理模式：代理对象代理真实对象，达到增强真实对象功能的目的</span><br><span class="line">* 实现方式：</span><br><span class="line"> 1. 静态代理：有一个类文件描述代理模式</span><br><span class="line"> 2. 动态代理：在内存中形成代理类</span><br><span class="line"> 	* 实现步骤：</span><br><span class="line"> 		* 代理对象和真实对象实现相同的接口</span><br><span class="line"> 		* Proxy.newProxyInstance();</span><br><span class="line"> 		* 使用代理对象调用方法</span><br><span class="line"> 		* 增强方法</span><br><span class="line"> 	* 增强方式：</span><br><span class="line"> 		* 增强参数列表</span><br><span class="line"> 		* 增强返回值类型</span><br><span class="line"> 		* 增强方法体执行逻辑</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Listener-监听器"><a href="#Listener-监听器" class="headerlink" title="Listener 监听器"></a>Listener 监听器</h2><ol>
+<li><p>事件监听机制</p>
+<ul>
+<li>事件：一件事情</li>
+<li>事件源：事件发生的地方（比如按钮）</li>
+<li>监听器：一个对象</li>
+<li>注册监听：将事件、事件源、监听器绑定在一起。当时事件源上发生某个事件后，执行监听器代码</li>
+</ul>
+</li>
+<li><p>ServletContextListener（接口）</p>
+<ul>
+<li><p>创建</p>
+<p>void contextInitialized(ServletContextEvent sce) ：ServletContext对象创建后会调用该方法</p>
+</li>
+<li><p>销毁</p>
+<p>void contextDestroyed(ServletContextEvent sce) ：ServletContext对象被销毁之前会调用该方法</p>
+</li>
+</ul>
+</li>
+<li><p>实现步骤</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">* 定义一个类，实现ServletContextListener接口</span><br><span class="line">   * 复写方法</span><br><span class="line">   * 配置</span><br><span class="line">   	* web.xml</span><br><span class="line">   	<span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>cn.lifan.listener.ContextLoderListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br><span class="line">   		* 指定初始化参数<span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">   	* 注解</span><br><span class="line">         @WebListener</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
 
       
     </div>
@@ -532,7 +564,7 @@
     <strong>本文作者： </strong>small96</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://small96.coding.me/2019/06/数据结构与算法-基础篇/" title="数据结构与算法-基础篇">https://small96.coding.me/2019/06/数据结构与算法-基础篇/</a>
+    <a href="https://small96.coding.me/2019/07/Filter&Listener/" title="Filter&Listener">https://small96.coding.me/2019/07/Filter&Listener/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -552,8 +584,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/数据结构与算法-入门篇/" rel="next" title="数据结构与算法-入门篇">
-                <i class="fa fa-chevron-left"></i> 数据结构与算法-入门篇
+              <a href="/2019/07/JSP&EL&JSTL/" rel="next" title="JSP&EL&JSTL">
+                <i class="fa fa-chevron-left"></i> JSP&EL&JSTL
               </a>
             
           </div>
@@ -561,10 +593,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/反射相关问题/" rel="prev" title="反射相关问题">
-                反射相关问题 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -699,7 +727,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、为什么很多编程语言中数组都从0下标开始的"><span class="nav-number">1.1.</span> <span class="nav-text">一、为什么很多编程语言中数组都从0下标开始的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-如何实现随机访问？"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 如何实现随机访问？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-低效的“插入”和“删除”操作"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 低效的“插入”和“删除”操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-警惕数组越界访问问题"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 警惕数组越界访问问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-容器是否能完全代替数组？"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 容器是否能完全代替数组？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-解答"><span class="nav-number">1.1.5.</span> <span class="nav-text">5. 解答</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链表"><span class="nav-number">2.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、如何实现LRU缓存淘汰算法？"><span class="nav-number">2.1.</span> <span class="nav-text">一、如何实现LRU缓存淘汰算法？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-单链表"><span class="nav-number">2.1.1.</span> <span class="nav-text">1. 单链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-循环链表"><span class="nav-number">2.1.2.</span> <span class="nav-text">2. 循环链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-双向链表"><span class="nav-number">2.1.3.</span> <span class="nav-text">3. 双向链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-双向循环链表"><span class="nav-number">2.1.4.</span> <span class="nav-text">4. 双向循环链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-数组和链表的最大区别"><span class="nav-number">2.1.5.</span> <span class="nav-text">5. 数组和链表的最大区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-解答"><span class="nav-number">2.1.6.</span> <span class="nav-text">6. 解答</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-设计思想"><span class="nav-number">2.1.7.</span> <span class="nav-text">7. 设计思想</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Filter-过滤器"><span class="nav-number">1.</span> <span class="nav-text">Filter 过滤器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Listener-监听器"><span class="nav-number">2.</span> <span class="nav-text">Listener 监听器</span></a></li></ol></div>
             
 
           </div>

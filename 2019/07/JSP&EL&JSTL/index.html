@@ -109,28 +109,24 @@
 
 
 
-  <meta name="description" content="数组一、为什么很多编程语言中数组都从0下标开始的 数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。  1. 如何实现随机访问？ 当计算机需要随机访问数组中的某个元素时，它会首先通过下面的寻址公式，计算出该元素存储的内存地址： a[i] address = base_address + i * data_type_size base_address：内存">
+  <meta name="description" content="JSP 指令  作用：用于配置JSP页面，导入资源文件  格式： &amp;lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2…%&amp;gt;  分类：  page：配置JSP页面 12345678* contentType：等同于response.setContentType()	* 设置响应体的mime类型以及字符集	* 设置当前jsp页面的编码（只能是高级的IDE才能生效，如果使用低级工具，则">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据结构与算法-基础篇">
-<meta property="og:url" content="https://small96.coding.me/2019/06/数据结构与算法-基础篇/index.html">
+<meta property="og:title" content="JSP&amp;EL&amp;JSTL">
+<meta property="og:url" content="https://small96.coding.me/2019/07/JSP&EL&JSTL/index.html">
 <meta property="og:site_name" content="后花园">
-<meta property="og:description" content="数组一、为什么很多编程语言中数组都从0下标开始的 数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。  1. 如何实现随机访问？ 当计算机需要随机访问数组中的某个元素时，它会首先通过下面的寻址公式，计算出该元素存储的内存地址： a[i] address = base_address + i * data_type_size base_address：内存">
+<meta property="og:description" content="JSP 指令  作用：用于配置JSP页面，导入资源文件  格式： &amp;lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2…%&amp;gt;  分类：  page：配置JSP页面 12345678* contentType：等同于response.setContentType()	* 设置响应体的mime类型以及字符集	* 设置当前jsp页面的编码（只能是高级的IDE才能生效，如果使用低级工具，则">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://wx4.sinaimg.cn/large/80ceacb8ly1g4srcdkavej20qe0efq3s.jpg">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/80ceacb8ly1g4srkgt6jpj20pp08uwez.jpg">
-<meta property="og:image" content="https://wx3.sinaimg.cn/large/80ceacb8ly1g4srxt9fa7j20qy0bk756.jpg">
-<meta property="og:updated_time" content="2019-07-30T09:07:24.534Z">
+<meta property="og:updated_time" content="2019-07-31T02:19:11.479Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数据结构与算法-基础篇">
-<meta name="twitter:description" content="数组一、为什么很多编程语言中数组都从0下标开始的 数组（Array）是一种线性表数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。  1. 如何实现随机访问？ 当计算机需要随机访问数组中的某个元素时，它会首先通过下面的寻址公式，计算出该元素存储的内存地址： a[i] address = base_address + i * data_type_size base_address：内存">
-<meta name="twitter:image" content="https://wx4.sinaimg.cn/large/80ceacb8ly1g4srcdkavej20qe0efq3s.jpg">
+<meta name="twitter:title" content="JSP&amp;EL&amp;JSTL">
+<meta name="twitter:description" content="JSP 指令  作用：用于配置JSP页面，导入资源文件  格式： &amp;lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2…%&amp;gt;  分类：  page：配置JSP页面 12345678* contentType：等同于response.setContentType()	* 设置响应体的mime类型以及字符集	* 设置当前jsp页面的编码（只能是高级的IDE才能生效，如果使用低级工具，则">
 
 
 
 
 
 
-  <link rel="canonical" href="https://small96.coding.me/2019/06/数据结构与算法-基础篇/"/>
+  <link rel="canonical" href="https://small96.coding.me/2019/07/JSP&EL&JSTL/"/>
 
 
 
@@ -140,7 +136,7 @@
   };
 </script>
 
-  <title>数据结构与算法-基础篇 | 后花园</title>
+  <title>JSP&EL&JSTL | 后花园</title>
   
 
 
@@ -312,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://small96.coding.me/2019/06/数据结构与算法-基础篇/">
+    <link itemprop="mainEntityOfPage" href="https://small96.coding.me/2019/07/JSP&EL&JSTL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="small96">
@@ -329,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">数据结构与算法-基础篇
+          <h1 class="post-title" itemprop="name headline">JSP&EL&JSTL
               
             
           </h1>
@@ -354,24 +350,12 @@
                 
               
 
-              <time title="创建时间：2019-06-24 10:23:13" itemprop="dateCreated datePublished" datetime="2019-06-24T10:23:13+08:00">2019-06-24</time>
+              <time title="创建时间：2019-07-31 08:36:13 / 修改时间：10:19:11" itemprop="dateCreated datePublished" datetime="2019-07-31T08:36:13+08:00">2019-07-31</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-30 17:07:24" itemprop="dateModified" datetime="2019-07-30T17:07:24+08:00">2019-07-30</time>
               
             
           </span>
@@ -388,7 +372,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构与算法/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
 
                 
                 
@@ -421,71 +405,129 @@
       
 
       
-        <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="一、为什么很多编程语言中数组都从0下标开始的"><a href="#一、为什么很多编程语言中数组都从0下标开始的" class="headerlink" title="一、为什么很多编程语言中数组都从0下标开始的"></a>一、为什么很多编程语言中数组都从0下标开始的</h3><blockquote>
-<p>数组（Array）是一种<strong>线性表</strong>数据结构。它用一组<strong>连续的内存空间</strong>，来存储一组<strong>具有相同类型的数据</strong>。</p>
-</blockquote>
-<h4 id="1-如何实现随机访问？"><a href="#1-如何实现随机访问？" class="headerlink" title="1. 如何实现随机访问？"></a>1. 如何实现随机访问？</h4><ul>
-<li><p>当计算机需要随机访问数组中的某个元素时，它会首先通过下面的寻址公式，计算出该元素存储的内存地址：</p>
-<p><strong>a[i] address = base_address + i * data_type_size</strong></p>
-<p><strong>base_address</strong>：内存块首地址</p>
-<p><strong>data_type_size</strong>：数组中每个元素的大小（），数组中存储int类型，data_type_size为4个字节</p>
-</li>
-<li><p><strong>数组支持随机访问，根据下标随机访问的时间复杂度为 O(1) 。</strong></p>
-</li>
-</ul>
-<h4 id="2-低效的“插入”和“删除”操作"><a href="#2-低效的“插入”和“删除”操作" class="headerlink" title="2. 低效的“插入”和“删除”操作"></a>2. 低效的“插入”和“删除”操作</h4><ul>
-<li><p>如果我们需要将一个数据插入到数组中的<strong>第 k 个位置</strong>。为了把第 k 个位置腾出来，给新来的数据，我们需要将第 k ～ n 这部分的元素都顺序地往后挪一位；如果在<strong>数组的末尾插入元素</strong>，那就不需要移动数据了，这时的时间复杂度为 O(1) 。但如果在<strong>数组的开头插入元素</strong>，那所有的数据都需要依次往后移动一位，所以最坏时间复杂度是 O(n) 。</p>
-</li>
-<li><p>如果我们要删除第 k 个位置的数据，为了内存的连续性，也需要搬移数据，不然中间就会出现空洞，内存就不连续了。和插入类似，如果<strong>删除数组末尾的数据</strong>，则最好情况时间复杂度为 O(1) ；如果<strong>删除开头的数据</strong>，则最坏情况时间复杂度为 O(n)。</p>
-</li>
-</ul>
-<h4 id="3-警惕数组越界访问问题"><a href="#3-警惕数组越界访问问题" class="headerlink" title="3. 警惕数组越界访问问题"></a>3. 警惕数组越界访问问题</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">a[<span class="number">3</span>] = <span class="number">1</span>; <span class="comment">// java.lang.ArrayIndexOutOfBoundsException</span></span><br></pre></td></tr></table></figure>
-<h4 id="4-容器是否能完全代替数组？"><a href="#4-容器是否能完全代替数组？" class="headerlink" title="4. 容器是否能完全代替数组？"></a>4. 容器是否能完全代替数组？</h4><ul>
-<li>ArrayList最大的优势就是可以将很多数组操作的细节封装起来</li>
-<li>支持动态扩容</li>
-<li><strong>在平时的业务开发中，我们可以直接使用编程语言提供的容器类，但是，如果是特别底层的开发，直接使用数组可能会更合适</strong></li>
-</ul>
-<h4 id="5-解答"><a href="#5-解答" class="headerlink" title="5. 解答"></a>5. 解答</h4><ul>
-<li><p><strong>公式对比</strong>：</p>
-<p>以0为起始下标：a[k]_address = base_address + k * type_size</p>
-<p>以1位起始下标：a[k]_address = base_address + (k-1)*type_size</p>
-</li>
-<li><p><strong>结论</strong>：数组作为非常基础的数据结构，通过下标随机访问数组元素又是其非常基础的编程操作，效率的优化就要尽可能做到极致。所以为了减少一次减法操作，数组选择了从 0 开始编号，而不是从 1 开始。</p>
-</li>
-</ul>
-<h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h3 id="一、如何实现LRU缓存淘汰算法？"><a href="#一、如何实现LRU缓存淘汰算法？" class="headerlink" title="一、如何实现LRU缓存淘汰算法？"></a>一、如何实现LRU缓存淘汰算法？</h3><blockquote>
-<p>缓存是一种提高数据读取性能的技术，在硬件设计、软件开发中都有着非常广泛的应用，比如常见的 CPU 缓存、数据库缓存、浏览器缓存等等。缓存的大小有限，当缓存被用满时，哪些数据应该被清理出去，哪些数据应该被保留？这就需要缓存淘汰策略来决定。常见的策略有三种：<strong>先进先出策略 FIFO</strong> （ First In ， First Out ）、<strong>最少使用策略 LFU</strong> （ Least Frequently Used ）、<strong>最近最少使用策略 LRU</strong> （ Least Recently Used ）。</p>
-</blockquote>
-<h4 id="1-单链表"><a href="#1-单链表" class="headerlink" title="1. 单链表"></a>1. 单链表</h4><p>我们习惯性地把第一个结点叫作<strong>头结点</strong>，把最后一个结点叫作<strong>尾结点</strong>。其中，<strong>头结点用来记录链表的基地址</strong>。有了它，我们就可以遍历得到整条链表。而尾结点特殊的地方是：指针不是指向下一个结点，而是<strong>指向一个空地址NULL</strong>，表示这是链表上最后一个结点</p>
+        <h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h2><ol>
+<li><p>指令</p>
 <ul>
-<li><strong>查找</strong>：链表要想随机访问第 k 个元素，需要根据指针一个结点一个结点地依次遍历，直到找到相应的结点。</li>
-<li><strong>插入和删除</strong></li>
-</ul>
-<p><img src="https://wx4.sinaimg.cn/large/80ceacb8ly1g4srcdkavej20qe0efq3s.jpg" alt="插入和删除"></p>
-<h4 id="2-循环链表"><a href="#2-循环链表" class="headerlink" title="2. 循环链表"></a>2. 循环链表</h4><ul>
-<li><strong>循环链表的尾结点指针是指向链表的头结点</strong>。</li>
-<li><strong>循环链表的优点是从链尾到链头比较方便</strong>。</li>
-<li>当要处理的数据具有环型结构特点时，就特别适合采用循环链表。比如著名的约瑟夫问题。</li>
-</ul>
-<h4 id="3-双向链表"><a href="#3-双向链表" class="headerlink" title="3. 双向链表"></a>3. 双向链表</h4><ul>
-<li><p>向链表，顾名思义，<strong>它支持两个方向</strong>，每个结点不止有一个后继指针 next 指向后面的结点，<strong>还有一个前驱指针 prev 指向前面的结点</strong>。</p>
-<p><img src="https://ws4.sinaimg.cn/large/80ceacb8ly1g4srkgt6jpj20pp08uwez.jpg" alt="双向链表"></p>
+<li><p>作用：用于配置JSP页面，导入资源文件</p>
 </li>
-<li><p><strong>双向链表需要额外的两个空间来存储后继结点和前驱结点的地址。</strong></p>
+<li><p>格式：</p>
+<p>&lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2…%&gt;</p>
 </li>
-</ul>
-<h4 id="4-双向循环链表"><a href="#4-双向循环链表" class="headerlink" title="4. 双向循环链表"></a>4. 双向循环链表</h4><p><img src="https://wx3.sinaimg.cn/large/80ceacb8ly1g4srxt9fa7j20qy0bk756.jpg" alt="双向循环链表"></p>
-<h4 id="5-数组和链表的最大区别"><a href="#5-数组和链表的最大区别" class="headerlink" title="5. 数组和链表的最大区别"></a>5. 数组和链表的最大区别</h4><p><strong>数组的缺点是大小固定</strong>，一经声明就要占用整块<strong>连续内存空间</strong>。如果声明的<strong>数组过大</strong>，系统可能没有足够的连续内存空间分配给它，导致 “ <strong>内存不足</strong>（ out of memory ） ” 。如果声明的<strong>数组过小</strong>，则可能<strong>出现不够用的情况</strong>。这时只能再申请一个更大的内存空间，把原数组拷贝进去，<strong>非常费时</strong>。链表本身没有大小的限制，天然地支持动态扩容，我觉得这也是它与数组最大的区别。</p>
-<h4 id="6-解答"><a href="#6-解答" class="headerlink" title="6. 解答"></a>6. 解答</h4><p>我们维护一个<strong>有序单链表</strong>，<strong>越靠近链表尾部的结点是越早之前访问的</strong>。当有一个新的数据被访问时，我们从链表头开始顺序遍历链表。</p>
+<li><p>分类：</p>
 <ul>
-<li>如果此数据之前已经被缓存在链表中了，我们遍历得到这个数据对应的结点，并将其从原来的位置删除，然后再插入到链表的头部。</li>
-<li>如果此数据没有在缓存链表中，又可以分为两种情况：<ul>
-<li>如果此时缓存未满，则将此结点直接插入到链表的头部；</li>
-<li>如果此时缓存已满，则链表尾结点删除，将新的数据结点插入链表的头部。</li>
+<li><p>page：配置JSP页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">* contentType：等同于response.setContentType()</span><br><span class="line">	* 设置响应体的mime类型以及字符集</span><br><span class="line">	* 设置当前jsp页面的编码（只能是高级的IDE才能生效，如果使用低级工具，则需要设置pageEncoding属性设置当前页面的字符集）</span><br><span class="line">* import：导包</span><br><span class="line">* errorPage：当前页面发生异常后，会自动跳转到指定的错误页面</span><br><span class="line">* isErrorPage：标识当前也是是否是错误页面。</span><br><span class="line">	* true：是，可以使用内置对象exception</span><br><span class="line">	* false：否。默认值。不可以使用内置对象exception</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>include：页面包含的。导入页面的资源文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* &lt;%@include file=&quot;top.jsp&quot;%&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>taglib：导入资源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* &lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;</span><br><span class="line">		* prefix：前缀，自定义的</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
 </ul>
-<h4 id="7-设计思想"><a href="#7-设计思想" class="headerlink" title="7. 设计思想"></a>7. 设计思想</h4><p>时空替换思想： “ 用空间换时间 ”  与 “ 用时间换空间 ”<br>当内存空间充足的时候，如果我们更加追求代码的执行速度，我们就可以选择空间复杂度相对较高，时间复杂度小相对较低的算法和数据结构，缓存就是空间换时间的例子。如果内存比较紧缺，比如代码跑在手机或者单片机上，这时，就要反过来用时间换空间的思路。</p>
+</li>
+</ol>
+<ol start="2">
+<li><p>注释</p>
+<ul>
+<li><p>html注释：\<!-- -->:只能注释html代码片段</p>
+</li>
+<li><p>jsp注释：推荐使用</p>
+<p>&lt;%– –%&gt;：可以注释所有</p>
+</li>
+</ul>
+</li>
+<li><p>内置对象</p>
+<p> 变量名                    真实类型                        作用</p>
+<ul>
+<li>pageContext         PageContext        当前页面共享数据，还可以获取其他八个内置对象</li>
+<li>request            HttpServletRequest        一次请求访问的多个资源(转发)</li>
+<li>session            HttpSession                一次会话的多个请求间</li>
+<li>application        ServletContext            所有用户间共享数据</li>
+<li>response            HttpServletResponse        响应对象</li>
+<li>page                Object                   当前页面(Servlet)的对象  this</li>
+<li>out                JspWriter               输出对象，数据输出到页面上</li>
+<li>config            ServletConfig            Servlet的配置对象</li>
+<li>exception            Throwable                异常对象<h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>M：Model，模型</p>
+<p>完成具体的业务操作，如：查询数据库，封装对象</p>
+</li>
+<li><p>V：View，视图。JSP</p>
+<p>展示数据</p>
+</li>
+<li><p>C：Controller，控制器。Servlet</p>
+<p>获取用户的输入–&gt;调用模型–&gt;将数据交给视图进行展示</p>
+</li>
+<li><p>优缺点：</p>
+<p>优点：</p>
+<ul>
+<li><p>耦合性低，方便维护，可以利于分工协作</p>
+</li>
+<li><p>重用性高</p>
+</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>使得项目架构变得复杂，对开发人员要求高</li>
+</ul>
+</li>
+</ul>
+<h2 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h2><ol>
+<li><p>概念：Expression Language 表达式语言</p>
+</li>
+<li><p>作用：替换和简化jsp页面中java代码的编写</p>
+</li>
+<li><p>语法：${表达式}</p>
+</li>
+<li><p><strong>注意：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* jsp默认支持el表达式的。如果要忽略el表达式</span><br><span class="line">	1. 设置jsp中page指令中：isELIgnored=&quot;true&quot; 忽略当前jsp页面中所有的el表达式</span><br><span class="line">	2. \$&#123;表达式&#125; ：忽略当前这个el表达式</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用</p>
+<ul>
+<li><p>运算</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. 算数运算符： + - * /(div) %(mod)</span><br><span class="line">2. 比较运算符： &gt; &lt; &gt;= &lt;= == !=</span><br><span class="line">3. 逻辑运算符： &amp;&amp;(and) ||(or) !(not)</span><br><span class="line">4. 空运算符： empty</span><br><span class="line">	* 功能：用于判断字符串、集合、数组对象是否为null或者长度是否为0</span><br><span class="line">	* $&#123;empty list&#125;:判断字符串、集合、数组对象是否为null或者长度为0</span><br><span class="line">	* $&#123;not empty str&#125;:表示判断字符串、集合、数组对象是否不为null 并且 长度&gt;0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">1. el表达式只能从域对象中获取值</span><br><span class="line">2. 语法：</span><br><span class="line">	* $&#123;域名称.键名&#125;：从指定域中获取指定键的值</span><br><span class="line">	* 域名称：</span><br><span class="line">		1. pageScope--&gt; pageContext</span><br><span class="line">		2. requestScope--&gt; request</span><br><span class="line">		3. sessionScope--&gt; session</span><br><span class="line">		4. applicationScope--&gt; application（ServletContext）</span><br><span class="line">		* 举例：在request域中存储了name=张三</span><br><span class="line">		* 获取：$&#123;requestScope.name&#125;</span><br><span class="line">	* $&#123;键名&#125;：表示依次从最小的域中查找是否有该键对应的值，直到找到为止。</span><br><span class="line">		$&#123;name&#125;</span><br><span class="line">	* 获取对象、List集合、Map集合的值</span><br><span class="line">		* 对象：$&#123;域名称.键名.属性名&#125;</span><br><span class="line">			*本质上会去调用对象的getter方法</span><br><span class="line">			* 简写：$&#123;键名.属性名&#125;</span><br><span class="line">		* List集合：$&#123;域名称.键名[索引]&#125;</span><br><span class="line">		* Map集合：</span><br><span class="line">			* $&#123;域名称.键名.key名称&#125;</span><br><span class="line">			* $&#123;域名称.键名[&quot;key名称&quot;]&#125;</span><br><span class="line">3.隐式对象：</span><br><span class="line">	* el表达式中有11个隐式对象</span><br><span class="line">	* pageContext：</span><br><span class="line">		* 获取jsp其他八个内置对象</span><br><span class="line">		* $&#123;pageContext.request.contextPath&#125;：动态获取虚拟目录</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="JSTL"><a href="#JSTL" class="headerlink" title="JSTL"></a>JSTL</h2><ol>
+<li><p>概念：JavaServer Pages Tag Library  JSP标准标签库</p>
+<ul>
+<li>是由Apache组织提供的开源的免费的jsp标签  &lt;标签&gt;</li>
+</ul>
+</li>
+<li><p>作用：用于简化和替换jsp页面上的java代码</p>
+</li>
+<li><p>使用步骤：</p>
+<ul>
+<li>导入jstl相关jar包</li>
+<li>引入标签库：taglib指令：  &lt;%@ taglib %&gt;</li>
+<li>使用标签</li>
+</ul>
+</li>
+<li><p>常用的 JSTL标签</p>
+<ul>
+<li><p>if：相当于java代码的if语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">属性：</span><br><span class="line">     * test 必须属性，接受boolean表达式</span><br><span class="line">     * 如果表达式为true，则显示if标签体内容，如果为false，则不显示标签体内容</span><br><span class="line">     * 一般情况下，test属性值会结合el表达式一起使用</span><br><span class="line"> 注意：</span><br><span class="line">     * c:if标签没有else情况，想要else情况，则可以在定义一个c:if标签</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>choose：相当于java代码的switch语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 使用choose标签声明         			相当于switch声明</span><br><span class="line">* 使用when标签做判断         		    相当于case</span><br><span class="line">* 使用otherwise标签做其他情况的声明    	相当于default</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>foreach：相当于java代码的for语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">普通遍历（for）：</span><br><span class="line">    属性：</span><br><span class="line">	* begin：开始值</span><br><span class="line">	* end：结束值（包含）</span><br><span class="line">	* var：临时变量</span><br><span class="line">	* step：步长</span><br><span class="line">	* varStatus：循环状态对象</span><br><span class="line">		* index：容器中元素的索引，从0开始</span><br><span class="line">		* count：循环次数，从1开始</span><br><span class="line">遍历容器（foreach）：</span><br><span class="line">	属性：</span><br><span class="line">	* items：容器对象</span><br><span class="line">	* var：容器中的临时变量</span><br><span class="line">	* varStatus：循环状态对象</span><br><span class="line">		* index：容器中元素的索引，从0开始</span><br><span class="line">		* count：循环次数，从1开始</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
@@ -532,7 +574,7 @@
     <strong>本文作者： </strong>small96</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://small96.coding.me/2019/06/数据结构与算法-基础篇/" title="数据结构与算法-基础篇">https://small96.coding.me/2019/06/数据结构与算法-基础篇/</a>
+    <a href="https://small96.coding.me/2019/07/JSP&EL&JSTL/" title="JSP&EL&JSTL">https://small96.coding.me/2019/07/JSP&EL&JSTL/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -552,8 +594,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/06/数据结构与算法-入门篇/" rel="next" title="数据结构与算法-入门篇">
-                <i class="fa fa-chevron-left"></i> 数据结构与算法-入门篇
+              <a href="/2019/07/会话技术/" rel="next" title="会话技术">
+                <i class="fa fa-chevron-left"></i> 会话技术
               </a>
             
           </div>
@@ -562,8 +604,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/反射相关问题/" rel="prev" title="反射相关问题">
-                反射相关问题 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/Filter&Listener/" rel="prev" title="Filter&Listener">
+                Filter&Listener <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -699,7 +741,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、为什么很多编程语言中数组都从0下标开始的"><span class="nav-number">1.1.</span> <span class="nav-text">一、为什么很多编程语言中数组都从0下标开始的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-如何实现随机访问？"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 如何实现随机访问？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-低效的“插入”和“删除”操作"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 低效的“插入”和“删除”操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-警惕数组越界访问问题"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 警惕数组越界访问问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-容器是否能完全代替数组？"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 容器是否能完全代替数组？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-解答"><span class="nav-number">1.1.5.</span> <span class="nav-text">5. 解答</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链表"><span class="nav-number">2.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、如何实现LRU缓存淘汰算法？"><span class="nav-number">2.1.</span> <span class="nav-text">一、如何实现LRU缓存淘汰算法？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-单链表"><span class="nav-number">2.1.1.</span> <span class="nav-text">1. 单链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-循环链表"><span class="nav-number">2.1.2.</span> <span class="nav-text">2. 循环链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-双向链表"><span class="nav-number">2.1.3.</span> <span class="nav-text">3. 双向链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-双向循环链表"><span class="nav-number">2.1.4.</span> <span class="nav-text">4. 双向循环链表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-数组和链表的最大区别"><span class="nav-number">2.1.5.</span> <span class="nav-text">5. 数组和链表的最大区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-解答"><span class="nav-number">2.1.6.</span> <span class="nav-text">6. 解答</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-设计思想"><span class="nav-number">2.1.7.</span> <span class="nav-text">7. 设计思想</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP"><span class="nav-number">1.</span> <span class="nav-text">JSP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC"><span class="nav-number">2.</span> <span class="nav-text">MVC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EL表达式"><span class="nav-number">3.</span> <span class="nav-text">EL表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSTL"><span class="nav-number">4.</span> <span class="nav-text">JSTL</span></a></li></ol></div>
             
 
           </div>
