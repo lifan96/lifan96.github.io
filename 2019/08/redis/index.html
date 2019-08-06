@@ -110,24 +110,24 @@
 
 
 
-  <meta name="description" content="HTTP协议 请求消息：客户端发送给服务器端的数据  数据格式：  请求行  请求头  请求空行  请求体      响应消息：服务器端发送给客户端的数据  数据格式：  响应行  组成：协议和版本  响应状态码   状态码描述  响应状态码：服务器告诉客户端浏览器请求和响应的一个状态  1XX：服务器就收客户端消息，但没有接受完成，等待一段时间后，发送1xx多状态码  2XX：成功。代表：200">
+  <meta name="description" content="Redis 数据结构redis存储的是：key,value格式的数据，其中key都是字符串，value有5种不同的数据结构  字符串类型 string 哈希类型 hash ： map格式   列表类型 list ： linkedlist格式。支持重复元素 集合类型 set  ：不允许重复元素 有序集合类型 sortedset：不允许重复元素，且元素有顺序  字符串String 存储：set key">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Response">
-<meta property="og:url" content="https://small96.coding.me/2019/07/Response/index.html">
+<meta property="og:title" content="Redis">
+<meta property="og:url" content="https://small96.coding.me/2019/08/redis/index.html">
 <meta property="og:site_name" content="后花园">
-<meta property="og:description" content="HTTP协议 请求消息：客户端发送给服务器端的数据  数据格式：  请求行  请求头  请求空行  请求体      响应消息：服务器端发送给客户端的数据  数据格式：  响应行  组成：协议和版本  响应状态码   状态码描述  响应状态码：服务器告诉客户端浏览器请求和响应的一个状态  1XX：服务器就收客户端消息，但没有接受完成，等待一段时间后，发送1xx多状态码  2XX：成功。代表：200">
+<meta property="og:description" content="Redis 数据结构redis存储的是：key,value格式的数据，其中key都是字符串，value有5种不同的数据结构  字符串类型 string 哈希类型 hash ： map格式   列表类型 list ： linkedlist格式。支持重复元素 集合类型 set  ：不允许重复元素 有序集合类型 sortedset：不允许重复元素，且元素有顺序  字符串String 存储：set key">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-30T09:18:50.740Z">
+<meta property="og:updated_time" content="2019-08-06T07:49:46.868Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Response">
-<meta name="twitter:description" content="HTTP协议 请求消息：客户端发送给服务器端的数据  数据格式：  请求行  请求头  请求空行  请求体      响应消息：服务器端发送给客户端的数据  数据格式：  响应行  组成：协议和版本  响应状态码   状态码描述  响应状态码：服务器告诉客户端浏览器请求和响应的一个状态  1XX：服务器就收客户端消息，但没有接受完成，等待一段时间后，发送1xx多状态码  2XX：成功。代表：200">
+<meta name="twitter:title" content="Redis">
+<meta name="twitter:description" content="Redis 数据结构redis存储的是：key,value格式的数据，其中key都是字符串，value有5种不同的数据结构  字符串类型 string 哈希类型 hash ： map格式   列表类型 list ： linkedlist格式。支持重复元素 集合类型 set  ：不允许重复元素 有序集合类型 sortedset：不允许重复元素，且元素有顺序  字符串String 存储：set key">
 
 
 
 
 
 
-  <link rel="canonical" href="https://small96.coding.me/2019/07/Response/"/>
+  <link rel="canonical" href="https://small96.coding.me/2019/08/redis/"/>
 
 
 
@@ -137,7 +137,7 @@
   };
 </script>
 
-  <title>Response | 后花园</title>
+  <title>Redis | 后花园</title>
   
 
 
@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://small96.coding.me/2019/07/Response/">
+    <link itemprop="mainEntityOfPage" href="https://small96.coding.me/2019/08/redis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="small96">
@@ -326,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Response
+          <h1 class="post-title" itemprop="name headline">Redis
               
             
           </h1>
@@ -351,24 +351,12 @@
                 
               
 
-              <time title="创建时间：2019-07-29 20:19:13" itemprop="dateCreated datePublished" datetime="2019-07-29T20:19:13+08:00">2019-07-29</time>
+              <time title="创建时间：2019-08-06 15:49:13 / 修改时间：15:49:46" itemprop="dateCreated datePublished" datetime="2019-08-06T15:49:13+08:00">2019-08-06</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-30 17:18:50" itemprop="dateModified" datetime="2019-07-30T17:18:50+08:00">2019-07-30</time>
               
             
           </span>
@@ -418,176 +406,86 @@
       
 
       
-        <h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><ol>
-<li><p>请求消息：客户端发送给服务器端的数据</p>
-<ul>
-<li><p>数据格式：</p>
-<ul>
-<li><p>请求行</p>
-</li>
-<li><p>请求头</p>
-</li>
-<li><p>请求空行</p>
-</li>
-<li><p>请求体</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>响应消息：服务器端发送给客户端的数据</p>
-<ul>
-<li><p>数据格式：</p>
-<ul>
-<li><p>响应行</p>
-<ul>
-<li><p>组成：协议和版本  响应状态码   状态码描述</p>
-</li>
-<li><p>响应状态码：服务器告诉客户端浏览器请求和响应的一个状态</p>
-<ul>
-<li><p>1XX：服务器就收客户端消息，但没有接受完成，等待一段时间后，发送1xx多状态码</p>
-</li>
-<li><p>2XX：成功。代表：200</p>
-</li>
-<li><p>3XX：重定向。代表：302(重定向)，304(访问缓存)</p>
-</li>
-<li><p>4XX：客户端错误</p>
-<p>404（请求路径没有对应的资源） </p>
-<p>405：请求方式没有对应的doxxx方法</p>
-</li>
-<li><p>5XX：服务器端错误。代表：500(服务器内部出现异常)</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>响应头</p>
-<ul>
-<li>格式：头名称 ：值</li>
-<li>常见响应头：<ul>
-<li>Content-Type：服务器告诉客户端本次响应体数据格式以及编码格式</li>
-<li>Content-disposition：服务器告诉客户端以什么格式打开响应体数据<ul>
-<li>in-line:默认值,在当前页面内打开</li>
-<li>attachment;filename=xxx：以附件形式打开响应体。文件下载</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>响应空行</p>
-</li>
-<li><p>响应体：传输的数据</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="Response"><a href="#Response" class="headerlink" title="Response"></a>Response</h2><h3 id="功能：设置响应消息"><a href="#功能：设置响应消息" class="headerlink" title="功能：设置响应消息"></a>功能：设置响应消息</h3><ol>
-<li><p>设置响应行</p>
-<ul>
-<li>格式：HTTP/1.1 200 ok</li>
-<li>设置状态码：setStatus(int sc) </li>
-</ul>
-</li>
-<li><p>设置响应头</p>
-<ul>
-<li>setHeader(String name, String value) </li>
-</ul>
-</li>
-<li><p>设置响应体</p>
-<ul>
-<li><p>步骤：</p>
-<p>① 获取输出流</p>
-<ul>
-<li>字符输出流：PrintWriter getWriter()</li>
-<li>字节输出流：ServletOutputStream getOutputStream()</li>
-</ul>
-<p>② 使用输出流，将数据输出到客户端浏览器</p>
-</li>
-</ul>
-</li>
-</ol>
-<h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><ol>
-<li><p>方式一</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 设置状态码为302</span></span><br><span class="line">response.setStatus(<span class="number">302</span>);</span><br><span class="line"><span class="comment">//2.设置响应头location</span></span><br><span class="line">response.setHeader(<span class="string">"location"</span>,<span class="string">"/day15/responseDemo2"</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方式二</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.sendRedirect(<span class="string">"/day15/responseDemo2"</span>);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="转发和重定向之间的区别"><a href="#转发和重定向之间的区别" class="headerlink" title="转发和重定向之间的区别"></a>转发和重定向之间的区别</h3><p>重定向的特点：<strong>redirect</strong></p>
+        <h2 id="Redis-数据结构"><a href="#Redis-数据结构" class="headerlink" title="Redis 数据结构"></a>Redis 数据结构</h2><p>redis存储的是：key,value格式的数据，其中key都是字符串，value有5种不同的数据结构</p>
 <ol>
-<li>地址栏发生变化</li>
-<li>重定向可以访问其他站点(服务器)的资源</li>
-<li>重定向是两次请求。<strong>不能使用request对象来共享数据</strong></li>
+<li>字符串类型 string</li>
+<li>哈希类型 hash ： map格式  </li>
+<li>列表类型 list ： linkedlist格式。<strong>支持重复元素</strong></li>
+<li>集合类型 set  ：<strong>不允许重复元素</strong></li>
+<li>有序集合类型 sortedset：<strong>不允许重复元素，且元素有顺序</strong></li>
 </ol>
-<p>转发的特点：<strong>forward</strong></p>
-<ol>
-<li>转发地址栏路径不变</li>
-<li>转发只能访问当前服务器下的资源</li>
-<li>转发是一次请求，可以使用request对象来共享数据</li>
+<h3 id="字符串String"><a href="#字符串String" class="headerlink" title="字符串String"></a>字符串String</h3><ol>
+<li>存储：set key value</li>
+<li>获取： get key</li>
+<li>删除： del key</li>
 </ol>
-<h3 id="服务器输出字符数据到浏览器"><a href="#服务器输出字符数据到浏览器" class="headerlink" title="服务器输出字符数据到浏览器"></a>服务器输出字符数据到浏览器</h3><p>步骤：</p>
-<ol>
-<li>获取字符输出流</li>
-<li>输出数据</li>
-</ol>
-<p>注意：</p>
-<p><strong>乱码问题：</strong></p>
-<ul>
-<li><p>PrintWriter pw = response.getWriter();获取的流的默认编码是ISO-8859-1</p>
-</li>
-<li><p>设置该流的默认编码</p>
-</li>
-<li><p>告诉浏览器响应体使用的编码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//简单的形式，设置编码，是在获取流之前设置</span></span><br><span class="line">response.setContentType(<span class="string">"text/html;charset=utf-8"</span>);</span><br></pre></td></tr></table></figure>
-</li>
+<h3 id="哈希类型-hash"><a href="#哈希类型-hash" class="headerlink" title="哈希类型 hash"></a>哈希类型 hash</h3><ol>
+<li>存储： hset key field value</li>
+<li>获取： hget key field：获取指定的field对应的值<ul>
+<li>hgetall key ：获取所有的field和value</li>
 </ul>
-<h3 id="服务器输出字节数据到浏览器"><a href="#服务器输出字节数据到浏览器" class="headerlink" title="服务器输出字节数据到浏览器"></a>服务器输出字节数据到浏览器</h3><p>步骤：</p>
-<ol>
-<li><p>获取字节输出流</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServletOutputStream sos = response.getOutputStream();</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>输出数据</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sos.write(<span class="string">"你好"</span>.getBytes(<span class="string">"utf-8"</span>));</span><br></pre></td></tr></table></figure>
+<li>删除： hdel key field</li>
+</ol>
+<h3 id="列表类型-list"><a href="#列表类型-list" class="headerlink" title="列表类型 list"></a>列表类型 list</h3><ol>
+<li>添加：可以添加一个元素到列表的头部（左边）或者尾部（右边）<ul>
+<li>lpush key value：将元素加入列表左边</li>
+<li>rpush key value：将元素加入列表右边</li>
+</ul>
+</li>
+<li>获取：lrange key start end：范围获取</li>
+<li>删除：<ul>
+<li>lpop key：删除列表最左边的一个元素，并将元素返回</li>
+<li>rpop key：删除列表最右边的一个元素，并将元素返回</li>
+</ul>
 </li>
 </ol>
-<h2 id="ServletContext对象"><a href="#ServletContext对象" class="headerlink" title="ServletContext对象"></a>ServletContext对象</h2><ol>
-<li><p>概念：代表整个web应用，可以和程序的容器(服务器)来通信，一个web项目只包含一个</p>
+<h3 id="集合类型-set"><a href="#集合类型-set" class="headerlink" title="集合类型 set"></a>集合类型 set</h3><ol>
+<li>存储：sadd key value</li>
+<li>获取：smembers key:获取set集合中所有元素</li>
+<li>删除：srem key value:删除set集合中的某个元素</li>
+</ol>
+<h3 id="有序集合类型-sortedset"><a href="#有序集合类型-sortedset" class="headerlink" title="有序集合类型 sortedset"></a>有序集合类型 sortedset</h3><ol>
+<li>存储：zadd key score value</li>
+<li>获取：zrange key start end [withscores]</li>
+<li>删除：zrem key value</li>
+</ol>
+<h2 id="通用命令"><a href="#通用命令" class="headerlink" title="通用命令"></a>通用命令</h2><ol>
+<li>keys * : 查询所有的键</li>
+<li>type key ： 获取键对应的value的类型</li>
+<li>del key：删除指定的key value</li>
+</ol>
+<h2 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h2><ol>
+<li><p>redis是一个内存数据库，当redis服务器重启，获取电脑重启，数据会丢失，我们可以将redis内存中的数据持久化保存到硬盘的文件中。</p>
 </li>
-<li><p>获取：</p>
+<li><p>redis持久化机制：</p>
 <ul>
-<li><p>通过 request  对象获取</p>
-<p>request.getServletContext();</p>
+<li><p>RDB：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">* 默认方式，不需要进行配置，默认就使用这种机制</span><br><span class="line">* 在一定的间隔时间中，检测key的变化情况，然后持久化数据</span><br><span class="line">1.编辑redis.windows.conf 文件</span><br><span class="line">	# after 900 sec (15 min) if at least 1 key changed</span><br><span class="line">	save 900 1</span><br><span class="line">	# after 300 sec (5 min) if at least 10 keys changed</span><br><span class="line">	save 300 10</span><br><span class="line">	# after 60 sec if at least 10000 keys changed</span><br><span class="line">	save 60 10000</span><br><span class="line">2.重新启动redis服务器，并指定配置文件名称</span><br><span class="line">	* redis目录下打开cmd，输入redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>通过 HttpServlet 获取</p>
-<p>this.getServletContext();</p>
+<li><p>AOF：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">* 日志记录的方式，可以记录每一条命令的操作。可以每一次命令操作后，持久化数据</span><br><span class="line">1.编辑redis.windows.conf 文件</span><br><span class="line">	appendonly no(关闭aof)---&gt;appendonly yes (打开aof)</span><br><span class="line">	# appendfsync always ： 每一次操作都进行持久化</span><br><span class="line">	appendfsync everysec ： 每隔一秒进行一次持久化</span><br><span class="line">	# appendfsync no	 ： 不进行持久化</span><br><span class="line">2.重新启动redis服务器，并指定配置文件名称</span><br><span class="line">	* redis目录下打开cmd，输入redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
-<li><p>获取MIME类型：</p>
-<ul>
-<li><p>MIME类型：在互联网通信过程中定义的一种文件数据类型</p>
-<ul>
-<li>格式： 大类型/小类型   text/html        image/jpeg</li>
-<li>获取：String getMimeType(String file) </li>
-</ul>
+</ol>
+<h2 id="Jedis"><a href="#Jedis" class="headerlink" title="Jedis"></a>Jedis</h2><ol>
+<li><p>Jedis: 一款java操作redis数据库的工具</p>
 </li>
-</ul>
-</li>
-<li><p>域对象：共享数据</p>
+<li><p>使用步骤：</p>
 <ul>
-<li>setAttribute(String name,Object value)</li>
-<li>getAttribute(String name)</li>
-<li>removeAttribute(String name)</li>
-<li><strong>ServletContext对象范围：所有用户所有请求的数据</strong></li>
+<li>下载jedis的jar包</li>
+<li>使用</li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.获取连接</span></span><br><span class="line">Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">"localhost"</span>,<span class="number">6379</span>);</span><br><span class="line"><span class="comment">//2.操作</span></span><br><span class="line">jedis.set(<span class="string">"username"</span>,<span class="string">"zhangsan"</span>);</span><br><span class="line"><span class="comment">//3.关闭连接</span></span><br><span class="line">jedis.close();</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>获取文件的真实(服务器)路径</p>
-<ul>
-<li>方法：String getRealPath(String path) </li>
+<li><p>Jedis中的方法与各种数据结构的操作名字一致</p>
+</li>
+</ol>
+<h3 id="Jedis-连接池"><a href="#Jedis-连接池" class="headerlink" title="Jedis 连接池"></a>Jedis 连接池</h3><ol>
+<li>使用<ul>
+<li>创建JedisPool连接池对象</li>
+<li>调用方法 getResource()方法获取Jedis连接</li>
 </ul>
 </li>
 </ol>
@@ -637,7 +535,7 @@
     <strong>本文作者： </strong>small96</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://small96.coding.me/2019/07/Response/" title="Response">https://small96.coding.me/2019/07/Response/</a>
+    <a href="https://small96.coding.me/2019/08/redis/" title="Redis">https://small96.coding.me/2019/08/redis/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -657,8 +555,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/jdbc相关问题/" rel="next" title="JDBC相关问题">
-                <i class="fa fa-chevron-left"></i> JDBC相关问题
+              <a href="/2019/08/AJAX&JSON/" rel="next" title="Ajax&Json">
+                <i class="fa fa-chevron-left"></i> Ajax&Json
               </a>
             
           </div>
@@ -666,10 +564,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/会话技术/" rel="prev" title="会话技术">
-                会话技术 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -804,7 +698,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP协议"><span class="nav-number">1.</span> <span class="nav-text">HTTP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Response"><span class="nav-number">2.</span> <span class="nav-text">Response</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#功能：设置响应消息"><span class="nav-number">2.1.</span> <span class="nav-text">功能：设置响应消息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重定向"><span class="nav-number">2.2.</span> <span class="nav-text">重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转发和重定向之间的区别"><span class="nav-number">2.3.</span> <span class="nav-text">转发和重定向之间的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器输出字符数据到浏览器"><span class="nav-number">2.4.</span> <span class="nav-text">服务器输出字符数据到浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器输出字节数据到浏览器"><span class="nav-number">2.5.</span> <span class="nav-text">服务器输出字节数据到浏览器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ServletContext对象"><span class="nav-number">3.</span> <span class="nav-text">ServletContext对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis-数据结构"><span class="nav-number">1.</span> <span class="nav-text">Redis 数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串String"><span class="nav-number">1.1.</span> <span class="nav-text">字符串String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哈希类型-hash"><span class="nav-number">1.2.</span> <span class="nav-text">哈希类型 hash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表类型-list"><span class="nav-number">1.3.</span> <span class="nav-text">列表类型 list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合类型-set"><span class="nav-number">1.4.</span> <span class="nav-text">集合类型 set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有序集合类型-sortedset"><span class="nav-number">1.5.</span> <span class="nav-text">有序集合类型 sortedset</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用命令"><span class="nav-number">2.</span> <span class="nav-text">通用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#持久化"><span class="nav-number">3.</span> <span class="nav-text">持久化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jedis"><span class="nav-number">4.</span> <span class="nav-text">Jedis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Jedis-连接池"><span class="nav-number">4.1.</span> <span class="nav-text">Jedis 连接池</span></a></li></ol></li></ol></div>
             
 
           </div>
