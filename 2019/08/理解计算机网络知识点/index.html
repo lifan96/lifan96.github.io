@@ -110,20 +110,33 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="后花园">
-<meta property="og:url" content="https://small96.coding.me/categories/多学一招/index.html">
+  <meta name="description" content="网络分层（自底向上） OSI 七层参考模型 1.1 物理层  主要定义物理设备的标准，如网线类型，光纤的接口类型等 单位：传输比特流（0101）转换为机器码  1.2 数据链路层  如何格式化数据以进行传输，控制对物理介质的访问。提供对错误的检测和纠正，确保传输的可 靠性  单位：将比特数据—&amp;gt;帧   1.3 网络层  将网络地址翻译成对应的物理地址，如何将发送方的数据路由到接收方 路由器属">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解计算机网络知识点">
+<meta property="og:url" content="https://small96.coding.me/2019/08/理解计算机网络知识点/index.html">
 <meta property="og:site_name" content="后花园">
+<meta property="og:description" content="网络分层（自底向上） OSI 七层参考模型 1.1 物理层  主要定义物理设备的标准，如网线类型，光纤的接口类型等 单位：传输比特流（0101）转换为机器码  1.2 数据链路层  如何格式化数据以进行传输，控制对物理介质的访问。提供对错误的检测和纠正，确保传输的可 靠性  单位：将比特数据—&amp;gt;帧   1.3 网络层  将网络地址翻译成对应的物理地址，如何将发送方的数据路由到接收方 路由器属">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/80ceacb8ly1g5t4t6mlcwj20cq08l0th.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/80ceacb8ly1g5t4tsq86yj20bw08rdgl.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/80ceacb8ly1g5t4ujj3w0j20ev05ydg4.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/80ceacb8ly1g5t4vadz7nj20ed04hq36.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/80ceacb8ly1g5t4vpaahyj20ea04ajrl.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/80ceacb8ly1g5t4vy8140j20e606yjrk.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/80ceacb8ly1g5t4wsjhkgj20dq05nweq.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/80ceacb8ly1g5t4x9lt20j20ex08kgm3.jpg">
+<meta property="og:updated_time" content="2019-08-09T05:15:22.074Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="后花园">
+<meta name="twitter:title" content="理解计算机网络知识点">
+<meta name="twitter:description" content="网络分层（自底向上） OSI 七层参考模型 1.1 物理层  主要定义物理设备的标准，如网线类型，光纤的接口类型等 单位：传输比特流（0101）转换为机器码  1.2 数据链路层  如何格式化数据以进行传输，控制对物理介质的访问。提供对错误的检测和纠正，确保传输的可 靠性  单位：将比特数据—&amp;gt;帧   1.3 网络层  将网络地址翻译成对应的物理地址，如何将发送方的数据路由到接收方 路由器属">
+<meta name="twitter:image" content="https://ws4.sinaimg.cn/large/80ceacb8ly1g5t4t6mlcwj20cq08l0th.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://small96.coding.me/categories/多学一招/"/>
+  <link rel="canonical" href="https://small96.coding.me/2019/08/理解计算机网络知识点/"/>
 
 
 
@@ -133,7 +146,7 @@
   };
 </script>
 
-  <title>分类: 多学一招 | 后花园</title>
+  <title>理解计算机网络知识点 | 后花园</title>
   
 
 
@@ -181,7 +194,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -225,7 +238,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类<span class="badge">5</span></a>
   </li>
@@ -261,25 +274,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -339,87 +333,533 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>多学一招<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://small96.coding.me/2019/08/理解计算机网络知识点/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="small96">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="后花园">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/07/Git-学习笔记01/" itemprop="url">
-              
-                <span itemprop="name">Git 学习笔记01</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">理解计算机网络知识点
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-26T12:23:40+08:00"
-              content="2018-07-26" >
-          07-26
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-08 15:23:13" itemprop="dateCreated datePublished" datetime="2019-08-08T15:23:13+08:00">2019-08-08</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-09 13:15:22" itemprop="dateModified" datetime="2019-08-09T13:15:22+08:00">2019-08-09</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/各进制之间的转换/" itemprop="url">
-              
-                <span itemprop="name">各进制之间的转换</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-24T13:56:39+08:00"
-              content="2018-07-24" >
-          07-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <h2 id="网络分层（自底向上）"><a href="#网络分层（自底向上）" class="headerlink" title="网络分层（自底向上）"></a>网络分层（自底向上）</h2><ol>
+<li><p><strong>OSI 七层参考模型</strong></p>
+<p>1.1 物理层</p>
+<ul>
+<li>主要定义物理设备的标准，如网线类型，光纤的接口类型等</li>
+<li>单位：传输<strong>比特流</strong>（0101）<--->转换为机器码</---></li>
+</ul>
+<p>1.2 数据链路层</p>
+<ul>
+<li><p>如何格式化数据以进行传输，控制对物理介质的访问。提供对错误的检测和纠正，确保传输的可</p>
+<p>靠性</p>
+</li>
+<li><p>单位：将比特数据—&gt;<strong>帧</strong></p>
+</li>
+</ul>
+<p>1.3 网络层</p>
+<ul>
+<li>将网络地址翻译成对应的物理地址，如何将发送方的数据路由到接收方</li>
+<li><strong>路由器属于网络层</strong></li>
+<li>单位：<strong>数据报</strong></li>
+<li>主要协议：IP</li>
+</ul>
+<p>1.4 传输层</p>
+<ul>
+<li>解决主机之间的数据传输，可以是不同网络之间</li>
+<li>单位：<strong>分段</strong></li>
+<li>TCP：面向连接的、可靠的、基于字节流的传输层通信协议</li>
+<li>UDP</li>
+</ul>
+<p>1.5 会话层</p>
+<ul>
+<li>建立和管理应用程序之间的通信</li>
+</ul>
+<p>1.6 表示层</p>
+<ul>
+<li>信息的语法语义以及它们的关联</li>
+</ul>
+<p>1.7 应用层</p>
+<ul>
+<li>HTTP协议</li>
+</ul>
+</li>
+<li><p><strong>TCP/IP</strong></p>
+</li>
+</ol>
+<h2 id="TCP的三次握手"><a href="#TCP的三次握手" class="headerlink" title="TCP的三次握手"></a>TCP的三次握手</h2><ol>
+<li>TCP简介<ul>
+<li>面向连接的、可靠的、基于字节流的传输层通信协议</li>
+<li>将应用层的数据流分隔成报文段并发送给目标节点的TCP层</li>
+<li>数据包都有序号，<strong>对方收到则发送ACK确认</strong>，未收到则重传</li>
+<li>使用奇偶校验和来检验数据在传输过程中是否有错误</li>
+</ul>
+</li>
+<li>TCP Flags<ul>
+<li>URG：紧急指针标志  为1时表示有效，为0则忽略</li>
+<li><strong>ACK：确认序号标志</strong>  为1时表示有效，为0不含确认信息，则忽略</li>
+<li>PSH：push标志  为1时指示接收方在接收到的报文段尽快交给应用程序，而不是在缓冲区排队</li>
+<li>RST：重置连接标志 用于重置由于主机崩溃产生的错误连接、非法的报文段和拒绝连接</li>
+<li><strong>SYN：</strong>同步序号，用于建立连接过程</li>
+<li><strong>FIN：</strong>finish标志，用于释放连接</li>
+</ul>
+</li>
+<li><p>流程</p>
+<ul>
+<li>第一次握手：建立连接时，客户端发送SYN包（syn=j）到服务器，进入SYN_SEND状态，等待服务器确认</li>
+<li>第二次握手：服务器收到SYN包，必须确认客户的SYN（ack+1），同时自己也发送一个SYN包（syn=k），即SYN+ACK包，此时服务器进入SYN_RECV状态</li>
+<li>第三次握手：客户端收到服务器的SYN+ACK包，向服务器发送确认包ACK（ack=ack+1），此包发送完毕，客户端和服务器进入ESTABLISHED状态，完成三次握手。</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/large/80ceacb8ly1g5t4t6mlcwj20cq08l0th.jpg" alt="批注 2019-08-08 101941"></p>
+</li>
+</ol>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
+<li><p>为什么需要三次握手才能建立起连接？</p>
+<p>为了初始化Sequence Number的初始值</p>
+</li>
+<li><p>首次握手的隐患—SYN超时</p>
+<ul>
+<li>Server收到Client的SYN，回复SYN-ACK的时候未收到ACK的确认</li>
+<li>Server不断重试直至超时，Linux默认等待63秒才断开连接</li>
+<li><strong>针对SYN Flood的防护措施</strong><ul>
+<li>SYN队列满后，通过tcp_syncookies参数回发SYN Cookie</li>
+<li>若为正常连接则Client会回发SYN Cookie，直接建立连接</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>建立连接后，Client出现故障怎么办？</p>
+<p>保活机制</p>
+<ul>
+<li>向对方发送保活探测报文，如果未收到响应则继续发送</li>
+<li>尝试次数达到保活探测数仍未收到响应则中断连接</li>
+</ul>
+</li>
+</ol>
+<h2 id="TCP的四次挥手"><a href="#TCP的四次挥手" class="headerlink" title="TCP的四次挥手"></a>TCP的四次挥手</h2><p>“挥手”是为了终止连接 </p>
+<ol>
+<li><p>流程</p>
+<ul>
+<li>第一次挥手：Client发送一个FIN，用来关闭Client到server的数据传送，Client进入FIN_WAIT_1状态</li>
+<li>第二次挥手：Server收到FIN后，发送一个ACK给Client，确认序号为收到序号+1（与SYN相同，一个FIN占用一个序号），Server进入CLOSE_WAIT状态</li>
+<li>第三次挥手：Server发送一个FIN，用来关闭Server到Client的数据传送，Server进入LAST_ACK</li>
+<li>第四次挥手：Client收到FIN后，Client进入TIME_WAIT状态，接着发送一个ACK给Server，确认序号为收到序号+1，Server进入CLOSED状态，完成四次挥手</li>
+</ul>
+<p><img src="https://ws4.sinaimg.cn/large/80ceacb8ly1g5t4tsq86yj20bw08rdgl.jpg" alt="批注 2019-08-08 104547"></p>
+<h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h3></li>
+<li><p>为什么会有TIME_WAIT状态？</p>
+<ul>
+<li>确保有足够的时间让对方收到ACK包</li>
+<li>避免新旧连接混淆</li>
+</ul>
+</li>
+<li>为什么需要四次握手才能断开连接？<ul>
+<li>因为全双工，发送方和接收方都需要FIN报文和ACK报文</li>
+</ul>
+</li>
+<li>服务器出现大量CLOSE_WAIT状态的原因<ul>
+<li>对方关闭Socket连接，我方忙于读或写，没有及时关闭连接<ul>
+<li>检查代码，特别是释放资源的代码</li>
+<li>检查配置，特别是处理请求的线程配置</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="TCP和UDP的区别"><a href="#TCP和UDP的区别" class="headerlink" title="TCP和UDP的区别"></a>TCP和UDP的区别</h2><ul>
+<li>面向连接 VS 无连接</li>
+<li>可靠性</li>
+<li>有序性</li>
+<li>速度</li>
+<li>量级</li>
+</ul>
+<h2 id="TCP的滑动窗口"><a href="#TCP的滑动窗口" class="headerlink" title="TCP的滑动窗口"></a>TCP的滑动窗口</h2><ol>
+<li><p>RTT和RTO</p>
+<ul>
+<li>RTT：发送一个数据包到收到对应的ACK，所花费时间</li>
+<li>RTO：重传时间间隔</li>
+</ul>
+</li>
+<li><p>TCP使用滑动窗口做流量控制与乱序重排</p>
+<ul>
+<li>保证TCP的可靠性</li>
+<li>保证TCP的流控特性</li>
+</ul>
+</li>
+<li><p>窗口数据的计算过程</p>
+<p><img src="https://wx1.sinaimg.cn/large/80ceacb8ly1g5t4ujj3w0j20ev05ydg4.jpg" alt="批注 2019-08-08 111202"></p>
+<ul>
+<li>AdvertisedWindow = MaxRcvBuffer - (LastByteRcvd - LastByteRead)</li>
+<li>EffectiveWindow = AdvertisedWindow - (LastByteSent - LastByteAcked)</li>
+</ul>
+</li>
+<li><p>TCP会话的发送方</p>
+<p>四种状态</p>
+<ul>
+<li>Sent and Acknowledged</li>
+<li>Sent But Not Yet Acknowledged（发送窗口）</li>
+<li>Not Sent Recipient Ready to Receive（发送窗口）</li>
+<li>Not Sent Recipient NOT Ready to Receive</li>
+</ul>
+</li>
+<li><p>TCP会话的接收方</p>
+<p>三种状态</p>
+<ul>
+<li>Received and Acknowledged</li>
+<li>Not Yet Received，Transmitter Permitted To Send（接收窗口）</li>
+<li>Not Yet Received，Transmitter May Not Send</li>
+</ul>
+</li>
+</ol>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><ol>
+<li><p>超文本传输协议特点：</p>
+<ul>
+<li>支持客户、服务器模式</li>
+<li>简单快速</li>
+<li>灵活</li>
+<li>无连接</li>
+<li>无状态</li>
+</ul>
+</li>
+<li><p>HTTP请求结构</p>
+<p><img src="https://ws3.sinaimg.cn/large/80ceacb8ly1g5t4vadz7nj20ed04hq36.jpg" alt="批注 2019-08-08 112622"></p>
+</li>
+<li><p>HTTP响应结构</p>
+<p><img src="https://ws4.sinaimg.cn/large/80ceacb8ly1g5t4vpaahyj20ea04ajrl.jpg" alt="批注 2019-08-08 112740"></p>
+</li>
+<li><p>请求/响应的步骤</p>
+<ul>
+<li>客户端连接到Web服务器</li>
+<li>发送HTTP请求</li>
+<li>服务器接收请求并返回HTTP响应</li>
+<li>释放TCP连接</li>
+<li>客户端浏览器解析HTML内容</li>
+</ul>
+</li>
+<li><p>HTTP状态码</p>
+<p>五种</p>
+<ul>
+<li>1xx：指示信息—表示请求已接收，继续处理</li>
+<li>2xx：成功—表示请求已被成功接收、理解、接受</li>
+<li>3xx：重定向—要完成请求必须进行更进一步地操作</li>
+<li>4xx：客户端错误—请求有语法错误或请求无法实现</li>
+<li>5xx：服务器端错误—服务器未能实现合法的请求</li>
+</ul>
+</li>
+</ol>
+<h3 id="问题-2"><a href="#问题-2" class="headerlink" title="问题"></a>问题</h3><ol>
+<li><p>在浏览器地址栏键入URL，按下回车之后经历的流程？</p>
+<ul>
+<li>DNS解析</li>
+<li>TCP连接</li>
+<li>发送HTTP请求</li>
+<li>服务器处理请求并返回HTTP报文</li>
+<li>浏览器解析渲染页面</li>
+<li>连接结束</li>
+</ul>
+</li>
+<li><p>常见的HTTP状态码</p>
+<ul>
+<li>200 OK：正常返回信息</li>
+<li>400 Bad Request：客户端请求有语法错误，不能被服务器所理解</li>
+<li>401 Unauthorized：请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用</li>
+<li>403 Forbidden：服务器收到请求，但是拒绝提供服务</li>
+<li>404 Not Found：请求资源不存在，eg，输入错误的URL</li>
+<li>500 InternalServer Error：服务器发生不可预期的错误</li>
+<li>503 Server Unavailable：服务器当前不能处理客户端的请求，一段时间可能恢复正常</li>
+</ul>
+</li>
+<li><p>GET请求和POST请求的区别</p>
+<ul>
+<li>Http报文层面：GET将请求信息放在URL,POST放在报文体中</li>
+<li>数据库层面：GET符合幂等性和安全性，POST不符合</li>
+<li>其他层面：GET可以被缓存、被存储，而POST不行</li>
+</ul>
+</li>
+<li><p>Cookie和Session的区别</p>
+<p>4.1 Cookie简介</p>
+<ul>
+<li><p>是由<strong>服务器发给客户端</strong>的特殊信息，以文本的形式存放在客户端</p>
+</li>
+<li><p>客户端再次请求时，会把Cookie回发</p>
+</li>
+<li><p>服务器接收到后，会解析Cookie生成与客户端相对应的内容</p>
+</li>
+<li><p>Cookie的设置以及发送过程</p>
+<p><img src="https://ws1.sinaimg.cn/large/80ceacb8ly1g5t4vy8140j20e606yjrk.jpg" alt="批注 2019-08-08 134015"></p>
+</li>
+</ul>
+<p>4.2 Session简介</p>
+<ul>
+<li><p><strong>服务器端的机制</strong>，在服务器上保存的信息</p>
+</li>
+<li><p>解析客户端请求并操作session id，按需保存状态信息</p>
+</li>
+<li><p>使用Cookie来实现</p>
+</li>
+<li><p>使用URL回写来实现</p>
+<p><img src="https://wx1.sinaimg.cn/large/80ceacb8ly1g5t4wsjhkgj20dq05nweq.jpg" alt="批注 2019-08-08 134823"></p>
+</li>
+</ul>
+<p>4.3 区别</p>
+<ul>
+<li><strong>Cookie数据存放在客户端的浏览器上，Session数据放在服务器上</strong></li>
+<li><strong>Session相对于Cookie更安全</strong></li>
+<li><strong>若考虑减轻服务器负担，应当使用Cookie</strong><h2 id="HTTP和HTTPS的区别"><a href="#HTTP和HTTPS的区别" class="headerlink" title="HTTP和HTTPS的区别"></a>HTTP和HTTPS的区别</h2></li>
+</ul>
+</li>
+<li><p>SSL简介（Security Sockets Layer，安全套接层）</p>
+<ul>
+<li>为网络通信提供安全及数据完整性的一种安全协议</li>
+<li>是操作系统外的API，SSL3.0后更名为TLS</li>
+<li>采用<strong>身份验证和数据加密</strong>保证网络的安全和数据的完整性</li>
+</ul>
+</li>
+<li>加密方式<ul>
+<li>对称加密：加密解密都是用同一个秘钥</li>
+<li>非对称加密：加密使用的秘钥和解密使用的秘钥是不相同的 </li>
+<li>哈希算法：将任意长度的信息转换为固定长度的值，算法不可逆</li>
+<li>数字签名：证明某个消息或文件是某人发出/认同的</li>
+</ul>
+</li>
+<li><p>HTTPS数据传输流程</p>
+<ul>
+<li>浏览器将支持的加密算法信息发送给服务器</li>
+<li>服务器选择一套浏览器支持的加密算法，以证书的形式回发浏览器</li>
+<li>浏览器验证证书的合法性，并结合证书公钥加密信息发送给服务器</li>
+<li>服务器使用私钥解密信息，验证哈希，加密响应消息回发浏览器</li>
+<li>浏览器解密响应消息，并对消息进行验证，之后进行加密交互数据</li>
+</ul>
+</li>
+<li><p>HTTP和HTTPS的区别</p>
+<ul>
+<li>HTTPS需要到CA申请证书，HTTP不需要 </li>
+<li>HTTPS密文传输，HTTP明文传输</li>
+<li>连接方式不同，HTTPS默认使用443端口，HTTP使用80端口</li>
+<li>HTTPS = HTTP +加密 +认证+完整性保护，较HTTP安全</li>
+</ul>
+</li>
+</ol>
+<h2 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h2><p><img src="https://ws4.sinaimg.cn/large/80ceacb8ly1g5t4x9lt20j20ex08kgm3.jpg" alt="批注 2019-08-08 154824"></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+	
+	<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+  
+  <div>
+      
+        
+      
+</div>
+
+	</div>
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat.png" alt="small96 wechat" style="width: 200px; max-width: 100%;"/>
+    <div>坚持原创技术分享，欢迎提出建议！</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>small96</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://small96.coding.me/2019/08/理解计算机网络知识点/" title="理解计算机网络知识点">https://small96.coding.me/2019/08/理解计算机网络知识点/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/Maven/" rel="next" title="Maven">
+                <i class="fa fa-chevron-left"></i> Maven
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/数据库知识分析/" rel="prev" title="数据库知识分析">
+                数据库知识分析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -440,8 +880,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -511,6 +960,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络分层（自底向上）"><span class="nav-number">1.</span> <span class="nav-text">网络分层（自底向上）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP的三次握手"><span class="nav-number">2.</span> <span class="nav-text">TCP的三次握手</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">2.1.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP的四次挥手"><span class="nav-number">3.</span> <span class="nav-text">TCP的四次挥手</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题-1"><span class="nav-number">3.1.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP和UDP的区别"><span class="nav-number">4.</span> <span class="nav-text">TCP和UDP的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP的滑动窗口"><span class="nav-number">5.</span> <span class="nav-text">TCP的滑动窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP"><span class="nav-number">6.</span> <span class="nav-text">HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题-2"><span class="nav-number">6.1.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP和HTTPS的区别"><span class="nav-number">7.</span> <span class="nav-text">HTTP和HTTPS的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Socket"><span class="nav-number">8.</span> <span class="nav-text">Socket</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -647,6 +1112,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.0"></script>
+
+
 
   
 
@@ -1001,43 +1470,42 @@
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { "$in": entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function ({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
+                .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function () {
+                  console.log('Failed to create');
+                });
+            
           }
         })
-        .fail(function ({ responseJSON }) {
-          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
-        });
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
     }
     
 
@@ -1057,9 +1525,7 @@
             });
           };
           
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
+          addCount(Counter);
           
         })
     });
