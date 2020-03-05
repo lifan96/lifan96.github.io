@@ -110,17 +110,17 @@
 
 
 
-  <meta name="description" content="JSP 指令  作用：用于配置JSP页面，导入资源文件  格式： &amp;lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2…%&amp;gt;  分类：  page：配置JSP页面 12345678* contentType：等同于response.setContentType()	* 设置响应体的mime类型以及字符集	* 设置当前jsp页面的编码（只能是高级的IDE才能生效，如果使用低级工具，则">
+  <meta name="description" content="JSP 概念：Java Server Pages： java服务器端页面 原理：JSP本质上就是一个Servlet（JSP–&amp;gt;.java–&amp;gt;class–&amp;gt;执行） JSP的脚本： &amp;lt;% 代码 %&amp;gt;：定义的java代码，在service方法中。service方法中可以定义什么，该脚本中就可以定义什么。 &amp;lt;%! 代码 %&amp;gt;：定义的java代码，在jsp转换后的j">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JSP&amp;EL&amp;JSTL">
 <meta property="og:url" content="https://small96.coding.me/2019/07/JSP&EL&JSTL/index.html">
 <meta property="og:site_name" content="后花园">
-<meta property="og:description" content="JSP 指令  作用：用于配置JSP页面，导入资源文件  格式： &amp;lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2…%&amp;gt;  分类：  page：配置JSP页面 12345678* contentType：等同于response.setContentType()	* 设置响应体的mime类型以及字符集	* 设置当前jsp页面的编码（只能是高级的IDE才能生效，如果使用低级工具，则">
+<meta property="og:description" content="JSP 概念：Java Server Pages： java服务器端页面 原理：JSP本质上就是一个Servlet（JSP–&amp;gt;.java–&amp;gt;class–&amp;gt;执行） JSP的脚本： &amp;lt;% 代码 %&amp;gt;：定义的java代码，在service方法中。service方法中可以定义什么，该脚本中就可以定义什么。 &amp;lt;%! 代码 %&amp;gt;：定义的java代码，在jsp转换后的j">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-31T02:19:11.479Z">
+<meta property="og:updated_time" content="2020-02-04T05:19:27.622Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSP&amp;EL&amp;JSTL">
-<meta name="twitter:description" content="JSP 指令  作用：用于配置JSP页面，导入资源文件  格式： &amp;lt;%@ 指令名称 属性名1=属性值1 属性名2=属性值2…%&amp;gt;  分类：  page：配置JSP页面 12345678* contentType：等同于response.setContentType()	* 设置响应体的mime类型以及字符集	* 设置当前jsp页面的编码（只能是高级的IDE才能生效，如果使用低级工具，则">
+<meta name="twitter:description" content="JSP 概念：Java Server Pages： java服务器端页面 原理：JSP本质上就是一个Servlet（JSP–&amp;gt;.java–&amp;gt;class–&amp;gt;执行） JSP的脚本： &amp;lt;% 代码 %&amp;gt;：定义的java代码，在service方法中。service方法中可以定义什么，该脚本中就可以定义什么。 &amp;lt;%! 代码 %&amp;gt;：定义的java代码，在jsp转换后的j">
 
 
 
@@ -239,7 +239,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">43</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">45</span></a>
   </li>
         
         
@@ -382,12 +382,24 @@
                 
               
 
-              <time title="创建时间：2019-07-31 08:36:13 / 修改时间：10:19:11" itemprop="dateCreated datePublished" datetime="2019-07-31T08:36:13+08:00">2019-07-31</time>
+              <time title="创建时间：2019-07-31 08:36:13" itemprop="dateCreated datePublished" datetime="2019-07-31T08:36:13+08:00">2019-07-31</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-04 13:19:27" itemprop="dateModified" datetime="2020-02-04T13:19:27+08:00">2020-02-04</time>
               
             
           </span>
@@ -438,7 +450,29 @@
 
       
         <h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h2><ol>
+<li>概念：Java Server Pages： java服务器端页面</li>
+<li>原理：JSP本质上就是一个Servlet（JSP–&gt;.java–&gt;class–&gt;执行）</li>
+<li>JSP的脚本：<ul>
+<li>&lt;% 代码 %&gt;：定义的java代码，<strong>在service方法中</strong>。service方法中可以定义什么，该脚本中就可以定义什么。</li>
+<li>&lt;%! 代码 %&gt;：定义的java代码，在jsp转换后的<strong>java类的成员位置</strong>（成员变量或方法）。</li>
+<li>&lt;%= 代码 %&gt;：定义的java代码，会输出到页面上。<strong>输出语句中可以定义什么，该脚本中就可以定义什么</strong>。</li>
+</ul>
+</li>
+<li><p>JSP的内置对象：在jsp页面中<strong>不需要获取和创建</strong>，可以直接使用的对象</p>
+<ul>
+<li>request</li>
+<li>response</li>
+<li>out：字符输出流对象。可以将数据输出到页面上。和response.getWriter()类似</li>
+<li><strong>response.getWriter()和out.write()的区别：</strong><ul>
+<li>在tomcat服务器真正给客户端做出响应之前，<strong>会先找response缓冲区数据，再找out缓冲区数据。</strong></li>
+<li>response.getWriter()数据输出永远在out.write()之前</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p>指令</p>
+</li>
+</ol>
 <ul>
 <li><p>作用：用于配置JSP页面，导入资源文件</p>
 </li>
@@ -459,20 +493,20 @@
 </ul>
 </li>
 </ul>
-</li>
+<ol start="6">
+<li>注释</li>
 </ol>
-<ol start="2">
-<li><p>注释</p>
 <ul>
 <li><p>html注释：\<!-- -->:只能注释html代码片段</p>
 </li>
-<li><p>jsp注释：推荐使用</p>
+<li><p><strong>jsp注释：推荐使用</strong></p>
 <p>&lt;%– –%&gt;：可以注释所有</p>
 </li>
 </ul>
-</li>
-<li><p>内置对象</p>
-<p> 变量名                    真实类型                        作用</p>
+<ol start="7">
+<li>内置对象</li>
+</ol>
+<p>变量名                    真实类型                        作用</p>
 <ul>
 <li>pageContext         PageContext        当前页面共享数据，还可以获取其他八个内置对象</li>
 <li>request            HttpServletRequest        一次请求访问的多个资源(转发)</li>
@@ -482,11 +516,9 @@
 <li>page                Object                   当前页面(Servlet)的对象  this</li>
 <li>out                JspWriter               输出对象，数据输出到页面上</li>
 <li>config            ServletConfig            Servlet的配置对象</li>
-<li>exception            Throwable                异常对象<h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2></li>
+<li>exception            Throwable                异常对象</li>
 </ul>
-</li>
-</ol>
-<ul>
+<h2 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h2><ul>
 <li><p>M：Model，模型</p>
 <p>完成具体的业务操作，如：查询数据库，封装对象</p>
 </li>
@@ -712,7 +744,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">43</span>
+                    <span class="site-state-item-count">45</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -794,7 +826,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-coffee"user></i>
   </span>

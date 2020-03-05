@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="后花园">
 <meta property="og:description" content="Request和Response对象原理 Tomcat服务器会根据请求url中的资源路径，创建对应的ServletDemo1的对象 Tomcat服务器，会创建request和 response对象，request对象中封装请求数据 Tomcat将request和response两个对象传递给service方法，并且调用service方法 程序员通过request对象获取请求数据，通过respons">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-30T09:19:18.786Z">
+<meta property="og:updated_time" content="2020-02-01T03:36:17.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Request">
 <meta name="twitter:description" content="Request和Response对象原理 Tomcat服务器会根据请求url中的资源路径，创建对应的ServletDemo1的对象 Tomcat服务器，会创建request和 response对象，request对象中封装请求数据 Tomcat将request和response两个对象传递给service方法，并且调用service方法 程序员通过request对象获取请求数据，通过respons">
@@ -239,7 +239,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">43</span></a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档<span class="badge">45</span></a>
   </li>
         
         
@@ -399,7 +399,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-30 17:19:18" itemprop="dateModified" datetime="2019-07-30T17:19:18+08:00">2019-07-30</time>
+                <time title="修改时间：2020-02-01 11:36:17" itemprop="dateModified" datetime="2020-02-01T11:36:17+08:00">2020-02-01</time>
               
             
           </span>
@@ -499,53 +499,54 @@
 <li><p>Enumeration<string> getHeaderNames()：获取所有请求头名称</string></p>
 </li>
 <li><p><strong>获取请求体数据</strong></p>
-</li>
-</ul>
-</li>
-<li><p>只有POST请求方式，才有请求体，在请求体中封装了POST请求的请求参数</p>
-</li>
-<li><p>步骤：</p>
-<ol>
-<li>获取流对象</li>
-</ol>
 <ul>
-<li><strong>BufferedReader getReader()：获取字符输入流，只能操作字符数据</strong></li>
-<li>ServletInputStream getInputStream()：获取字节输入流，可以操作所有所有类型的数据</li>
+<li><strong>只有POST请求方式，才有请求体</strong>，在请求体中封装了POST请求的请求参数</li>
+<li><p>步骤：</p>
+<ul>
+<li>获取流对象<ul>
+<li><strong>BufferedReader getReader()：获取字符输入流，只能操作字符数据-</strong>ServletInputStream getInputStream()：获取字节输入流，可以操作所有所有类型的数据</li>
 </ul>
-<ol start="2">
-<li><p>再从流对象中拿数据</p>
+</li>
+<li>再从流对象中拿数据</li>
+</ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String line = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">while</span> ((line = br.readLine()) != <span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.println(line);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 </li>
 </ol>
-<ul>
+<ol start="3">
 <li><p>其他功能</p>
 <ul>
-<li><p>获取请求参数通用方式（get和post通用）</p>
+<li><p><strong>获取请求参数通用方式</strong>（get和post通用）</p>
 <ul>
-<li>String getPrarmeter(String name)：根据请求参数名称获取请求参数值</li>
+<li><strong>String getPrarmeter(String name)：根据请求参数名称获取请求参数值</strong></li>
 <li>String[] getPrarmeterValues(String name)：根据请求参数名称获取请求参数值的数组</li>
 <li>Enumeration<string> getParameterNames()：获取所有请求参数名称</string></li>
 <li>Map&lt;String,String[ ]&gt; getParameterMap()：获取所有参数的map集合</li>
 </ul>
 </li>
-<li><p>请求转发</p>
+<li><p><strong>请求转发</strong></p>
 <p>步骤 ：</p>
 <ul>
-<li>通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher (String Path)</li>
-<li>通过RequestDispatcher 对象调用方法转发：forward(ServletRequest request ,ServletResponse response)</li>
-</ul>
-<p><strong>特点：</strong></p>
+<li><p>通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher (String Path)</p>
+</li>
+<li><p>通过RequestDispatcher 对象调用方法转发：forward(ServletRequest request ,ServletResponse response)</p>
+</li>
+<li><p><strong>特点：</strong></p>
 <ul>
-<li>浏览器地址状态栏路径不发生变化</li>
-<li>只能转发到当前服务器内部资源中</li>
-<li><strong>转发是一次请求</strong></li>
+<li><p>浏览器地址状态栏路径不发生变化</p>
+</li>
+<li><p>只能转发到当前服务器内部资源中</p>
+</li>
+<li><p><strong>转发是一次请求</strong></p>
+</li>
 </ul>
 </li>
-<li><p>共享数据</p>
+<li><p><strong>共享数据</strong></p>
 <p>request域：代表一次请求的范围，一般用于请求转发的多个资源中共享数据</p>
 <p>方法：</p>
 <ul>
@@ -554,35 +555,24 @@
 <li>removeAttribute(String name)：通过键移除键值对</li>
 </ul>
 </li>
-<li><p>获取ServletContext</p>
+</ul>
+</li>
+<li><p>获取ServletContext：</p>
 <p>ServletContext getServletContext()</p>
 </li>
 </ul>
 </li>
-</ul>
-<pre><code>### 中文乱码问题
-
-- get方式：Tomcat 8 已经将中文乱码问题解决
-
-- post方式：会乱码
-
-  解决：在获取参数前，设置编码 request.setCharacterEncoding(&quot;UTF-8&quot;);
-</code></pre><h2 id="BeanUtils工具类"><a href="#BeanUtils工具类" class="headerlink" title="BeanUtils工具类"></a>BeanUtils工具类</h2><p>   简化数据封装，用于封装JavaBean的</p>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">### 中文乱码问题</span><br><span class="line">    </span><br><span class="line">- get方式：Tomcat 8 已经将中文乱码问题解决</span><br><span class="line">    </span><br><span class="line">- post方式：会乱码</span><br><span class="line">    </span><br><span class="line">  解决：在获取参数前，设置编码 request.setCharacterEncoding(&quot;UTF-8&quot;);</span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<h2 id="BeanUtils工具类"><a href="#BeanUtils工具类" class="headerlink" title="BeanUtils工具类"></a>BeanUtils工具类</h2><p>   简化数据封装，用于封装JavaBean的</p>
 <ol>
-<li><p>JavaBean：标准的Java类</p>
-<ul>
-<li><p>要求：</p>
-<ul>
-<li><p>类必须被public修饰</p>
-</li>
-<li><p>必须提供空参的构造器</p>
-</li>
-<li><p>成员变量必须使用private修饰</p>
-</li>
-<li><p>提供公共setter和getter方法</p>
-</li>
-</ul>
-</li>
+<li>JavaBean：标准的Java类<ul>
+<li>要求：    </li>
+<li>类必须被public修饰<pre><code>- 必须提供空参的构造器
+ - 成员变量必须使用private修饰
+ - 提供公共setter和getter方法
+</code></pre></li>
 </ul>
 </li>
 <li>功能：封装数据</li>
@@ -663,8 +653,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/Http相关/" rel="prev" title="Http相关">
-                Http相关 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/07/Tomcat启动相关问题/" rel="prev" title="Tomcat启动相关问题">
+                Tomcat启动相关问题 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -739,7 +729,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">43</span>
+                    <span class="site-state-item-count">45</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -821,7 +811,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-coffee"user></i>
   </span>

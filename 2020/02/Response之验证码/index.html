@@ -110,24 +110,24 @@
 
 
 
-  <meta name="description" content="Http特点 基于TCP/IP的高级协议 默认端口号:80 基于请求/响应模型的:一次请求对应一次响应 无状态的：每次请求之间相互独立，不能交互数据  历史版本：  1.0：每一次请求响应都会建立新的连接 1.1：复用连接  请求消息数据格式 请求行 请求方式  请求url  请求协议/版本  请求方式 GET POST     请求头 请求头名称 ：请求头值   User-Agent：浏览器告诉">
+  <meta name="description" content="步骤  创建对象，在内存中生成图片（验证码图片对象）  1234int width = 100;int height = 50;BufferedImage image = new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);  美化图片  1234567891011121314151617181920212223242526272">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Http相关">
-<meta property="og:url" content="https://small96.coding.me/2019/07/Http相关/index.html">
+<meta property="og:title" content="Response之验证码">
+<meta property="og:url" content="https://small96.coding.me/2020/02/Response之验证码/index.html">
 <meta property="og:site_name" content="后花园">
-<meta property="og:description" content="Http特点 基于TCP/IP的高级协议 默认端口号:80 基于请求/响应模型的:一次请求对应一次响应 无状态的：每次请求之间相互独立，不能交互数据  历史版本：  1.0：每一次请求响应都会建立新的连接 1.1：复用连接  请求消息数据格式 请求行 请求方式  请求url  请求协议/版本  请求方式 GET POST     请求头 请求头名称 ：请求头值   User-Agent：浏览器告诉">
+<meta property="og:description" content="步骤  创建对象，在内存中生成图片（验证码图片对象）  1234int width = 100;int height = 50;BufferedImage image = new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);  美化图片  1234567891011121314151617181920212223242526272">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-30T09:14:40.549Z">
+<meta property="og:updated_time" content="2020-02-01T04:17:41.669Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Http相关">
-<meta name="twitter:description" content="Http特点 基于TCP/IP的高级协议 默认端口号:80 基于请求/响应模型的:一次请求对应一次响应 无状态的：每次请求之间相互独立，不能交互数据  历史版本：  1.0：每一次请求响应都会建立新的连接 1.1：复用连接  请求消息数据格式 请求行 请求方式  请求url  请求协议/版本  请求方式 GET POST     请求头 请求头名称 ：请求头值   User-Agent：浏览器告诉">
+<meta name="twitter:title" content="Response之验证码">
+<meta name="twitter:description" content="步骤  创建对象，在内存中生成图片（验证码图片对象）  1234int width = 100;int height = 50;BufferedImage image = new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);  美化图片  1234567891011121314151617181920212223242526272">
 
 
 
 
 
 
-  <link rel="canonical" href="https://small96.coding.me/2019/07/Http相关/"/>
+  <link rel="canonical" href="https://small96.coding.me/2020/02/Response之验证码/"/>
 
 
 
@@ -137,7 +137,7 @@
   };
 </script>
 
-  <title>Http相关 | 后花园</title>
+  <title>Response之验证码 | 后花园</title>
   
 
 
@@ -340,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://small96.coding.me/2019/07/Http相关/">
+    <link itemprop="mainEntityOfPage" href="https://small96.coding.me/2020/02/Response之验证码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="small96">
@@ -357,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Http相关
+          <h1 class="post-title" itemprop="name headline">Response之验证码
               
             
           </h1>
@@ -382,24 +382,12 @@
                 
               
 
-              <time title="创建时间：2019-07-25 15:23:13" itemprop="dateCreated datePublished" datetime="2019-07-25T15:23:13+08:00">2019-07-25</time>
+              <time title="创建时间：2020-02-01 11:23:13 / 修改时间：12:17:41" itemprop="dateCreated datePublished" datetime="2020-02-01T11:23:13+08:00">2020-02-01</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-30 17:14:40" itemprop="dateModified" datetime="2019-07-30T17:14:40+08:00">2019-07-30</time>
               
             
           </span>
@@ -449,49 +437,20 @@
       
 
       
-        <h2 id="Http特点"><a href="#Http特点" class="headerlink" title="Http特点"></a>Http特点</h2><ol>
-<li>基于TCP/IP的高级协议</li>
-<li>默认端口号:80</li>
-<li>基于请求/响应模型的:一次请求对应一次响应</li>
-<li>无状态的：每次请求之间相互独立，不能交互数据</li>
-</ol>
-<p>历史版本：</p>
+        <ol>
+<li><p>步骤</p>
 <ul>
-<li>1.0：每一次请求响应都会建立新的连接</li>
-<li>1.1：复用连接</li>
+<li>创建对象，在内存中生成图片（验证码图片对象）</li>
 </ul>
-<h2 id="请求消息数据格式"><a href="#请求消息数据格式" class="headerlink" title="请求消息数据格式"></a>请求消息数据格式</h2><ol>
-<li><p>请求行</p>
-<p>请求方式  请求url  请求协议/版本</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> width = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">int</span> height = <span class="number">50</span>;</span><br><span class="line"></span><br><span class="line">BufferedImage image = <span class="keyword">new</span> BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);</span><br></pre></td></tr></table></figure>
 <ul>
-<li>请求方式<ul>
-<li>GET</li>
-<li>POST</li>
+<li>美化图片</li>
 </ul>
-</li>
-</ul>
-</li>
-<li><p>请求头</p>
-<p>请求头名称 ：请求头值 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//美化图片</span></span><br><span class="line">        <span class="comment">//填充背景色</span></span><br><span class="line">        Graphics g = image.getGraphics();  <span class="comment">//画笔对象</span></span><br><span class="line">        g.setColor(Color.PINK);<span class="comment">//设置背景色</span></span><br><span class="line">        g.fillRect(<span class="number">0</span>,<span class="number">0</span>,width,height);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//画边框</span></span><br><span class="line">        g.setColor(Color.BLUE);</span><br><span class="line">        g.drawRect(<span class="number">0</span>,<span class="number">0</span>,width-<span class="number">1</span>,height-<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        String str = <span class="string">"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"</span>;</span><br><span class="line">        <span class="comment">//生成随机下标</span></span><br><span class="line">        Random ran = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">4</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> index = ran.nextInt(str.length());</span><br><span class="line">            <span class="comment">//获取字符</span></span><br><span class="line">            <span class="keyword">char</span> ch = str.charAt(index);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//写验证码</span></span><br><span class="line">            g.drawString(ch+<span class="string">""</span>,width/<span class="number">5</span>*i,height/<span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//画干扰线</span></span><br><span class="line">        g.setColor(Color.GREEN);</span><br><span class="line">        <span class="comment">//随机生成坐标点</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> x1 = ran.nextInt(width);</span><br><span class="line">            <span class="keyword">int</span> x2 = ran.nextInt(width);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> y1 = ran.nextInt(height);</span><br><span class="line">            <span class="keyword">int</span> y2 = ran.nextInt(height);</span><br><span class="line">            g.drawLine(x1,y1,x2,y2);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>User-Agent：浏览器告诉服务器，我访问你 使用的浏览器版本信息<ul>
-<li>可以在服务器端获取该头的信息，解决浏览器的兼容性问题</li>
+<li>将图片输出到页面</li>
 </ul>
-</li>
-<li>Referer：<a href="http://localhost/login.html" target="_blank" rel="noopener">http://localhost/login.html</a><ul>
-<li>告诉服务器，我(当前请求)从哪里来？</li>
-<li>作用：防盗链、统计工作</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>请求空行</p>
-<p>空行（起分隔作用）</p>
-</li>
-<li><p>请求体（正文）</p>
-<ul>
-<li>封装POST请求消息的请求参数的</li>
-</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将图片输出到页面展示</span></span><br><span class="line">       ImageIO.write(image,<span class="string">"jpg"</span>,resp.getOutputStream());</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -540,7 +499,7 @@
     <strong>本文作者： </strong>small96</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://small96.coding.me/2019/07/Http相关/" title="Http相关">https://small96.coding.me/2019/07/Http相关/</a>
+    <a href="https://small96.coding.me/2020/02/Response之验证码/" title="Response之验证码">https://small96.coding.me/2020/02/Response之验证码/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -560,8 +519,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/Tomcat启动相关问题/" rel="next" title="Tomcat启动相关问题">
-                <i class="fa fa-chevron-left"></i> Tomcat启动相关问题
+              <a href="/2019/08/数据库知识分析/" rel="next" title="数据库知识分析">
+                <i class="fa fa-chevron-left"></i> 数据库知识分析
               </a>
             
           </div>
@@ -570,8 +529,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/07/注解相关问题/" rel="prev" title="注解相关问题">
-                注解相关问题 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/Session之验证码案例/" rel="prev" title="Session之验证码案例">
+                Session之验证码案例 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -617,17 +576,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -697,22 +647,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Http特点"><span class="nav-number">1.</span> <span class="nav-text">Http特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求消息数据格式"><span class="nav-number">2.</span> <span class="nav-text">请求消息数据格式</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
