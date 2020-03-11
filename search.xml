@@ -129,17 +129,17 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Tomcat启动相关问题]]></title>
-    <url>%2F2019%2F07%2F25%2F2019%2F07%2FTomcat%E5%90%AF%E5%8A%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[可能遇到的问题 黑窗口一闪而过： 原因： 没有正确配置JAVA_HOME环境变量 解决方案：正确配置JAVA_HOME环境变量 启动报错： 暴力：找到占用的端口号，并且找到对应的进程，杀死该进程 netstat -ano 温柔：修改自身的端口号 conf/server.xml 123&lt;Connector port="8888" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8445" /&gt; - 一般会将tomcat的默认端口号修改为80。80端口号是http协议的默认端口号。 - 好处：在访问时，就不用输入端口号 部署 直接将项目放到webapps目录下即可。 简化部署：将项目打成一个war包，再将war包放置到webapps目录下。war包会自动解压缩 配置conf/server.xml文件 在标签体中配置 docBase:项目存放的路径 path：虚拟目录 在conf\Catalina\localhost创建任意名称的xml文件。]]></content>
+    <title><![CDATA[Http相关]]></title>
+    <url>%2F2019%2F07%2F25%2F2019%2F07%2FHttp%E7%9B%B8%E5%85%B3%2F</url>
+    <content type="text"><![CDATA[Http特点 基于TCP/IP的高级协议 默认端口号:80 基于请求/响应模型的:一次请求对应一次响应 无状态的：每次请求之间相互独立，不能交互数据 历史版本： 1.0：每一次请求响应都会建立新的连接 1.1：复用连接 请求消息数据格式 请求行 请求方式 请求url 请求协议/版本 请求方式 GET POST 请求头 请求头名称 ：请求头值 User-Agent：浏览器告诉服务器，我访问你 使用的浏览器版本信息 可以在服务器端获取该头的信息，解决浏览器的兼容性问题 Referer：http://localhost/login.html 告诉服务器，我(当前请求)从哪里来？ 作用：防盗链、统计工作 请求空行 空行（起分隔作用） 请求体（正文） 封装POST请求消息的请求参数的]]></content>
       <categories>
         <category>Java</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Http相关]]></title>
-    <url>%2F2019%2F07%2F25%2F2019%2F07%2FHttp%E7%9B%B8%E5%85%B3%2F</url>
-    <content type="text"><![CDATA[Http特点 基于TCP/IP的高级协议 默认端口号:80 基于请求/响应模型的:一次请求对应一次响应 无状态的：每次请求之间相互独立，不能交互数据 历史版本： 1.0：每一次请求响应都会建立新的连接 1.1：复用连接 请求消息数据格式 请求行 请求方式 请求url 请求协议/版本 请求方式 GET POST 请求头 请求头名称 ：请求头值 User-Agent：浏览器告诉服务器，我访问你 使用的浏览器版本信息 可以在服务器端获取该头的信息，解决浏览器的兼容性问题 Referer：http://localhost/login.html 告诉服务器，我(当前请求)从哪里来？ 作用：防盗链、统计工作 请求空行 空行（起分隔作用） 请求体（正文） 封装POST请求消息的请求参数的]]></content>
+    <title><![CDATA[Tomcat启动相关问题]]></title>
+    <url>%2F2019%2F07%2F25%2F2019%2F07%2FTomcat%E5%90%AF%E5%8A%A8%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[可能遇到的问题 黑窗口一闪而过： 原因： 没有正确配置JAVA_HOME环境变量 解决方案：正确配置JAVA_HOME环境变量 启动报错： 暴力：找到占用的端口号，并且找到对应的进程，杀死该进程 netstat -ano 温柔：修改自身的端口号 conf/server.xml 123&lt;Connector port="8888" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8445" /&gt; - 一般会将tomcat的默认端口号修改为80。80端口号是http协议的默认端口号。 - 好处：在访问时，就不用输入端口号 部署 直接将项目放到webapps目录下即可。 简化部署：将项目打成一个war包，再将war包放置到webapps目录下。war包会自动解压缩 配置conf/server.xml文件 在标签体中配置 docBase:项目存放的路径 path：虚拟目录 在conf\Catalina\localhost创建任意名称的xml文件。]]></content>
       <categories>
         <category>Java</category>
       </categories>
